@@ -75,3 +75,8 @@ optimized_*/
 
 # Private raw terminal-log pointers inside migrated run artifacts
 experiments/runs/**/raw_logs/
+
+# Local secret configuration
+.env
+.env.*
+!.env.example
