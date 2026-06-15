@@ -1,0 +1,20 @@
+{
+  "total_long_rows": 8,
+  "total_functions": 2,
+  "total_wide_rows": 2,
+  "total_main_table_wide_rows": 0,
+  "counts_by_blocker": {
+    "dependency_unsafe": 4,
+    "recurrence_reduction": 4
+  },
+  "counts_by_strategy": {
+    "strong_plain": 2,
+    "diagnostic_only": 2,
+    "case_card_only": 2,
+    "full_method": 2
+  },
+  "counts_by_conclusion": {
+    "protocol_limited_or_nonformal": 7,
+    "correctness_failed": 1
+  }
+}

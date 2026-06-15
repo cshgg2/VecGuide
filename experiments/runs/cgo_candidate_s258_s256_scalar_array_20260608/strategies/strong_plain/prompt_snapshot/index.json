@@ -1,0 +1,33 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-08T23:10:55.010117",
+      "function": "s258",
+      "strategy": "strong_plain",
+      "publication_name": "strong_plain",
+      "prompt_version": "strong_plain_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/prompt_snapshot/s258/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/prompt_snapshot/s258/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/prompt_snapshot/s258/round01_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    },
+    {
+      "timestamp": "2026-06-08T23:11:02.415960",
+      "function": "s256",
+      "strategy": "strong_plain",
+      "publication_name": "strong_plain",
+      "prompt_version": "strong_plain_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/prompt_snapshot/s256/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/prompt_snapshot/s256/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/prompt_snapshot/s256/round01_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

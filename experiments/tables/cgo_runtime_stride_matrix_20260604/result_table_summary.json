@@ -1,0 +1,21 @@
+{
+  "total_long_rows": 12,
+  "total_functions": 3,
+  "total_wide_rows": 3,
+  "total_main_table_wide_rows": 3,
+  "counts_by_blocker": {
+    "call_side_effect": 8,
+    "dependency_unsafe": 4
+  },
+  "counts_by_strategy": {
+    "strong_plain": 3,
+    "diagnostic_only": 3,
+    "case_card_only": 3,
+    "full_method": 3
+  },
+  "counts_by_conclusion": {
+    "correctness_failed": 3,
+    "non_vectorized_slowdown": 2,
+    "non_vectorized_speedup": 7
+  }
+}

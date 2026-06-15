@@ -1,0 +1,63 @@
+{
+  "strategy": "strong_plain",
+  "results": {
+    "s261": {
+      "func_name": "s261",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": Infinity,
+        "optimized_checksum": Infinity,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": Infinity,
+            "optimized_checksum": Infinity,
+            "original_state_metrics": {
+              "STATE_SUM": Infinity,
+              "STATE_ABS_SUM": Infinity,
+              "STATE_WEIGHTED_SUM": Infinity
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": Infinity,
+              "STATE_ABS_SUM": Infinity,
+              "STATE_WEIGHTED_SUM": Infinity
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": false,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=inf ret_opt=inf max_rel=nan FAIL",
+          "[n1=1, n3=1] TEST1: ret_orig=inf ret_opt=inf max_rel=nan FAIL",
+          "[n1=1, n3=1] TEST2: ret_orig=inf ret_opt=inf max_rel=nan FAIL",
+          "[n1=1, n3=1] PASSED 0/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": false
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-09T22:22:37.421260",
+      "function": "s279",
+      "strategy": "diagnostic_only",
+      "publication_name": "diagnostic_only",
+      "prompt_version": "diagnostic_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s279_complex_control_flow_20260609/strategies/diagnostic_only/prompt_snapshot/s279/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s279_complex_control_flow_20260609/strategies/diagnostic_only/prompt_snapshot/s279/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s279_complex_control_flow_20260609/strategies/diagnostic_only/prompt_snapshot/s279/round01_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

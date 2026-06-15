@@ -1,0 +1,130 @@
+{
+  "timestamp": "2026-06-09T22:22:49.570146",
+  "strategy": "diagnostic_only",
+  "strategy_description": "投稿版诊断基线：保留编译诊断和结构化反馈，去掉案例卡、Few-shot 和多轮反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s279"
+  ],
+  "results": [
+    {
+      "function": "s279",
+      "strategy": "diagnostic_only",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s279(struct args_t * func_args)\n{\n\n//    control flow\n//    vector if/gotos\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < iterations/2; nl++) {\n        for (int i = 0; i < LEN_1D; i++) {\n            real_t * __restrict__ a_ptr = a;\n            real_t * __restrict__ b_ptr = b;\n            real_t * __restrict__ c_ptr = c;\n            real_t * __restrict__ d_ptr = d;\n            real_t * __restrict__ e_ptr = e;\n\n            if (a_ptr[i] > (real_t)0.) {\n                c_ptr[i] = -c_ptr[i] + e_ptr[i] * e_ptr[i];\n            } else {\n                b_ptr[i] = -b_ptr[i] + d_ptr[i] * d_ptr[i];\n                if (b_ptr[i] <= a_ptr[i]) {\n                    // Do nothing, corresponds to falling through to L30\n                } else {\n                    c_ptr[i] += d_ptr[i] * e_ptr[i];\n                }\n            }\n            a_ptr[i] = b_ptr[i] + c_ptr[i] * d_ptr[i];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s279_h3vexciz/minimal_s279.c:55:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+            "/tmp/acpo_s279_h3vexciz/minimal_s279.c:55:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s279_h3vexciz/minimal_s279.c:55:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+              "reason": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s279_h3vexciz/minimal_s279.c:55:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+              "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s279",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 10926255243264.0,
+          "optimized_checksum": 10926255243264.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 10926255243264.0,
+              "optimized_checksum": 10926255243264.0,
+              "original_state_metrics": {
+                "STATE_SUM": 10928569919048.057,
+                "STATE_ABS_SUM": 10928575511368.057,
+                "STATE_WEIGHTED_SUM": 2.6228154995337702e+17
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 10928569919048.057,
+                "STATE_ABS_SUM": 10928575511368.057,
+                "STATE_WEIGHTED_SUM": 2.6228154995337702e+17
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

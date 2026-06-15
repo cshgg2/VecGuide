@@ -1,0 +1,33 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-08T23:13:26.388248",
+      "function": "s258",
+      "strategy": "diagnostic_only",
+      "publication_name": "diagnostic_only",
+      "prompt_version": "diagnostic_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/prompt_snapshot/s258/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/prompt_snapshot/s258/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/prompt_snapshot/s258/round01_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    },
+    {
+      "timestamp": "2026-06-08T23:13:33.782194",
+      "function": "s256",
+      "strategy": "diagnostic_only",
+      "publication_name": "diagnostic_only",
+      "prompt_version": "diagnostic_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/prompt_snapshot/s256/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/prompt_snapshot/s256/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/prompt_snapshot/s256/round01_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "timestamp": "2026-06-09T11:29:18.216630",
+  "strategy": "diagnostic_only",
+  "strategy_description": "投稿版诊断基线：保留编译诊断和结构化反馈，去掉案例卡、Few-shot 和多轮反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s211"
+  ],
+  "results": [
+    {
+      "function": "s211",
+      "strategy": "diagnostic_only",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 2,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s211(struct args_t * func_args)\n{\n\n//    statement reordering\n//    statement reordering allows vectorization\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < iterations; nl++) {\n        real_t * __restrict__ a_p = a;\n        real_t * __restrict__ b_p = b;\n        real_t * __restrict__ c_p = c;\n        real_t * __restrict__ d_p = d;\n        real_t * __restrict__ e_p = e;\n\n        for (int i = 1; i < LEN_1D-1; i++) {\n            a_p[i] = b_p[i - 1] + c_p[i] * d_p[i];\n        }\n        for (int i = 1; i < LEN_1D-1; i++) {\n            b_p[i] = b_p[i + 1] - e_p[i] * d_p[i];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 2,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:64:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+            "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:61:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:64:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+            "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:61:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:64:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 64,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:61:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 61,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:64:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 64,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s211_p2n6z0nt/minimal_s211.c:61:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 61,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s211",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": -2.6218236157414605e+17,
+          "optimized_checksum": -2.6218236157414605e+17,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": -2.6218236157414605e+17,
+              "optimized_checksum": -2.6218236157414605e+17,
+              "original_state_metrics": {
+                "STATE_SUM": -5.243752066035145e+17,
+                "STATE_ABS_SUM": 5.243752102190168e+17,
+                "STATE_WEIGHTED_SUM": -6.712458191581847e+21
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": -5.243752066035145e+17,
+                "STATE_ABS_SUM": 5.243752102190168e+17,
+                "STATE_WEIGHTED_SUM": -6.712458191581847e+21
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": false,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=-10914722006171648.000000 ret_opt=-10903799904337920.000000 max_rel=1.00e-03 FAIL",
+            "[n1=1, n3=1] TEST1: ret_orig=-10914722006171648.000000 ret_opt=-10903799904337920.000000 max_rel=1.00e-03 FAIL",
+            "[n1=1, n3=1] TEST2: ret_orig=-10914722006171648.000000 ret_opt=-10903799904337920.000000 max_rel=1.00e-03 FAIL",
+            "[n1=1, n3=1] PASSED 0/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": false
+      }
+    }
+  ]
+}

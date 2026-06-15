@@ -1,0 +1,35 @@
+{
+  "strategy": "origin",
+  "results": {
+    "s242": {
+      "func_name": "s242",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s3112": {
+      "func_name": "s3112",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s3113": {
+      "func_name": "s3113",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s341": {
+      "func_name": "s341",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s342": {
+      "func_name": "s342",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s343": {
+      "func_name": "s343",
+      "overall": true,
+      "mode": "origin_baseline"
+    }
+  }
+}

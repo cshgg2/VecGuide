@@ -1,0 +1,142 @@
+{
+  "run_id": "cgo_candidate_scalar_carry_s253_s254_s255_20260609",
+  "timestamp": "2026-06-09T17:10:23.258245",
+  "total_rows": 15,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 3,
+        "status_counts": {
+          "origin_baseline": 3
+        },
+        "observed_outcome_counts": {
+          "origin_not_vectorized_baseline": 1,
+          "origin_vectorized_baseline": 2
+        },
+        "correctness_passed": 3,
+        "fully_vectorized": 2,
+        "benchmark_success_count": 3,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/origin/paper_summary.json"
+    },
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 3,
+        "status_counts": {
+          "failed": 1,
+          "skipped": 2
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1,
+          "already_vectorized_skipped": 2
+        },
+        "correctness_passed": 3,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 3,
+        "avg_speedup": 1.1445400000000001,
+        "median_speedup": 1.1445400000000001,
+        "avg_improvement_pct": 14.454,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/strong_plain/paper_summary.json"
+    },
+    {
+      "strategy": "diagnostic_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "diagnostic_only",
+        "exit_code": 0,
+        "total_functions": 3,
+        "status_counts": {
+          "failed": 1,
+          "skipped": 2
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_flat": 1,
+          "already_vectorized_skipped": 2
+        },
+        "correctness_passed": 3,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 3,
+        "avg_speedup": 1.00968,
+        "median_speedup": 1.00968,
+        "avg_improvement_pct": 0.968,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/diagnostic_only/paper_summary.json"
+    },
+    {
+      "strategy": "case_card_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "case_card_only",
+        "exit_code": 0,
+        "total_functions": 3,
+        "status_counts": {
+          "failed": 1,
+          "skipped": 2
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1,
+          "already_vectorized_skipped": 2
+        },
+        "correctness_passed": 3,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 3,
+        "avg_speedup": 1.1714,
+        "median_speedup": 1.1714,
+        "avg_improvement_pct": 17.14,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/case_card_only/paper_summary.json"
+    },
+    {
+      "strategy": "full_method",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "full_method",
+        "exit_code": 0,
+        "total_functions": 3,
+        "status_counts": {
+          "success": 1,
+          "skipped": 2
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 1,
+          "already_vectorized_skipped": 2
+        },
+        "correctness_passed": 3,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 3,
+        "avg_speedup": 1.2324,
+        "median_speedup": 1.2324,
+        "avg_improvement_pct": 23.240000000000002,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/full_method/paper_summary.json"
+    }
+  ]
+}

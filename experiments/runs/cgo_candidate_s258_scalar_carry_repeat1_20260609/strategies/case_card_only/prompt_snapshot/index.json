@@ -1,0 +1,24 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-09T11:02:23.662989",
+      "function": "s258",
+      "strategy": "case_card_only",
+      "publication_name": "case_card_only",
+      "prompt_version": "case_card_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/prompt_snapshot/s258/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/prompt_snapshot/s258/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/prompt_snapshot/s258/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "partial_vectorization_slowdown_boundary",
+        "reduction_or_recurrence_boundary",
+        "guarded_loop_interchange_invariant_branch",
+        "imperfect_nested_distribution_interchange"
+      ]
+    }
+  ]
+}

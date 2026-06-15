@@ -1,0 +1,19 @@
+{
+  "strategy": "full_method",
+  "exit_code": 0,
+  "total_functions": 5,
+  "status_counts": {
+    "success": 5
+  },
+  "observed_outcome_counts": {
+    "vectorized_speedup": 4,
+    "benchmark_failed": 1
+  },
+  "correctness_passed": 5,
+  "fully_vectorized": 5,
+  "benchmark_success_count": 4,
+  "avg_speedup": 7.72261,
+  "median_speedup": 2.4867600000000003,
+  "avg_improvement_pct": 672.261,
+  "negative_optimization_count": 0
+}

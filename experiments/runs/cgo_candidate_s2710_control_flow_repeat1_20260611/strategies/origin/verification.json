@@ -1,0 +1,10 @@
+{
+  "strategy": "origin",
+  "results": {
+    "s2710": {
+      "func_name": "s2710",
+      "overall": true,
+      "mode": "origin_baseline"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-06-11T17:48:32.304416",
+  "strategy": "origin",
+  "strategy_description": "原始代码基线，不执行 LLM 优化。",
+  "requested_rounds": 3,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "effective_rounds": 0,
+  "single_round": true,
+  "functions": [
+    "s243",
+    "s2244",
+    "s271",
+    "s273",
+    "s274",
+    "s1279",
+    "s2710",
+    "s2711"
+  ],
+  "results": [],
+  "note": "origin 基线不执行 LLM 优化，仅作为原始代码对照。"
+}

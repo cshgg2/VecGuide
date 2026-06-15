@@ -1,0 +1,159 @@
+{
+  "timestamp": "2026-06-04T19:26:07.184669",
+  "strategy": "diagnostic_only",
+  "strategy_description": "投稿版诊断基线：保留编译诊断和结构化反馈，去掉案例卡、Few-shot 和多轮反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s126"
+  ],
+  "results": [
+    {
+      "function": "s126",
+      "strategy": "diagnostic_only",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 2,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s126(struct args_t * func_args)\n{\n\n//    induction variable recognition\n//    induction variable in two loops; recurrence in inner loop\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < 10*(iterations/LEN_2D); nl++) {\n        for (int i = 0; i < LEN_2D; i++) {\n            // Precompute the base index for this i iteration\n            // Original logic: k starts at 1. For each i, inner loop runs (LEN_2D - 1) times.\n            // Base k for current i is: 1 + i * (LEN_2D - 1 + 1) = 1 + i * LEN_2D\n            int k_base = 1 + i * LEN_2D;\n            \n            for (int j = 1; j < LEN_2D; j++) {\n                // k = k_base + (j - 1)\n                // flat_2d_array[k-1] = flat_2d_array[k_base + j - 2]\n                real_t * __restrict__ bb_ptr = bb[j];\n                real_t * __restrict__ bb_prev_ptr = bb[j-1];\n                real_t * __restrict__ cc_ptr = cc[j];\n                \n                bb_ptr[i] = bb_prev_ptr[i] + flat_2d_array[k_base + j - 2] * cc_ptr[i];\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:68:29: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:61:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:68:29: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:61:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:68:29: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 68,
+              "column": 29,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:61:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 61,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:68:29: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 68,
+              "column": 29,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s126_bxdwwjld/minimal_s126.c:61:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 61,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "analysis_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "all_categories": [
+            "recurrence_reduction",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s126",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 512002944.0,
+          "optimized_checksum": 512002944.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512002944.0,
+              "optimized_checksum": 512002944.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2985537586.467053,
+                "STATE_ABS_SUM": 2991129906.467053,
+                "STATE_WEIGHTED_SUM": 72972289118550.28
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2985537586.467053,
+                "STATE_ABS_SUM": 2991129906.467053,
+                "STATE_WEIGHTED_SUM": 72972289118550.28
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "run_id": "cgo_strong_plain_key_cases_20260603",
+  "timestamp": "2026-06-04T00:15:24.060219",
+  "strategies": [
+    "strong_plain"
+  ],
+  "total_functions": 5,
+  "outcome_counts_by_strategy": {
+    "strong_plain": {
+      "non_vectorized_flat": 1,
+      "benchmark_failed": 1,
+      "non_vectorized_speedup": 1,
+      "vectorized_speedup": 2
+    }
+  },
+  "pairwise_summaries": [],
+  "functions": [
+    {
+      "function": "s1244",
+      "severity": null,
+      "problem_count": null,
+      "line_range": null,
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": null,
+          "problem_count": null,
+          "status": "success",
+          "correctness_overall": true,
+          "analysis_vectorized": true,
+          "analysis_vectorized_count": 2,
+          "analysis_missed_count": 0,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 2.6997,
+          "speedup_median": 2.7245,
+          "speedup_stddev": 0.04486474116720162,
+          "improvement_pct": 169.97,
+          "observed_outcome": "vectorized_speedup",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        }
+      },
+      "pairwise": {}
+    },
+    {
+      "function": "s231",
+      "severity": null,
+      "problem_count": null,
+      "line_range": null,
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": null,
+          "problem_count": null,
+          "status": "success",
+          "correctness_overall": true,
+          "analysis_vectorized": true,
+          "analysis_vectorized_count": 1,
+          "analysis_missed_count": 0,
+          "benchmark_success": false,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": null,
+          "speedup_median": null,
+          "speedup_stddev": null,
+          "improvement_pct": null,
+          "observed_outcome": "benchmark_failed",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": "运行时错误: Command '['/tmp/tmpxh_dj720', '1', '1']' timed out after 120 seconds"
+        }
+      },
+      "pairwise": {}
+    },
+    {
+      "function": "s275",
+      "severity": null,
+      "problem_count": null,
+      "line_range": null,
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": null,
+          "problem_count": null,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 0,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 6.04198,
+          "speedup_median": 5.9477,
+          "speedup_stddev": 0.24710387896591174,
+          "improvement_pct": 504.19800000000004,
+          "observed_outcome": "non_vectorized_speedup",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        }
+      },
+      "pairwise": {}
+    },
+    {
+      "function": "s278",
+      "severity": null,
+      "problem_count": null,
+      "line_range": null,
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": null,
+          "problem_count": null,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 0,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 1.0003,
+          "speedup_median": 1.0017,
+          "speedup_stddev": 0.005528562200066146,
+          "improvement_pct": 0.03000000000000001,
+          "observed_outcome": "non_vectorized_flat",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        }
+      },
+      "pairwise": {}
+    },
+    {
+      "function": "s293",
+      "severity": null,
+      "problem_count": null,
+      "line_range": null,
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": null,
+          "problem_count": null,
+          "status": "success",
+          "correctness_overall": true,
+          "analysis_vectorized": true,
+          "analysis_vectorized_count": 1,
+          "analysis_missed_count": 0,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 2.4026,
+          "speedup_median": 2.4018,
+          "speedup_stddev": 0.197102536767034,
+          "improvement_pct": 140.26,
+          "observed_outcome": "vectorized_speedup",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        }
+      },
+      "pairwise": {}
+    }
+  ]
+}

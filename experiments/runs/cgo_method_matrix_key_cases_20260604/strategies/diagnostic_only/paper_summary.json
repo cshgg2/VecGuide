@@ -1,0 +1,22 @@
+{
+  "strategy": "diagnostic_only",
+  "exit_code": 0,
+  "total_functions": 5,
+  "status_counts": {
+    "success": 3,
+    "failed": 2
+  },
+  "observed_outcome_counts": {
+    "vectorized_speedup": 2,
+    "benchmark_failed": 1,
+    "non_vectorized_slowdown": 1,
+    "non_vectorized_flat": 1
+  },
+  "correctness_passed": 5,
+  "fully_vectorized": 3,
+  "benchmark_success_count": 4,
+  "avg_speedup": 1.716695,
+  "median_speedup": 1.6017,
+  "avg_improvement_pct": 71.6695,
+  "negative_optimization_count": 1
+}

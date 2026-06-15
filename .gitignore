@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local agent / assistant state
+.claude/
+.codex/
+.agents/
+
+# OS
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# Logs and local config
+*.log
+*.local
+optimization_state.json
+
+# Private research notes and local progress logs.
+# These directories may exist locally, but they are not part of the public repo.
+0version/
+1goals/
+2rebuild/
+3temp/
+4thesis/
+5archive/
+reports/
+
+# Generated optimization workspaces
+optimized_*/
+!optimized_*/optimized_*.c
+!optimized_*/optimized_*_origin.c
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.out
+*.run.xml
+*.toc
+*.pdf
+
+# Private raw terminal-log pointers inside migrated run artifacts
+experiments/runs/**/raw_logs/

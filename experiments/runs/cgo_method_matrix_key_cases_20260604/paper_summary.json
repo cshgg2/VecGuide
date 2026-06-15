@@ -1,0 +1,95 @@
+{
+  "run_id": "cgo_method_matrix_key_cases_20260604",
+  "timestamp": "2026-06-04T11:04:08.301847",
+  "total_rows": 15,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "diagnostic_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "diagnostic_only",
+        "exit_code": 0,
+        "total_functions": 5,
+        "status_counts": {
+          "success": 3,
+          "failed": 2
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 2,
+          "benchmark_failed": 1,
+          "non_vectorized_slowdown": 1,
+          "non_vectorized_flat": 1
+        },
+        "correctness_passed": 5,
+        "fully_vectorized": 3,
+        "benchmark_success_count": 4,
+        "avg_speedup": 1.716695,
+        "median_speedup": 1.6017,
+        "avg_improvement_pct": 71.6695,
+        "negative_optimization_count": 1
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/diagnostic_only/paper_summary.json"
+    },
+    {
+      "strategy": "case_card_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "case_card_only",
+        "exit_code": 0,
+        "total_functions": 5,
+        "status_counts": {
+          "success": 4,
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 3,
+          "benchmark_failed": 1,
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 5,
+        "fully_vectorized": 4,
+        "benchmark_success_count": 4,
+        "avg_speedup": 3.367675,
+        "median_speedup": 2.49629,
+        "avg_improvement_pct": 236.7675,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/case_card_only/paper_summary.json"
+    },
+    {
+      "strategy": "full_method",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "full_method",
+        "exit_code": 0,
+        "total_functions": 5,
+        "status_counts": {
+          "success": 5
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 4,
+          "benchmark_failed": 1
+        },
+        "correctness_passed": 5,
+        "fully_vectorized": 5,
+        "benchmark_success_count": 4,
+        "avg_speedup": 7.72261,
+        "median_speedup": 2.4867600000000003,
+        "avg_improvement_pct": 672.261,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/full_method/paper_summary.json"
+    }
+  ]
+}

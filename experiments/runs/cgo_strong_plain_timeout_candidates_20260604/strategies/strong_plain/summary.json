@@ -1,0 +1,294 @@
+{
+  "timestamp": "2026-06-04T16:47:06.750468",
+  "strategy": "strong_plain",
+  "strategy_description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s115",
+    "s235"
+  ],
+  "results": [
+    {
+      "function": "s115",
+      "strategy": "strong_plain",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 2,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s115(struct args_t * func_args)\n{\n\n//    linear dependence testing\n//    triangular saxpy loop\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < 1000*(iterations/LEN_2D); nl++) {\n        for (int i = 1; i < LEN_2D; i++) {\n            for (int j = 0; j < i; j++) {\n                a[i] -= aa[j][i] * a[j];\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s115_01kletjd/minimal_s115.c:57:22: remark: loop not vectorized: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+            "/tmp/acpo_s115_01kletjd/minimal_s115.c:56:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "Unknown data dependence. Memory location is the same as accessed at /tmp/acpo_s115_01kletjd/minimal_s115.c:57:36 [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s115_01kletjd/minimal_s115.c:56:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s115_01kletjd/minimal_s115.c:57:22: remark: loop not vectorized: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+              "line": 57,
+              "column": 22,
+              "message": "loop not vectorized: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+              "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+              "categories": [
+                "dependency_unsafe"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s115_01kletjd/minimal_s115.c:56:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 56,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "Unknown data dependence. Memory location is the same as accessed at /tmp/acpo_s115_01kletjd/minimal_s115.c:57:36 [-Rpass-analysis=loop-vectorize]",
+              "line": null,
+              "column": null,
+              "message": "Unknown data dependence. Memory location is the same as accessed at /tmp/acpo_s115_01kletjd/minimal_s115.c:57:36 [-Rpass-analysis=loop-vectorize]",
+              "reason": "Unknown data dependence. Memory location is the same as accessed at /tmp/acpo_s115_01kletjd/minimal_s115.c:57:36 [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s115_01kletjd/minimal_s115.c:56:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 56,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "dependency_unsafe",
+            "other"
+          ],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "dependency_unsafe",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s115",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": NaN,
+          "optimized_checksum": NaN,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": NaN,
+              "optimized_checksum": NaN,
+              "original_state_metrics": {
+                "STATE_SUM": NaN,
+                "STATE_ABS_SUM": NaN,
+                "STATE_WEIGHTED_SUM": NaN
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": NaN,
+                "STATE_ABS_SUM": NaN,
+                "STATE_WEIGHTED_SUM": NaN
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=-6238606081533591583129184763904.000000 ret_opt=-6238606081533591583129184763904.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=-6238606081533591583129184763904.000000 ret_opt=-6238606081533591583129184763904.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=-6238606081533591583129184763904.000000 ret_opt=-6238606081533591583129184763904.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    },
+    {
+      "function": "s235",
+      "strategy": "strong_plain",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 2,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s235(struct args_t * func_args)\n{\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < 200*(iterations/LEN_2D); nl++) {\n        for (int i = 0; i < LEN_2D; i++) {\n            real_t * restrict aa_i = &aa[0][i];\n            real_t * restrict bb_i = &bb[0][i];\n            real_t a_val = a[i] + b[i] * c[i];\n            a[i] = a_val;\n\n            for (int j = 1; j < LEN_2D; j++) {\n                aa_i[j] = aa_i[j-1] + bb_i[j] * a_val;\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:58:27: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:58:27: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:58:27: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 58,
+              "column": 27,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 57,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:58:27: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 58,
+              "column": 27,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s235_pnod6gnw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 57,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "analysis_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "all_categories": [
+            "recurrence_reduction",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s235",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": false,
+          "error": "[n1=1, n3=1] STATE_SUM 不匹配: 原始=86186997635673.406250, 优化=8120745780763.223633, diff=78066251854910.187500, tol=861869976.356734",
+          "original_checksum": null,
+          "optimized_checksum": null,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 447023284224.0,
+              "optimized_checksum": 447023284224.0,
+              "original_state_metrics": {
+                "STATE_SUM": 86186997635673.4,
+                "STATE_ABS_SUM": 86187003227993.4,
+                "STATE_WEIGHTED_SUM": 3.753345433680674e+18
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 8120745780763.224,
+                "STATE_ABS_SUM": 8120751373083.224,
+                "STATE_WEIGHTED_SUM": 3136207628974401.0
+              },
+              "equivalent": false,
+              "error": "STATE_SUM 不匹配: 原始=86186997635673.406250, 优化=8120745780763.223633, diff=78066251854910.187500, tol=861869976.356734"
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": false,
+          "error": null,
+          "details": []
+        },
+        "overall": false
+      }
+    }
+  ]
+}

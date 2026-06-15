@@ -1,0 +1,223 @@
+{
+  "snapshot_schema_version": 1,
+  "timestamp": "2026-06-04T17:45:23.292095",
+  "function": "s235",
+  "strategy": "case_card_only",
+  "publication_name": "case_card_only",
+  "paper_role": "案例卡约束消融基线。",
+  "prompt_version": "case_card_only_v1_20260601",
+  "round": 1,
+  "max_rounds": 1,
+  "prompt_kind": "optimization",
+  "prompt_options": {
+    "system_prompt_profile": "method",
+    "include_strong_baseline_guidance": false,
+    "include_diagnostics": true,
+    "include_structured_feedback": true,
+    "include_semantic_hints": true,
+    "include_knowledge": true,
+    "include_examples": false,
+    "include_history": false,
+    "include_progress_analysis": false,
+    "use_multi_round_system_prompt": false
+  },
+  "template_versions": {
+    "method_system": "method_system_v1_20260601",
+    "strong_plain_system": "strong_plain_system_v1_20260601",
+    "multi_round_system": "multi_round_system_v1_20260601",
+    "optimization_user": "optimization_user_v1_20260601",
+    "retry_prompt": "retry_prompt_v1_20260601",
+    "structured_feedback_format": "structured_feedback_v1_20260601"
+  },
+  "system_prompt_template": {
+    "name": "method_system",
+    "version": "method_system_v1_20260601"
+  },
+  "user_prompt_template": {
+    "name": "optimization_user",
+    "version": "optimization_user_v1_20260601"
+  },
+  "diagnostics": {
+    "vectorized": [],
+    "missed": [
+      "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:58:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+      "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+    ],
+    "analysis": [
+      "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:58:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+      "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+    ],
+    "errors": [],
+    "vectorized_entries": [],
+    "missed_entries": [
+      {
+        "raw": "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:58:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+        "line": 58,
+        "column": 28,
+        "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+        "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+        "categories": [
+          "recurrence_reduction"
+        ]
+      },
+      {
+        "raw": "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "line": 57,
+        "column": 13,
+        "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      }
+    ],
+    "analysis_entries": [
+      {
+        "raw": "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:58:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+        "line": 58,
+        "column": 28,
+        "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+        "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+        "categories": [
+          "recurrence_reduction"
+        ]
+      },
+      {
+        "raw": "/tmp/acpo_s235_hsbyjxlw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "line": 57,
+        "column": 13,
+        "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      }
+    ],
+    "missed_categories": [
+      "recurrence_reduction",
+      "other"
+    ],
+    "analysis_categories": [
+      "recurrence_reduction",
+      "other"
+    ],
+    "all_categories": [
+      "recurrence_reduction",
+      "other"
+    ],
+    "structured_feedback": {
+      "func_name": "s235",
+      "severity": "medium",
+      "pattern_family": "reduction_or_recurrence",
+      "primary_categories": [
+        "recurrence_reduction"
+      ],
+      "compile_level": {
+        "compilable": true,
+        "error_preview": null
+      },
+      "vectorization_level": {
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "missed_categories": [
+          "recurrence_reduction"
+        ],
+        "dynamic_missed_reasons": [
+          "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]"
+        ],
+        "static_problem_reasons": [
+          "value that could not be identified as reduction is used outside the loop"
+        ]
+      },
+      "performance_level": {
+        "available": false,
+        "anti_patterns": []
+      },
+      "code_facts": {
+        "has_runtime_stride": false,
+        "has_indexed_recurrence": false,
+        "has_control_flow": false,
+        "has_indirect_indexing": false,
+        "has_fixed_index_self_read_hazard": false,
+        "has_outer_iterations_loop": true
+      }
+    }
+  },
+  "case_cards": {
+    "case_card_set_version": "experiment_case_cards_v1_20260601",
+    "case_card_format_version": "case_card_format_v1_20260601",
+    "structured_feedback_available": true,
+    "limit": 4,
+    "selected_count": 4,
+    "selected_cards": [
+      {
+        "rank": 1,
+        "score": 10,
+        "id": "imperfect_nested_distribution_interchange",
+        "title": "imperfect nested loop: distribute producer before interchange",
+        "summary": "For imperfectly nested loops where a per-column producer precedes a row recurrence, split the producer first, then interchange the recurrence nest.",
+        "oracle_function": "s235",
+        "oracle_speedup": "oracle_batch7_distribution_control_20260529: ours_full internal correctness passed, 2 vectorized / 0 missed; reduced 3-batch benchmark mean 21.752x / median 22.074x, repeat mean 21.210x / median 21.393x. oracle_s235_distribution_interchange_plain_20260529: llm_plain correctness passed but stayed non-vectorized at 0 vectorized / 2 missed and 1.000x.",
+        "oracle_failure": null,
+        "oracle_verified": "2026-05-29",
+        "semantic_safety": "In s235, each a[i] update is independent and must be completed before every aa[j][i] for the same column reads a[i]. After all a[i] values are produced, the aa recurrence still runs in increasing j order.",
+        "vectorization_rationale": "The transformed aa nest reads row j-1 and writes row j for each fixed j, so the inner i loop is contiguous and independent across columns.",
+        "performance_risk": "This is a protocol-limited strong candidate: the heavy original s235 function can exceed the formal export or benchmark timeout. A mid protocol with warmup=2, timing=5, batches=3 also hit the 120-second per-process benchmark timeout, so evidence should name the reduced 3-batch repeat protocol unless timeout handling is changed.",
+        "oracle_critical_note": "Use s235 as a method-advantage strong candidate under the reduced protocol, not as a completed formal main-table result. The full warmup=3 timing=10 batches=5 export path hit original-function timeout, and a mid warmup=2 timing=5 batches=3 benchmark hit the 120-second process timeout.",
+        "failure_asset": null
+      },
+      {
+        "rank": 2,
+        "score": 7,
+        "id": "partial_vectorization_slowdown_boundary",
+        "title": "partial vectorization boundary: do not accept isolated vectorized fragments",
+        "summary": "For loop-distribution candidates with a true recurrence in the middle, vectorizing the independent fragments is not enough if the recurrence remains scalar and the whole loop slows down.",
+        "oracle_function": "s222",
+        "oracle_speedup": null,
+        "oracle_failure": "oracle_batch1_core_20260522: ours_full passed correctness and vectorized one split loop, but two loops remained missed and the full benchmark slowed to 0.885x mean / 0.887x median.",
+        "oracle_verified": "2026-05-22",
+        "semantic_safety": "The e recurrence depends on the just-produced e[i-1], so ordinary distribution must preserve its sequential order.",
+        "vectorization_rationale": "The a update can become a clean vectorized fragment, but that does not solve the recurrence that dominates the remaining loop.",
+        "performance_risk": "Splitting a loop can add loop overhead, restrict compiler fusion opportunities and leave the expensive scalar recurrence unchanged.",
+        "oracle_critical_note": "Use s222 as a negative routing example: partial vectorization is evidence to inspect, not evidence to accept.",
+        "failure_asset": null
+      },
+      {
+        "rank": 3,
+        "score": 7,
+        "id": "reduction_or_recurrence_boundary",
+        "title": "reduction / recurrence boundary: be conservative",
+        "summary": "Distinguish reductions from true recurrences. Reductions may be exposed explicitly; true recurrences often need a safety policy instead of aggressive rewrites.",
+        "oracle_function": "s321",
+        "oracle_speedup": null,
+        "oracle_failure": "Historical attempts (llm_plain + ours_full, DeepSeek + GLM) produced inf/nan or correctness failures. oracle_probe_s123_s321_20260522 repeated this boundary: all 3 rounds failed correctness, runtime validation reported ret_orig=inf, ret_opt=inf, max_rel=nan, and no benchmark was run.",
+        "oracle_verified": "2026-05-22",
+        "semantic_safety": "The current safe policy is rejection: a[i] depends on the just-updated a[i-1], so ordinary splitting or staging changes semantics.",
+        "vectorization_rationale": "No generic RAG rewrite is recommended; only a proven recurrence solver or closed-form transformation would make vectorization meaningful.",
+        "performance_risk": "Wrong staged rewrites may look vectorized but fail correctness, often with inf/nan behavior in validation.",
+        "oracle_critical_note": null,
+        "failure_asset": "This function should be classified as 'do not rewrite unless a proven recurrence-solver is available'. The correct approach is to leave it for compiler auto-vectorization or manual closed-form derivation, not LLM-driven loop restructuring."
+      },
+      {
+        "rank": 4,
+        "score": 3,
+        "id": "guarded_loop_interchange_invariant_branch",
+        "title": "guarded loop interchange: prove branch invariance first",
+        "summary": "For an if around an inner recurrence loop, interchange can expose independent columns only after the branch condition is proven invariant or safely hoisted.",
+        "oracle_function": "s275",
+        "oracle_speedup": "oracle_batch3_loop_interchange_20260527: ours_full 25.667x mean / 26.344x median, correctness passed, 1 vectorized / 0 missed. oracle_batch3_loop_interchange_plain_20260527: llm_plain got 5.819x mean / 5.950x median but remained non-vectorized.",
+        "oracle_failure": null,
+        "oracle_verified": "2026-05-27",
+        "semantic_safety": "Under the TSVC s275 initialization, aa[0][i] is initialized positive for every i and row 0 is not written by the loop body, so the original guard is true for all updated columns in the measured harness.",
+        "vectorization_rationale": "The plain loop interchange leaves a per-element branch in the inner loop. Hoisting or simplifying the invariant branch gives Clang a branch-free contiguous inner loop.",
+        "performance_risk": "The transformation is benchmark-harness-specific. Without the initialization fact, the safe fallback is to keep the original guard or split guarded columns explicitly.",
+        "oracle_critical_note": "The branch simplification relies on TSVC s275 initializing aa with positive values and never writing aa[0][i]. Do not generalize this card to arbitrary data-dependent branches.",
+        "failure_asset": null
+      }
+    ],
+    "formatted_text": "案例卡 1: imperfect nested loop: distribute producer before interchange\n- 触发原因: For imperfectly nested loops where a per-column producer precedes a row recurrence, split the producer first, then interchange the recurrence nest.\n- 推荐动作:\n  - Identify scalar or 1D producer statements that must run before the nested recurrence consumes them.\n  - Distribute those producer statements into a separate loop if different columns are independent.\n  - Move the recurrence-carrying dimension outside the vectorized loop.\n  - Keep the contiguous independent dimension as the inner loop and verify that every consumed producer value has already been computed.\n- 明确避免:\n  - Do not leave the producer inside the recurrence nest if it prevents interchange.\n  - Do not interchange before proving the producer is available for all columns.\n  - Do not report this as a full formal-protocol result when the heavy original benchmark times out.\n- 代表函数: s235\n- 验证结论: oracle_batch7_distribution_control_20260529: ours_full internal correctness passed, 2 vectorized / 0 missed; reduced 3-batch benchmark mean 21.752x / median 22.074x, repeat mean 21.210x / median 21.393x. oracle_s235_distribution_interchange_plain_20260529: llm_plain correctness passed but stayed non-vectorized at 0 vectorized / 2 missed and 1.000x.\n- 验证日期: 2026-05-29\n- 语义安全理由: In s235, each a[i] update is independent and must be completed before every aa[j][i] for the same column reads a[i]. After all a[i] values are produced, the aa recurrence still runs in increasing j order.\n- 有利于向量化的原因: The transformed aa nest reads row j-1 and writes row j for each fixed j, so the inner i loop is contiguous and independent across columns.\n- 性能风险: This is a protocol-limited strong candidate: the heavy original s235 function can exceed the formal export or benchmark timeout. A mid protocol with warmup=2, timing=5, batches=3 also hit the 120-second per-process benchmark timeout, so evidence should name the reduced 3-batch repeat protocol unless timeout handling is changed.\n- 关键风险约束: Use s235 as a method-advantage strong candidate under the reduced protocol, not as a completed formal main-table result. The full warmup=3 timing=10 batches=5 export path hit original-function timeout, and a mid warmup=2 timing=5 batches=3 benchmark hit the 120-second process timeout.\n- 最小示例 before: for (i) { a[i] += b[i] * c[i]; for (j=1) { aa[j][i] = aa[j-1][i] + bb[j][i] * a[i]; } }\n- 最小示例 after: first vectorize for (i) a[i] += b[i] * c[i]; then for (j=1) vectorize the inner i loop for aa[j][i].\n\n案例卡 2: partial vectorization boundary: do not accept isolated vectorized fragments\n- 触发原因: For loop-distribution candidates with a true recurrence in the middle, vectorizing the independent fragments is not enough if the recurrence remains scalar and the whole loop slows down.\n- 推荐动作:\n  - Separate independent updates only when the remaining scalar recurrence cost is small enough.\n  - Keep true recurrences ordered unless a proven recurrence transformation is available.\n  - Require benchmark evidence after distribution; vectorization remarks alone are not acceptance evidence.\n- 明确避免:\n  - Do not count a candidate as successful only because one split loop is vectorized.\n  - Do not manually unroll a true recurrence and claim that it removes the dependency.\n  - Do not materialize extra temporaries for a low-work loop without a clear reuse benefit.\n- 代表函数: s222\n- 失败证据: oracle_batch1_core_20260522: ours_full passed correctness and vectorized one split loop, but two loops remained missed and the full benchmark slowed to 0.885x mean / 0.887x median.\n- 验证日期: 2026-05-22\n- 语义安全理由: The e recurrence depends on the just-produced e[i-1], so ordinary distribution must preserve its sequential order.\n- 有利于向量化的原因: The a update can become a clean vectorized fragment, but that does not solve the recurrence that dominates the remaining loop.\n- 性能风险: Splitting a loop can add loop overhead, restrict compiler fusion opportunities and leave the expensive scalar recurrence unchanged.\n- 关键风险约束: Use s222 as a negative routing example: partial vectorization is evidence to inspect, not evidence to accept.\n- 最小示例 before: a[i] += b[i] * c[i]; e[i] = e[i - 1] * e[i - 1]; a[i] -= b[i] * c[i];\n- 最小示例 after: If the independent a-update is split out, keep the e-recurrence scalar and accept only if the full candidate is faster than the original.\n\n案例卡 3: reduction / recurrence boundary: be conservative\n- 触发原因: Distinguish reductions from true recurrences. Reductions may be exposed explicitly; true recurrences often need a safety policy instead of aggressive rewrites.\n- 推荐动作:\n  - If it is a classical reduction, make the accumulator explicit and keep ordering concerns visible.\n  - If it is a true recurrence, classify it as unsafe unless a valid algorithmic reformulation is known.\n  - Treat inf/nan behavior as part of the oracle boundary, not just a benchmark detail.\n- 明确避免:\n  - Do NOT mechanically unroll or stage a true recurrence into arrays and call it equivalent.\n  - Do NOT overstate floating-point reorder safety.\n  - Do NOT apply loop distribution or loop splitting to a[i] += a[i-1] * b[i] — this is a first-order linear recurrence and cannot be parallelized by splitting alone.\n  - s321-specific: do NOT attempt to vectorize a[i] += a[i-1] * b[i] via staging arrays, prefix-sum, or block-based schemes without a verified closed-form solution.\n- 代表函数: s321\n- 失败证据: Historical attempts (llm_plain + ours_full, DeepSeek + GLM) produced inf/nan or correctness failures. oracle_probe_s123_s321_20260522 repeated this boundary: all 3 rounds failed correctness, runtime validation reported ret_orig=inf, ret_opt=inf, max_rel=nan, and no benchmark was run.\n- 验证日期: 2026-05-22\n- 语义安全理由: The current safe policy is rejection: a[i] depends on the just-updated a[i-1], so ordinary splitting or staging changes semantics.\n- 有利于向量化的原因: No generic RAG rewrite is recommended; only a proven recurrence solver or closed-form transformation would make vectorization meaningful.\n- 性能风险: Wrong staged rewrites may look vectorized but fail correctness, often with inf/nan behavior in validation.\n- 边界结论: This function should be classified as 'do not rewrite unless a proven recurrence-solver is available'. The correct approach is to leave it for compiler auto-vectorization or manual closed-form derivation, not LLM-driven loop restructuring.\n- 最小示例 before: a[i] += a[i-1] * b[i];\n- 最小示例 after: Keep ordered semantics or reject aggressive rewrite if no proven transformation exists.\n\n案例卡 4: guarded loop interchange: prove branch invariance first\n- 触发原因: For an if around an inner recurrence loop, interchange can expose independent columns only after the branch condition is proven invariant or safely hoisted.\n- 推荐动作:\n  - Prove whether the branch guard changes inside the transformed loop nest.\n  - If the guard is invariant under the benchmark harness, hoist or simplify it before vectorizing the inner loop.\n  - Keep the recurrence-carrying dimension outside the vectorized loop.\n  - Record the harness assumption that makes branch simplification legal.\n- 明确避免:\n  - Do not delete or collapse a branch without an initialization or invariant argument.\n  - Do not move the guard across writes that may change the guarded value.\n  - Do not claim a generic control-flow rule from a TSVC-specific invariant.\n- 代表函数: s275\n- 验证结论: oracle_batch3_loop_interchange_20260527: ours_full 25.667x mean / 26.344x median, correctness passed, 1 vectorized / 0 missed. oracle_batch3_loop_interchange_plain_20260527: llm_plain got 5.819x mean / 5.950x median but remained non-vectorized.\n- 验证日期: 2026-05-27\n- 语义安全理由: Under the TSVC s275 initialization, aa[0][i] is initialized positive for every i and row 0 is not written by the loop body, so the original guard is true for all updated columns in the measured harness.\n- 有利于向量化的原因: The plain loop interchange leaves a per-element branch in the inner loop. Hoisting or simplifying the invariant branch gives Clang a branch-free contiguous inner loop.\n- 性能风险: The transformation is benchmark-harness-specific. Without the initialization fact, the safe fallback is to keep the original guard or split guarded columns explicitly.\n- 关键风险约束: The branch simplification relies on TSVC s275 initializing aa with positive values and never writing aa[0][i]. Do not generalize this card to arbitrary data-dependent branches.\n- 最小示例 before: for (i) { if (aa[0][i] > 0) { for (j=1) { aa[j][i] = aa[j-1][i] + bb[j][i] * cc[j][i]; } } }\n- 最小示例 after: after proving aa[0][i] is positive and unchanged, use j outer / i inner and vectorize the i loop.",
+    "included": true
+  },
+  "system_prompt": "你是 ACPO-LLM（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。\n\n## 你的核心能力\n1. **向量化障碍诊断**：分析代码中阻止编译器向量化的原因\n2. **代码重构**：在不改变语义的前提下，重构代码以消除向量化障碍\n3. **知识应用**：应用常见的向量化优化模式（Loop Distribution, Scalar Promotion 等）\n\n## 你必须遵守的原则\n1. **正确性第一（最重要）**：优化后的代码必须保持与原始代码完全相同的语义，宁可不向量化也不能破坏正确性\n2. **语义等价**：优化后的代码计算结果必须与原始代码一致，会通过校验和验证\n3. **TSVC 兼容性**：代码必须符合 TSVC 测试框架的规范\n4. **可编译性**：生成的代码必须能通过 Clang 编译\n5. **禁止硬编码**：不要硬编码 LEN_1D 等宏的具体数值\n\n## 正确性保证检查清单\n在提交优化后的代码前，请确认：\n- [ ] 所有数组访问都在合法范围内\n- [ ] 循环边界条件与原始代码一致\n- [ ] 浮点运算顺序改变不会影响精度（避免过度重排）\n- [ ] 条件分支的逻辑与原始代码等价\n- [ ] 使用 restrict 时确保指针确实不重叠\n- [ ] 使用了 #pragma vectorize 时确保循环确实是可向量化的\n- [ ] **禁止移动 dummy() 调用**：dummy() 在原始代码中位于哪个循环层级，优化后必须保持在同一层级，不可移出循环\n\n## 高风险改写禁令（必须遵守）\n- **禁止把递推变量直接改成闭式公式**：如果原始代码中存在 `k += ...` / `sum += ...` 这类跨迭代递推，且该变量参与索引、地址或控制逻辑，默认不能直接改成 `k = f(i)`。只有在你能严格保证首项、更新顺序、每轮值序列完全一致时才允许这样做；否则优先使用“预计算数组 + 第二阶段消费”。\n- **禁止折叠外层迭代语义**：不要把 `for (nl = 0; nl < iterations; nl++)` 改写成“乘法放大”“批量累加”或其他一次性聚合形式。每一轮对数组和 `dummy()` 的副作用次数、顺序和层级都必须保持一致。\n- **禁止只针对默认参数取值投机优化**：若循环步长/边界由 `arg_info` 决定（如 `n1/n3`），不要只为 `n3 == 1`、`n1 == 1` 等默认值设计“快路径”而忽略通用情况。任何特化都必须保留对所有参数的通用正确路径。\n- **禁止使用与 TSVC 全局数组同名的局部变量/循环变量**：不要新引入名为 `a/b/c/d/e/aa/bb/cc/tt/x/xx/yy/indx` 的局部变量或循环变量，这会导致遮蔽和编译/语义问题。\n- **禁止把“同数组固定位置读”误当成整轮不变量**：如果循环一边写 `a[i]`，一边读 `a[k]`，且 `i` 可能命中 `k`，那么 `a[k]` 在同一轮后续迭代中可能变化。此时不能把 `a[k]` 整轮外提为标量；若要优化，必须按命中点拆分循环或保留逐迭代读取语义。\n- **如果不确定，选择保守可验证的重构**：优先索引预计算、循环拆分、掩码/条件选择；不要做无法直接证明等价的“聪明”代数化简。\n\n## 你可以使用的技术\n\n### 源码修改技术（当编译器指令无效时使用）\n- **循环拆分（Loop Distribution/Fission）**：将有依赖的语句分离到不同循环\n- **标量提升（Scalar Promotion）**：将标量变量提升为数组元素\n- **索引预计算**：将复杂索引计算提前到单独阶段\n- **循环归一化**：将非规范循环转为标准形式\n- **条件转换**：将 if-else 转为条件选择表达式\n\n### 编译器指令技术（优先尝试，改动最小）\n- **restrict 关键字**：`real_t * __restrict__ ptr = a;` - 消除指针别名顾虑\n- **vectorize pragma**：`#pragma clang loop vectorize(enable)` - 强制向量化\n- **interleave pragma**：`#pragma clang loop interleave(enable)` - 增加指令级并行\n- **width pragma**：`#pragma clang loop vectorize_width(4)` - 指定向量宽度\n\n## 决策优先级\n1. **首先尝试编译器指令**（restrict + pragma）- 改动最小，成功率往往很高\n2. **分析失败原因**：如果是归纳变量/真依赖，必须重构代码\n3. **如果是边界/别名问题**：指令通常有效，无需大规模重构\n\n## 输出格式要求\n1. **策略描述**：首先描述你识别的向量化障碍和采用的优化策略（2-4行）\n2. **代码块**：使用 ```c 和 ``` 包裹优化后的完整函数代码\n3. **只输出函数**：不要包含 main 函数或其他辅助代码\n4. **代码块内只能包含纯 C 代码**：不要在代码块里写中文解释、分析过程、项目符号或额外说明\n5. **禁止省略**：不要输出 `...`、`TODO`、伪代码或“其余部分同上”之类占位内容；必须给出完整可编译函数\n6. **如果不确定**：请返回完整的保守版本函数，也不要返回半截代码或解释性文字代替代码\n\n示例输出格式：\n策略：识别到归纳变量 k 导致的反向索引依赖。采用循环拆分技术，将索引预计算与数据访问分离，并使用 restrict 消除别名顾虑。\n\n```c\n// 优化后的代码\n```\n",
+  "user_prompt": "【函数名】: s235\n【当前轮次】: 第 1 轮 / 共 1 轮\n\n【待优化代码】:\n```c\nreal_t s235(struct args_t * func_args)\n{\n\n//    loop interchanging\n//    imperfectly nested loops\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < 200*(iterations/LEN_2D); nl++) {\n        for (int i = 0; i < LEN_2D; i++) {\n            a[i] += b[i] * c[i];\n            for (int j = 1; j < LEN_2D; j++) {\n                aa[j][i] = aa[j-1][i] + bb[j][i] * a[i];\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}\n```\n\n【向量化失败原因】(2 个问题):\n1. value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]\n2. /tmp/acpo_s235_hsbyjxlw/minimal_s235.c:57:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]\n\n【结构化反馈摘要】:\n- 静态严重度: medium\n- 当前更像的模式族: reduction_or_recurrence\n- compile-level: 可编译\n- vectorization-level: vectorized=0, missed=2, primary blockers=reduction / recurrence boundary\n  - 动态诊断: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]\n  - 静态问题图谱: value that could not be identified as reduction is used outside the loop\n\n【语义安全提示】:\n- 检测到 `dummy()` 位于外层 `nl/iterations` 循环内。禁止改变 dummy() 的调用次数、顺序或循环层级，也不要折叠外层迭代。\n- 若需要重构跨多次 `iterations` 的逻辑，只能做等价的逐轮改写；不要用乘法放大、批量累加或一次性聚合替代多轮副作用。\n\n【类别化案例卡】:\n案例卡 1: imperfect nested loop: distribute producer before interchange\n- 触发原因: For imperfectly nested loops where a per-column producer precedes a row recurrence, split the producer first, then interchange the recurrence nest.\n- 推荐动作:\n  - Identify scalar or 1D producer statements that must run before the nested recurrence consumes them.\n  - Distribute those producer statements into a separate loop if different columns are independent.\n  - Move the recurrence-carrying dimension outside the vectorized loop.\n  - Keep the contiguous independent dimension as the inner loop and verify that every consumed producer value has already been computed.\n- 明确避免:\n  - Do not leave the producer inside the recurrence nest if it prevents interchange.\n  - Do not interchange before proving the producer is available for all columns.\n  - Do not report this as a full formal-protocol result when the heavy original benchmark times out.\n- 代表函数: s235\n- 验证结论: oracle_batch7_distribution_control_20260529: ours_full internal correctness passed, 2 vectorized / 0 missed; reduced 3-batch benchmark mean 21.752x / median 22.074x, repeat mean 21.210x / median 21.393x. oracle_s235_distribution_interchange_plain_20260529: llm_plain correctness passed but stayed non-vectorized at 0 vectorized / 2 missed and 1.000x.\n- 验证日期: 2026-05-29\n- 语义安全理由: In s235, each a[i] update is independent and must be completed before every aa[j][i] for the same column reads a[i]. After all a[i] values are produced, the aa recurrence still runs in increasing j order.\n- 有利于向量化的原因: The transformed aa nest reads row j-1 and writes row j for each fixed j, so the inner i loop is contiguous and independent across columns.\n- 性能风险: This is a protocol-limited strong candidate: the heavy original s235 function can exceed the formal export or benchmark timeout. A mid protocol with warmup=2, timing=5, batches=3 also hit the 120-second per-process benchmark timeout, so evidence should name the reduced 3-batch repeat protocol unless timeout handling is changed.\n- 关键风险约束: Use s235 as a method-advantage strong candidate under the reduced protocol, not as a completed formal main-table result. The full warmup=3 timing=10 batches=5 export path hit original-function timeout, and a mid warmup=2 timing=5 batches=3 benchmark hit the 120-second process timeout.\n- 最小示例 before: for (i) { a[i] += b[i] * c[i]; for (j=1) { aa[j][i] = aa[j-1][i] + bb[j][i] * a[i]; } }\n- 最小示例 after: first vectorize for (i) a[i] += b[i] * c[i]; then for (j=1) vectorize the inner i loop for aa[j][i].\n\n案例卡 2: partial vectorization boundary: do not accept isolated vectorized fragments\n- 触发原因: For loop-distribution candidates with a true recurrence in the middle, vectorizing the independent fragments is not enough if the recurrence remains scalar and the whole loop slows down.\n- 推荐动作:\n  - Separate independent updates only when the remaining scalar recurrence cost is small enough.\n  - Keep true recurrences ordered unless a proven recurrence transformation is available.\n  - Require benchmark evidence after distribution; vectorization remarks alone are not acceptance evidence.\n- 明确避免:\n  - Do not count a candidate as successful only because one split loop is vectorized.\n  - Do not manually unroll a true recurrence and claim that it removes the dependency.\n  - Do not materialize extra temporaries for a low-work loop without a clear reuse benefit.\n- 代表函数: s222\n- 失败证据: oracle_batch1_core_20260522: ours_full passed correctness and vectorized one split loop, but two loops remained missed and the full benchmark slowed to 0.885x mean / 0.887x median.\n- 验证日期: 2026-05-22\n- 语义安全理由: The e recurrence depends on the just-produced e[i-1], so ordinary distribution must preserve its sequential order.\n- 有利于向量化的原因: The a update can become a clean vectorized fragment, but that does not solve the recurrence that dominates the remaining loop.\n- 性能风险: Splitting a loop can add loop overhead, restrict compiler fusion opportunities and leave the expensive scalar recurrence unchanged.\n- 关键风险约束: Use s222 as a negative routing example: partial vectorization is evidence to inspect, not evidence to accept.\n- 最小示例 before: a[i] += b[i] * c[i]; e[i] = e[i - 1] * e[i - 1]; a[i] -= b[i] * c[i];\n- 最小示例 after: If the independent a-update is split out, keep the e-recurrence scalar and accept only if the full candidate is faster than the original.\n\n案例卡 3: reduction / recurrence boundary: be conservative\n- 触发原因: Distinguish reductions from true recurrences. Reductions may be exposed explicitly; true recurrences often need a safety policy instead of aggressive rewrites.\n- 推荐动作:\n  - If it is a classical reduction, make the accumulator explicit and keep ordering concerns visible.\n  - If it is a true recurrence, classify it as unsafe unless a valid algorithmic reformulation is known.\n  - Treat inf/nan behavior as part of the oracle boundary, not just a benchmark detail.\n- 明确避免:\n  - Do NOT mechanically unroll or stage a true recurrence into arrays and call it equivalent.\n  - Do NOT overstate floating-point reorder safety.\n  - Do NOT apply loop distribution or loop splitting to a[i] += a[i-1] * b[i] — this is a first-order linear recurrence and cannot be parallelized by splitting alone.\n  - s321-specific: do NOT attempt to vectorize a[i] += a[i-1] * b[i] via staging arrays, prefix-sum, or block-based schemes without a verified closed-form solution.\n- 代表函数: s321\n- 失败证据: Historical attempts (llm_plain + ours_full, DeepSeek + GLM) produced inf/nan or correctness failures. oracle_probe_s123_s321_20260522 repeated this boundary: all 3 rounds failed correctness, runtime validation reported ret_orig=inf, ret_opt=inf, max_rel=nan, and no benchmark was run.\n- 验证日期: 2026-05-22\n- 语义安全理由: The current safe policy is rejection: a[i] depends on the just-updated a[i-1], so ordinary splitting or staging changes semantics.\n- 有利于向量化的原因: No generic RAG rewrite is recommended; only a proven recurrence solver or closed-form transformation would make vectorization meaningful.\n- 性能风险: Wrong staged rewrites may look vectorized but fail correctness, often with inf/nan behavior in validation.\n- 边界结论: This function should be classified as 'do not rewrite unless a proven recurrence-solver is available'. The correct approach is to leave it for compiler auto-vectorization or manual closed-form derivation, not LLM-driven loop restructuring.\n- 最小示例 before: a[i] += a[i-1] * b[i];\n- 最小示例 after: Keep ordered semantics or reject aggressive rewrite if no proven transformation exists.\n\n案例卡 4: guarded loop interchange: prove branch invariance first\n- 触发原因: For an if around an inner recurrence loop, interchange can expose independent columns only after the branch condition is proven invariant or safely hoisted.\n- 推荐动作:\n  - Prove whether the branch guard changes inside the transformed loop nest.\n  - If the guard is invariant under the benchmark harness, hoist or simplify it before vectorizing the inner loop.\n  - Keep the recurrence-carrying dimension outside the vectorized loop.\n  - Record the harness assumption that makes branch simplification legal.\n- 明确避免:\n  - Do not delete or collapse a branch without an initialization or invariant argument.\n  - Do not move the guard across writes that may change the guarded value.\n  - Do not claim a generic control-flow rule from a TSVC-specific invariant.\n- 代表函数: s275\n- 验证结论: oracle_batch3_loop_interchange_20260527: ours_full 25.667x mean / 26.344x median, correctness passed, 1 vectorized / 0 missed. oracle_batch3_loop_interchange_plain_20260527: llm_plain got 5.819x mean / 5.950x median but remained non-vectorized.\n- 验证日期: 2026-05-27\n- 语义安全理由: Under the TSVC s275 initialization, aa[0][i] is initialized positive for every i and row 0 is not written by the loop body, so the original guard is true for all updated columns in the measured harness.\n- 有利于向量化的原因: The plain loop interchange leaves a per-element branch in the inner loop. Hoisting or simplifying the invariant branch gives Clang a branch-free contiguous inner loop.\n- 性能风险: The transformation is benchmark-harness-specific. Without the initialization fact, the safe fallback is to keep the original guard or split guarded columns explicitly.\n- 关键风险约束: The branch simplification relies on TSVC s275 initializing aa with positive values and never writing aa[0][i]. Do not generalize this card to arbitrary data-dependent branches.\n- 最小示例 before: for (i) { if (aa[0][i] > 0) { for (j=1) { aa[j][i] = aa[j-1][i] + bb[j][i] * cc[j][i]; } } }\n- 最小示例 after: after proving aa[0][i] is positive and unchanged, use j outer / i inner and vectorize the i loop.\n\n【向量化知识库参考】:\n============================================================\n【深度诊断分析】\n============================================================\n\n问题 1: /tmp/acpo_s235_hsbyjxlw/minimal_s235.c:58:28: remark: loop not vectorized: value...\n  根因: 未知原因: /tmp/acpo_s235_hsbyjxlw/minimal_s235.c:58:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]\n  类别: unknown\n  解决类型: source_change\n  成功概率: unknown\n\n  推荐方案:\n    1. 尝试使用 pragma 强制向量化\n       代码: #pragma clang loop vectorize(enable)\n       成功率: unknown\n\n【编译器指令】: 可尝试 #pragma clang loop vectorize(enable)\n\n\n【决策流程】:\n1. 首先尝试编译器指令（pragma）- 改动最小\n2. 如果 pragma 无效，分析是否需要源码修改\n3. 对于归纳变量/真依赖问题，必须重构代码\n4. 对于别名/边界问题，pragma + restrict 通常有效\n\n【编译选项建议】:\n确保使用 -O3 -march=native 编译以启用所有优化\n\n\n【快速修复建议（按成功率排序）】:\n  1. general_pragma (成功率: unknown)\n     示例: #pragma clang loop vectorize(enable)\n\n【你的任务】:\n分析上述代码的向量化障碍，应用适当的优化技术，输出优化后的代码。\n如果存在递推变量、参数化步长或 dummy() 语义风险，优先使用可验证的保守重构，不要做未经证明的闭式化简或批量折叠。\n\n请输出优化策略和完整代码：\n- 先给 2-4 行策略说明，再给一个 ```c 代码块\n- 代码块内只能包含纯 C 代码，禁止夹带解释文字\n- 不要输出 `...`、`TODO`、伪代码或半截函数\n- 如果不确定优化是否成立，返回完整保守版本函数，不要只给分析"
+}

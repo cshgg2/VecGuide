@@ -1,0 +1,18 @@
+{
+  "strategy": "case_card_only",
+  "exit_code": 0,
+  "total_functions": 2,
+  "status_counts": {
+    "success": 2
+  },
+  "observed_outcome_counts": {
+    "vectorized_speedup": 2
+  },
+  "correctness_passed": 2,
+  "fully_vectorized": 2,
+  "benchmark_success_count": 2,
+  "avg_speedup": 12.789333333333332,
+  "median_speedup": 12.789333333333332,
+  "avg_improvement_pct": 1178.9333333333334,
+  "negative_optimization_count": 0
+}

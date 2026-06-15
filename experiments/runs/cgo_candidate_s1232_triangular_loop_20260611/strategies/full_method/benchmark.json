@@ -1,0 +1,44 @@
+{
+  "strategy": "full_method",
+  "results": {
+    "s1232": {
+      "success": false,
+      "func_name": "s1232",
+      "protocol_name": "formal",
+      "protocol_role": "formal_main_table",
+      "protocol_display_name": "formal(warmup=3,timing=10,batches=5)",
+      "paper_main_table_eligible": true,
+      "batch_count": 0,
+      "warmup_runs": 3,
+      "timing_runs": 10,
+      "batches": [],
+      "arg_cases": [
+        {
+          "a": 1,
+          "b": 1
+        }
+      ],
+      "arg_case_results": [],
+      "arg_case_count": 1,
+      "sample_count": 0,
+      "benchmark_scope": "batches_only",
+      "original_time_ms": null,
+      "optimized_time_ms": null,
+      "speedup": null,
+      "improvement_pct": null,
+      "original_time_median_ms": null,
+      "optimized_time_median_ms": null,
+      "speedup_median": null,
+      "improvement_pct_median": null,
+      "original_time_stddev_ms": null,
+      "optimized_time_stddev_ms": null,
+      "speedup_stddev": null,
+      "improvement_pct_stddev": null,
+      "error": "运行时错误: Command '['/tmp/tmpchtoemds', '1', '1']' timed out after 120 seconds",
+      "benchmark_protocol": "formal",
+      "benchmark_protocol_role": "formal_main_table",
+      "benchmark_protocol_display": "formal(warmup=3,timing=10,batches=5)",
+      "benchmark_protocol_warning": null
+    }
+  }
+}

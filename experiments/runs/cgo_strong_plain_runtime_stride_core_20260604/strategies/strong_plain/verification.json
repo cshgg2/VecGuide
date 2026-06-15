@@ -1,0 +1,240 @@
+{
+  "strategy": "strong_plain",
+  "results": {
+    "s172": {
+      "func_name": "s172",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": false,
+        "error": "[n1=1, n3=1] CHECKSUM 不匹配: 原始=51205480906752.000000, 优化=512202880.000000, diff=51204968703872.000000, tol=512054809.067520",
+        "original_checksum": null,
+        "optimized_checksum": null,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "a": 3,
+            "b": 4
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 51205480906752.0,
+            "optimized_checksum": 512202880.0,
+            "original_state_metrics": {
+              "STATE_SUM": 51207686840601.06,
+              "STATE_ABS_SUM": 51207692432921.06,
+              "STATE_WEIGHTED_SUM": 1.0924379571454372e+18
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 2829155042.056498,
+              "STATE_ABS_SUM": 2834747362.056498,
+              "STATE_WEIGHTED_SUM": 66442541089923.63
+            },
+            "equivalent": false,
+            "error": "CHECKSUM 不匹配: 原始=51205480906752.000000, 优化=512202880.000000, diff=51204968703872.000000, tol=512054809.067520"
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": false,
+        "error": null,
+        "details": []
+      },
+      "overall": false
+    },
+    "s1113": {
+      "func_name": "s1113",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 102633989734400.0,
+        "optimized_checksum": 102633989734400.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 102633989734400.0,
+            "optimized_checksum": 102633989734400.0,
+            "original_state_metrics": {
+              "STATE_SUM": 102672669354786.05,
+              "STATE_ABS_SUM": 102672674947106.05,
+              "STATE_WEIGHTED_SUM": 1.6428372883303613e+18
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 102672411322914.05,
+              "STATE_ABS_SUM": 102672416915234.05,
+              "STATE_WEIGHTED_SUM": 1.6428310953053696e+18
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": false,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=1024945618944.000000 ret_opt=1024907214848.000000 max_rel=3.73e-04 FAIL",
+          "[n1=1, n3=1] TEST1: ret_orig=1024945618944.000000 ret_opt=1024907214848.000000 max_rel=3.73e-04 FAIL",
+          "[n1=1, n3=1] TEST2: ret_orig=1024945618944.000000 ret_opt=1024907214848.000000 max_rel=3.73e-04 FAIL",
+          "[n1=1, n3=1] PASSED 0/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": false
+    },
+    "s122": {
+      "func_name": "s122",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 51205623513088.0,
+        "optimized_checksum": 51205623513088.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 2,
+            "b": 2
+          },
+          {
+            "a": 4,
+            "b": 3
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 51205623513088.0,
+            "optimized_checksum": 51205623513088.0,
+            "original_state_metrics": {
+              "STATE_SUM": 51207686847235.06,
+              "STATE_ABS_SUM": 51207692439555.06,
+              "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 51207686847235.06,
+              "STATE_ABS_SUM": 51207692439555.06,
+              "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 2,
+              "b": 2
+            },
+            "original_checksum": 38403244556288.0,
+            "optimized_checksum": 38403244556288.0,
+            "original_state_metrics": {
+              "STATE_SUM": 38405272388898.06,
+              "STATE_ABS_SUM": 38405277981218.06,
+              "STATE_WEIGHTED_SUM": 5.462750743697464e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 38405272388898.06,
+              "STATE_ABS_SUM": 38405277981218.06,
+              "STATE_WEIGHTED_SUM": 5.462750743697464e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 4,
+              "b": 3
+            },
+            "original_checksum": 28445065084928.0,
+            "optimized_checksum": 28445065084928.0,
+            "original_state_metrics": {
+              "STATE_SUM": 28447539472675.055,
+              "STATE_ABS_SUM": 28447545064995.055,
+              "STATE_WEIGHTED_SUM": 4.248876954476813e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 28447539472675.055,
+              "STATE_ABS_SUM": 28447545064995.055,
+              "STATE_WEIGHTED_SUM": 4.248876954476813e+17
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3",
+          "[n1=2, n3=2] TEST0: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] TEST1: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] TEST2: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] PASSED 3/3",
+          "[n1=4, n3=3] TEST0: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] TEST1: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] TEST2: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 2,
+            "b": 2
+          },
+          {
+            "a": 4,
+            "b": 3
+          }
+        ]
+      },
+      "overall": true
+    }
+  }
+}

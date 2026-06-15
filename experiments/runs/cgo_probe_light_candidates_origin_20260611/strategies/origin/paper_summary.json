@@ -1,0 +1,19 @@
+{
+  "strategy": "origin",
+  "exit_code": 0,
+  "total_functions": 8,
+  "status_counts": {
+    "origin_baseline": 8
+  },
+  "observed_outcome_counts": {
+    "origin_vectorized_baseline": 6,
+    "origin_not_vectorized_baseline": 2
+  },
+  "correctness_passed": 8,
+  "fully_vectorized": 6,
+  "benchmark_success_count": 8,
+  "avg_speedup": null,
+  "median_speedup": null,
+  "avg_improvement_pct": null,
+  "negative_optimization_count": 0
+}

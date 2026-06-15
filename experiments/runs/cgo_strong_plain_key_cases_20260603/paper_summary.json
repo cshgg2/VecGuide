@@ -1,0 +1,45 @@
+{
+  "run_id": "cgo_strong_plain_key_cases_20260603",
+  "timestamp": "2026-06-04T00:15:24.059888",
+  "total_rows": 5,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 5,
+        "status_counts": {
+          "failed": 2,
+          "success": 3
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_flat": 1,
+          "benchmark_failed": 1,
+          "non_vectorized_speedup": 1,
+          "vectorized_speedup": 2
+        },
+        "correctness_passed": 5,
+        "fully_vectorized": 3,
+        "benchmark_success_count": 4,
+        "avg_speedup": 3.036145,
+        "median_speedup": 2.55115,
+        "avg_improvement_pct": 203.6145,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_strong_plain_key_cases_20260603/strategies/strong_plain/paper_summary.json"
+    }
+  ]
+}

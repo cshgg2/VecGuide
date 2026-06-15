@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "run_id": "cgo_strong_plain_timeout_candidates_20260604",
+  "timestamp": "2026-06-04T16:46:06.668468",
+  "strategies": [
+    {
+      "name": "strong_plain",
+      "publication_name": "strong_plain",
+      "implementation_status": "ready",
+      "paper_role": "公平强基础大模型基线。",
+      "prompt_version": "strong_plain_v1_20260601",
+      "legacy_name": null,
+      "description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+      "optimizer_enabled": true,
+      "single_round": true,
+      "max_rounds": 1,
+      "prompt_options": {
+        "system_prompt_profile": "strong_plain",
+        "include_strong_baseline_guidance": true,
+        "include_diagnostics": false,
+        "include_structured_feedback": false,
+        "include_semantic_hints": false,
+        "include_knowledge": false,
+        "include_examples": false,
+        "include_history": false,
+        "include_progress_analysis": false,
+        "use_multi_round_system_prompt": false
+      },
+      "performance_guard": {
+        "enabled": false,
+        "min_median_speedup": 0.8,
+        "min_mean_speedup": 0.8
+      }
+    }
+  ]
+}

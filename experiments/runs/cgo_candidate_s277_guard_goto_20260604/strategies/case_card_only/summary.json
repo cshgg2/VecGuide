@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-06-04T23:02:23.949224",
+  "strategy": "case_card_only",
+  "strategy_description": "投稿版案例卡基线：保留诊断驱动的案例卡/知识库约束，但只做单轮，不使用历史反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s277"
+  ],
+  "results": [
+    {
+      "function": "s277",
+      "strategy": "case_card_only",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 3,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s277(struct args_t * func_args)\n{\n\n//    control flow\n//    test for dependences arising from guard variable computation.\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < iterations; nl++) {\n        for (int i = 0; i < LEN_1D-1; i++) {\n                int l20_reached = 0;\n                int l30_reached = 0;\n\n                if (a[i] >= (real_t)0.) {\n                    l20_reached = 1;\n                }\n                if (!l20_reached && b[i] >= (real_t)0.) {\n                    l30_reached = 1;\n                }\n                if (!l20_reached && !l30_reached) {\n                    a[i] += c[i] * d[i];\n                }\n                if (!l20_reached) {\n                    b[i+1] = c[i] + d[i] * e[i];\n                }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 3,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "reason": "could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "trip_count_bounds"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "reason": "could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "trip_count_bounds"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s277_4wxnw715/minimal_s277.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "recurrence_reduction",
+            "trip_count_bounds",
+            "other"
+          ],
+          "analysis_categories": [
+            "recurrence_reduction",
+            "trip_count_bounds",
+            "other"
+          ],
+          "all_categories": [
+            "recurrence_reduction",
+            "trip_count_bounds",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s277",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 512002944.0,
+          "optimized_checksum": 512002944.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512002944.0,
+              "optimized_checksum": 512002944.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828955042.056498,
+                "STATE_ABS_SUM": 2834547362.056498,
+                "STATE_WEIGHTED_SUM": 66442540889923.63
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828955042.056498,
+                "STATE_ABS_SUM": 2834547362.056498,
+                "STATE_WEIGHTED_SUM": 66442540889923.63
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

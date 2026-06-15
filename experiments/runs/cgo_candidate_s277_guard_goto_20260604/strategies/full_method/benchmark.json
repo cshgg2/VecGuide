@@ -1,0 +1,15 @@
+{
+  "strategy": "full_method",
+  "results": {
+    "s277": {
+      "func_name": "s277",
+      "success": false,
+      "error": "轻量 benchmark 显示明显负优化： median=0.563x, mean=0.563x， 低于守护阈值 median<0.80x 且 mean<0.80x",
+      "benchmark_protocol": "formal",
+      "benchmark_protocol_role": "formal_main_table",
+      "benchmark_protocol_display": "formal(warmup=3,timing=10,batches=5)",
+      "paper_main_table_eligible": true,
+      "benchmark_protocol_warning": null
+    }
+  }
+}

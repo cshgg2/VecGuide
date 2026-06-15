@@ -1,0 +1,307 @@
+{
+  "strategy": "diagnostic_only",
+  "results": {
+    "s172": {
+      "func_name": "s172",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 51205480906752.0,
+        "optimized_checksum": 51205480906752.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "a": 3,
+            "b": 4
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 51205480906752.0,
+            "optimized_checksum": 51205480906752.0,
+            "original_state_metrics": {
+              "STATE_SUM": 51207686840601.06,
+              "STATE_ABS_SUM": 51207692432921.06,
+              "STATE_WEIGHTED_SUM": 1.0924379571454372e+18
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 51207686840601.06,
+              "STATE_ABS_SUM": 51207692432921.06,
+              "STATE_WEIGHTED_SUM": 1.0924379571454372e+18
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 2
+            },
+            "original_checksum": 25601958215680.0,
+            "optimized_checksum": 25601958215680.0,
+            "original_state_metrics": {
+              "STATE_SUM": 25604458036945.055,
+              "STATE_ABS_SUM": 25604463629265.055,
+              "STATE_WEIGHTED_SUM": 5.4622659552038694e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 25604458036945.055,
+              "STATE_ABS_SUM": 25604463629265.055,
+              "STATE_WEIGHTED_SUM": 5.4622659552038694e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 3,
+              "b": 4
+            },
+            "original_checksum": 12801736179712.0,
+            "optimized_checksum": 12801736179712.0,
+            "original_state_metrics": {
+              "STATE_SUM": 12804443581545.057,
+              "STATE_ABS_SUM": 12804449173865.057,
+              "STATE_WEIGHTED_SUM": 2.7317211505719942e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 12804443581545.057,
+              "STATE_ABS_SUM": 12804449173865.057,
+              "STATE_WEIGHTED_SUM": 2.7317211505719942e+17
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=512560005120.000000 ret_opt=512560005120.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=512560005120.000000 ret_opt=512560005120.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=512560005120.000000 ret_opt=512560005120.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3",
+          "[n1=1, n3=2] TEST0: ret_orig=256539967488.000000 ret_opt=256539967488.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=2] TEST1: ret_orig=256539967488.000000 ret_opt=256539967488.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=2] TEST2: ret_orig=256539967488.000000 ret_opt=256539967488.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=2] PASSED 3/3",
+          "[n1=3, n3=4] TEST0: ret_orig=128527876096.000000 ret_opt=128527876096.000000 max_rel=0.00e+00 PASS",
+          "[n1=3, n3=4] TEST1: ret_orig=128527876096.000000 ret_opt=128527876096.000000 max_rel=0.00e+00 PASS",
+          "[n1=3, n3=4] TEST2: ret_orig=128527876096.000000 ret_opt=128527876096.000000 max_rel=0.00e+00 PASS",
+          "[n1=3, n3=4] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 1,
+            "b": 2
+          },
+          {
+            "a": 3,
+            "b": 4
+          }
+        ]
+      },
+      "overall": true
+    },
+    "s1113": {
+      "func_name": "s1113",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 102633989734400.0,
+        "optimized_checksum": 102633989734400.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 102633989734400.0,
+            "optimized_checksum": 102633989734400.0,
+            "original_state_metrics": {
+              "STATE_SUM": 102672669354786.05,
+              "STATE_ABS_SUM": 102672674947106.05,
+              "STATE_WEIGHTED_SUM": 1.6428372883303613e+18
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 102672411322914.05,
+              "STATE_ABS_SUM": 102672416915234.05,
+              "STATE_WEIGHTED_SUM": 1.6428310953053696e+18
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": false,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=1024945618944.000000 ret_opt=1024907214848.000000 max_rel=3.73e-04 FAIL",
+          "[n1=1, n3=1] TEST1: ret_orig=1024945618944.000000 ret_opt=1024907214848.000000 max_rel=3.73e-04 FAIL",
+          "[n1=1, n3=1] TEST2: ret_orig=1024945618944.000000 ret_opt=1024907214848.000000 max_rel=3.73e-04 FAIL",
+          "[n1=1, n3=1] PASSED 0/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": false
+    },
+    "s122": {
+      "func_name": "s122",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 51205623513088.0,
+        "optimized_checksum": 51205623513088.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 2,
+            "b": 2
+          },
+          {
+            "a": 4,
+            "b": 3
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 51205623513088.0,
+            "optimized_checksum": 51205623513088.0,
+            "original_state_metrics": {
+              "STATE_SUM": 51207686847235.06,
+              "STATE_ABS_SUM": 51207692439555.06,
+              "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 51207686847235.06,
+              "STATE_ABS_SUM": 51207692439555.06,
+              "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 2,
+              "b": 2
+            },
+            "original_checksum": 38403244556288.0,
+            "optimized_checksum": 38403244556288.0,
+            "original_state_metrics": {
+              "STATE_SUM": 38405272388898.06,
+              "STATE_ABS_SUM": 38405277981218.06,
+              "STATE_WEIGHTED_SUM": 5.462750743697464e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 38405272388898.06,
+              "STATE_ABS_SUM": 38405277981218.06,
+              "STATE_WEIGHTED_SUM": 5.462750743697464e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 4,
+              "b": 3
+            },
+            "original_checksum": 28445065084928.0,
+            "optimized_checksum": 28445065084928.0,
+            "original_state_metrics": {
+              "STATE_SUM": 28447539472675.055,
+              "STATE_ABS_SUM": 28447545064995.055,
+              "STATE_WEIGHTED_SUM": 4.248876954476813e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 28447539472675.055,
+              "STATE_ABS_SUM": 28447545064995.055,
+              "STATE_WEIGHTED_SUM": 4.248876954476813e+17
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3",
+          "[n1=2, n3=2] TEST0: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] TEST1: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] TEST2: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] PASSED 3/3",
+          "[n1=4, n3=3] TEST0: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] TEST1: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] TEST2: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 2,
+            "b": 2
+          },
+          {
+            "a": 4,
+            "b": 3
+          }
+        ]
+      },
+      "overall": true
+    }
+  }
+}

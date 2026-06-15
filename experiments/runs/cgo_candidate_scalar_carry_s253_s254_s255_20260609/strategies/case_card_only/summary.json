@@ -1,0 +1,258 @@
+{
+  "timestamp": "2026-06-09T16:59:12.963830",
+  "strategy": "case_card_only",
+  "strategy_description": "投稿版案例卡基线：保留诊断驱动的案例卡/知识库约束，但只做单轮，不使用历史反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s253",
+    "s254",
+    "s255"
+  ],
+  "results": [
+    {
+      "function": "s253",
+      "strategy": "case_card_only",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s253(struct args_t * func_args)\n{\n\n//    scalar and array expansion\n//    scalar expansio assigned under if\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    real_t s;\n    for (int nl = 0; nl < iterations; nl++) {\n        for (int i = 0; i < LEN_1D; i++) {\n            real_t cond_val = a[i] - b[i] * d[i];\n            if (a[i] > b[i]) {\n                s = cond_val;\n                c[i] += s;\n                a[i] = s;\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s253_wzc_up5f/minimal_s253.c:56:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+            "/tmp/acpo_s253_wzc_up5f/minimal_s253.c:56:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s253_wzc_up5f/minimal_s253.c:56:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+              "line": 56,
+              "column": 9,
+              "message": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+              "reason": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s253_wzc_up5f/minimal_s253.c:56:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+              "line": 56,
+              "column": 9,
+              "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+              "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s253",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 512002944.0,
+          "optimized_checksum": 512002944.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512002944.0,
+              "optimized_checksum": 512002944.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828955042.056498,
+                "STATE_ABS_SUM": 2834547362.056498,
+                "STATE_WEIGHTED_SUM": 66442540889923.63
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828955042.056498,
+                "STATE_ABS_SUM": 2834547362.056498,
+                "STATE_WEIGHTED_SUM": 66442540889923.63
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    },
+    {
+      "function": "s254",
+      "strategy": "case_card_only",
+      "status": "skipped",
+      "success": false,
+      "partial": false,
+      "skipped": true,
+      "rounds": 0,
+      "best_round": null,
+      "final_code": "real_t s254(struct args_t * func_args)\n{\n\n//    scalar and array expansion\n//    carry around variable\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    real_t x;\n    for (int nl = 0; nl < 4*iterations; nl++) {\n        x = b[LEN_1D-1];\n        for (int i = 0; i < LEN_1D; i++) {\n            a[i] = (b[i] + x) * (real_t).5;\n            x = b[i];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s254_69271fhs/minimal_s254.c:57:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s254_69271fhs/minimal_s254.c:57:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s254_69271fhs/minimal_s254.c:57:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 57,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s254_69271fhs/minimal_s254.c:57:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 57,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s254",
+        "overall": true
+      }
+    },
+    {
+      "function": "s255",
+      "strategy": "case_card_only",
+      "status": "skipped",
+      "success": false,
+      "partial": false,
+      "skipped": true,
+      "rounds": 0,
+      "best_round": null,
+      "final_code": "real_t s255(struct args_t * func_args)\n{\n\n//    scalar and array expansion\n//    carry around variables, 2 levels\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    real_t x, y;\n    for (int nl = 0; nl < iterations; nl++) {\n        x = b[LEN_1D-1];\n        y = b[LEN_1D-2];\n        for (int i = 0; i < LEN_1D; i++) {\n            a[i] = (b[i] + x + y) * (real_t).333;\n            y = x;\n            x = b[i];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s255_jk5736zc/minimal_s255.c:58:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s255_jk5736zc/minimal_s255.c:58:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s255_jk5736zc/minimal_s255.c:58:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 58,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s255_jk5736zc/minimal_s255.c:58:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 58,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s255",
+        "overall": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "run_id": "cgo_probe_boundary_candidates_origin_20260611",
+  "timestamp": "2026-06-11T17:42:36.887932",
+  "total_rows": 6,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 6,
+        "status_counts": {
+          "origin_baseline": 6
+        },
+        "observed_outcome_counts": {
+          "origin_not_vectorized_baseline": 5,
+          "origin_benchmark_failed": 1
+        },
+        "correctness_passed": 6,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 5,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_boundary_candidates_origin_20260611/strategies/origin/paper_summary.json"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-04T17:50:09.247868",
+      "function": "s115",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/prompt_snapshot/s115/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/prompt_snapshot/s115/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/prompt_snapshot/s115/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "triangular_saxpy_inner_loop_scalarization",
+        "loop_peeling_fixed_source_scalarization",
+        "node_splitting_true_anti_dependency",
+        "loop_distribution_dependency_isolation"
+      ]
+    },
+    {
+      "timestamp": "2026-06-04T17:50:51.316405",
+      "function": "s235",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/prompt_snapshot/s235/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/prompt_snapshot/s235/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/prompt_snapshot/s235/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "imperfect_nested_distribution_interchange",
+        "partial_vectorization_slowdown_boundary",
+        "reduction_or_recurrence_boundary",
+        "guarded_loop_interchange_invariant_branch"
+      ]
+    }
+  ]
+}

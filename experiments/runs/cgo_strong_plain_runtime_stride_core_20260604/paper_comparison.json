@@ -1,0 +1,140 @@
+{
+  "run_id": "cgo_strong_plain_runtime_stride_core_20260604",
+  "timestamp": "2026-06-04T11:42:03.202678",
+  "strategies": [
+    "strong_plain"
+  ],
+  "total_functions": 3,
+  "outcome_counts_by_strategy": {
+    "strong_plain": {
+      "correctness_failed": 2,
+      "non_vectorized_slowdown": 1
+    }
+  },
+  "pairwise_summaries": [],
+  "functions": [
+    {
+      "function": "s1113",
+      "severity": "medium",
+      "problem_count": 1,
+      "line_range": [
+        172,
+        193
+      ],
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": "medium",
+          "problem_count": 1,
+          "status": "failed",
+          "correctness_overall": false,
+          "analysis_vectorized": true,
+          "analysis_vectorized_count": 1,
+          "analysis_missed_count": 0,
+          "benchmark_success": false,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": null,
+          "speedup_median": null,
+          "speedup_stddev": null,
+          "improvement_pct": null,
+          "observed_outcome": "correctness_failed",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": "正确性验证失败"
+        }
+      },
+      "pairwise": {}
+    },
+    {
+      "function": "s122",
+      "severity": "high",
+      "problem_count": 3,
+      "line_range": [
+        384,
+        414
+      ],
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": "high",
+          "problem_count": 3,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 5,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 0.35076,
+          "speedup_median": 0.348,
+          "speedup_stddev": 0.0703267861994479,
+          "improvement_pct": -64.924,
+          "observed_outcome": "non_vectorized_slowdown",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        }
+      },
+      "pairwise": {}
+    },
+    {
+      "function": "s172",
+      "severity": "high",
+      "problem_count": 3,
+      "line_range": [
+        824,
+        848
+      ],
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": "high",
+          "problem_count": 3,
+          "status": "failed",
+          "correctness_overall": false,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 5,
+          "benchmark_success": false,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": null,
+          "speedup_median": null,
+          "speedup_stddev": null,
+          "improvement_pct": null,
+          "observed_outcome": "correctness_failed",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": "[n1=1, n3=1] CHECKSUM 不匹配: 原始=51205480906752.000000, 优化=512202880.000000, diff=51204968703872.000000, tol=512054809.067520",
+          "error": "[n1=1, n3=1] CHECKSUM 不匹配: 原始=51205480906752.000000, 优化=512202880.000000, diff=51204968703872.000000, tol=512054809.067520"
+        }
+      },
+      "pairwise": {}
+    }
+  ]
+}

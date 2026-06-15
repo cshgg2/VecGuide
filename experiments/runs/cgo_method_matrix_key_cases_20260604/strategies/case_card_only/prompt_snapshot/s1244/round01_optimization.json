@@ -1,0 +1,222 @@
+{
+  "snapshot_schema_version": 1,
+  "timestamp": "2026-06-04T10:24:54.943535",
+  "function": "s1244",
+  "strategy": "case_card_only",
+  "publication_name": "case_card_only",
+  "paper_role": "案例卡约束消融基线。",
+  "prompt_version": "case_card_only_v1_20260601",
+  "round": 1,
+  "max_rounds": 1,
+  "prompt_kind": "optimization",
+  "prompt_options": {
+    "system_prompt_profile": "method",
+    "include_strong_baseline_guidance": false,
+    "include_diagnostics": true,
+    "include_structured_feedback": true,
+    "include_semantic_hints": true,
+    "include_knowledge": true,
+    "include_examples": false,
+    "include_history": false,
+    "include_progress_analysis": false,
+    "use_multi_round_system_prompt": false
+  },
+  "template_versions": {
+    "method_system": "method_system_v1_20260601",
+    "strong_plain_system": "strong_plain_system_v1_20260601",
+    "multi_round_system": "multi_round_system_v1_20260601",
+    "optimization_user": "optimization_user_v1_20260601",
+    "retry_prompt": "retry_prompt_v1_20260601",
+    "structured_feedback_format": "structured_feedback_v1_20260601"
+  },
+  "system_prompt_template": {
+    "name": "method_system",
+    "version": "method_system_v1_20260601"
+  },
+  "user_prompt_template": {
+    "name": "optimization_user",
+    "version": "optimization_user_v1_20260601"
+  },
+  "diagnostics": {
+    "vectorized": [],
+    "missed": [
+      "/tmp/acpo_s1244_exx8re5t/minimal_s1244.c:57:27: remark: loop not vectorized: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+      "/tmp/acpo_s1244_exx8re5t/minimal_s1244.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+    ],
+    "analysis": [
+      "Backward loop carried data dependence. Memory location is the same as accessed at /tmp/acpo_s1244_exx8re5t/minimal_s1244.c:56:13 [-Rpass-analysis=loop-vectorize]",
+      "/tmp/acpo_s1244_exx8re5t/minimal_s1244.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+    ],
+    "errors": [],
+    "vectorized_entries": [],
+    "missed_entries": [
+      {
+        "raw": "/tmp/acpo_s1244_exx8re5t/minimal_s1244.c:57:27: remark: loop not vectorized: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 57,
+        "column": 27,
+        "message": "loop not vectorized: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "categories": [
+          "dependency_unsafe"
+        ]
+      },
+      {
+        "raw": "/tmp/acpo_s1244_exx8re5t/minimal_s1244.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "line": 55,
+        "column": 9,
+        "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      }
+    ],
+    "analysis_entries": [
+      {
+        "raw": "Backward loop carried data dependence. Memory location is the same as accessed at /tmp/acpo_s1244_exx8re5t/minimal_s1244.c:56:13 [-Rpass-analysis=loop-vectorize]",
+        "line": null,
+        "column": null,
+        "message": "Backward loop carried data dependence. Memory location is the same as accessed at /tmp/acpo_s1244_exx8re5t/minimal_s1244.c:56:13 [-Rpass-analysis=loop-vectorize]",
+        "reason": "Backward loop carried data dependence. Memory location is the same as accessed at /tmp/acpo_s1244_exx8re5t/minimal_s1244.c:56:13 [-Rpass-analysis=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      },
+      {
+        "raw": "/tmp/acpo_s1244_exx8re5t/minimal_s1244.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "line": 55,
+        "column": 9,
+        "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      }
+    ],
+    "missed_categories": [
+      "dependency_unsafe",
+      "other"
+    ],
+    "analysis_categories": [
+      "other"
+    ],
+    "all_categories": [
+      "dependency_unsafe",
+      "other"
+    ],
+    "structured_feedback": {
+      "func_name": "s1244",
+      "severity": "medium",
+      "pattern_family": "loop_distribution_dependence_isolation",
+      "primary_categories": [
+        "dependency_unsafe"
+      ],
+      "compile_level": {
+        "compilable": true,
+        "error_preview": null
+      },
+      "vectorization_level": {
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "missed_categories": [
+          "dependency_unsafe"
+        ],
+        "dynamic_missed_reasons": [
+          "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop"
+        ],
+        "static_problem_reasons": [
+          "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop"
+        ]
+      },
+      "performance_level": {
+        "available": false,
+        "anti_patterns": []
+      },
+      "code_facts": {
+        "has_runtime_stride": false,
+        "has_indexed_recurrence": false,
+        "has_control_flow": false,
+        "has_indirect_indexing": false,
+        "has_fixed_index_self_read_hazard": false,
+        "has_outer_iterations_loop": true
+      }
+    }
+  },
+  "case_cards": {
+    "case_card_set_version": "experiment_case_cards_v1_20260601",
+    "case_card_format_version": "case_card_format_v1_20260601",
+    "structured_feedback_available": true,
+    "limit": 4,
+    "selected_count": 4,
+    "selected_cards": [
+      {
+        "rank": 1,
+        "score": 13,
+        "id": "node_splitting_true_anti_dependency",
+        "title": "node splitting: separate producer and shifted consumer",
+        "summary": "When one statement produces a shifted array value and a later statement consumes the completed array, split the producer and consumer into two ordered loops.",
+        "oracle_function": "s1244",
+        "oracle_speedup": "oracle_batch5_statement_node_splitting_20260527: ours_full 2.561x mean / 2.612x median, correctness passed, 2 vectorized / 0 missed. oracle_s1244_node_splitting_plain_20260527: llm_plain also passed correctness and vectorized fully, 2.442x mean / 2.559x median.",
+        "oracle_failure": null,
+        "oracle_verified": "2026-05-27",
+        "semantic_safety": "For s1244, the second statement reads a[i] and a[i+1] after the producer assignment for i has completed. Splitting first computes all producer values for the current outer iteration, then consumes the completed array.",
+        "vectorization_rationale": "After splitting, both loops are simple contiguous array loops with no loop-carried update in the vectorized dimension.",
+        "performance_risk": "Similar-looking statement-reordering cases can fail runtime validation with inf/nan comparisons. oracle_batch5_statement_node_splitting_20260527 rejected s212, s1213, s241 and s244 despite vectorized diagnostics because final runtime verification failed.",
+        "oracle_critical_note": "Use s1244 as a node-splitting transform-family positive example. Do not claim full-method advantage from this case alone because llm_plain also found the same split and succeeded.",
+        "failure_asset": null
+      },
+      {
+        "rank": 2,
+        "score": 7,
+        "id": "loop_peeling_fixed_source_scalarization",
+        "title": "loop peeling: scalarize fixed self-source before vector loop",
+        "summary": "When every iteration writes from a fixed array element that is also written by the loop, peel the self-write and cache the fixed source before the vectorized suffix.",
+        "oracle_function": "s293",
+        "oracle_speedup": "oracle_batch6_dependency_reduction_20260527: ours_full 1.910x mean / 1.830x median, correctness passed, 1 vectorized / 0 missed. oracle_s293_loop_peeling_plain_20260528: llm_plain 2.428x mean / 2.403x median, correctness passed, 1 vectorized / 0 missed.",
+        "oracle_failure": null,
+        "oracle_verified": "2026-05-28",
+        "semantic_safety": "For s293, the i=0 assignment writes a[0] back to itself, so caching a[0] before the suffix preserves the value read by every later iteration.",
+        "vectorization_rationale": "After peeling i=0, the suffix loop writes a contiguous range from one invariant scalar and no longer reads from a location written by the same vectorized loop.",
+        "performance_risk": "This pattern is narrow. If the fixed source element can change before later iterations, scalarization changes semantics. The s293 baseline shows this is a transform-family positive, not a full-method advantage case.",
+        "oracle_critical_note": "Use s293 as a loop-peeling transform-family positive example. Do not claim full-method advantage because llm_plain also found scalarization and was faster in this run.",
+        "failure_asset": null
+      },
+      {
+        "rank": 3,
+        "score": 7,
+        "id": "loop_distribution_dependency_isolation",
+        "title": "unsafe dependence: isolate the offending statement",
+        "summary": "When clang reports unsafe dependent memory operations, first try to isolate the dependent statement rather than rewriting the whole loop.",
+        "oracle_function": "s1113",
+        "oracle_speedup": "2.95x (glm-4.7), 2.96x (deepseek-v4-pro)",
+        "oracle_failure": null,
+        "oracle_verified": "2026-05-15",
+        "semantic_safety": "The split uses the old value of a[mid] before i == mid and the new value after i == mid, matching the original sequential update.",
+        "vectorization_rationale": "The i < mid and i > mid segments read a scalar invariant and write disjoint ranges, so each segment becomes a clean vectorizable loop.",
+        "performance_risk": "Hoisting a[mid] once for the entire loop is incorrect; over-splitting would add overhead without changing the dependency.",
+        "oracle_critical_note": "Must NOT hoist a[mid] once for the whole loop — must split at mid because a[mid] is overwritten when i==mid.",
+        "failure_asset": null
+      },
+      {
+        "rank": 4,
+        "score": 3,
+        "id": "triangular_saxpy_inner_loop_scalarization",
+        "title": "triangular saxpy: keep outer order, scalarize inner invariant",
+        "summary": "For triangular saxpy loops, keep the outer dependency order and expose the inner loop by scalarizing the fixed source element.",
+        "oracle_function": "s115",
+        "oracle_speedup": "oracle_batch1_core_20260522: ours_full 4.045x mean / 4.030x median, 1 vectorized / 0 missed; oracle_s115_plain_baseline_20260522: llm_plain 0 vectorized / 2 missed and benchmark timeout.",
+        "oracle_failure": null,
+        "oracle_verified": "2026-05-22",
+        "semantic_safety": "The outer j order is preserved. For a fixed j, the inner loop writes only a[i] where i > j, so it does not modify a[j]; caching a[j] as a scalar preserves the value used by all inner iterations.",
+        "vectorization_rationale": "After scalarizing a[j] and using restrict row pointers, the inner loop becomes a contiguous update with one invariant scalar and no loop-carried write to the scalar source.",
+        "performance_risk": "The verifier reports NaN state metrics for s115, so this card needs runtime equality and repeated benchmark evidence before it is used as final paper-grade proof.",
+        "oracle_critical_note": "The important transformation is not loop interchange. The plain baseline interchanged loops, preserved correctness, but remained non-vectorized and timed out in benchmark.",
+        "failure_asset": null
+      }
+    ],
+    "formatted_text": "案例卡 1: node splitting: separate producer and shifted consumer\n- 触发原因: When one statement produces a shifted array value and a later statement consumes the completed array, split the producer and consumer into two ordered loops.\n- 推荐动作:\n  - Confirm that the first statement computes the full producer array values needed by the second statement.\n  - Run the producer loop first, then the consumer loop.\n  - Preserve the original outer iteration boundary and keep helper calls after both loops.\n  - Add vectorization pragmas only after the split preserves the same per-outer-iteration state.\n- 明确避免:\n  - Do not split loops whose original result overflows to inf/nan and then treat matching inf as sufficient correctness.\n  - Do not split when the consumer needs a value that would not yet exist in the original sequential order.\n  - Do not move dummy() between the producer and consumer phases.\n- 代表函数: s1244\n- 验证结论: oracle_batch5_statement_node_splitting_20260527: ours_full 2.561x mean / 2.612x median, correctness passed, 2 vectorized / 0 missed. oracle_s1244_node_splitting_plain_20260527: llm_plain also passed correctness and vectorized fully, 2.442x mean / 2.559x median.\n- 验证日期: 2026-05-27\n- 语义安全理由: For s1244, the second statement reads a[i] and a[i+1] after the producer assignment for i has completed. Splitting first computes all producer values for the current outer iteration, then consumes the completed array.\n- 有利于向量化的原因: After splitting, both loops are simple contiguous array loops with no loop-carried update in the vectorized dimension.\n- 性能风险: Similar-looking statement-reordering cases can fail runtime validation with inf/nan comparisons. oracle_batch5_statement_node_splitting_20260527 rejected s212, s1213, s241 and s244 despite vectorized diagnostics because final runtime verification failed.\n- 关键风险约束: Use s1244 as a node-splitting transform-family positive example. Do not claim full-method advantage from this case alone because llm_plain also found the same split and succeeded.\n- 最小示例 before: for (i) { a[i] = f(b[i], c[i]); d[i] = a[i] + a[i+1]; }\n- 最小示例 after: for (i) { a[i] = f(b[i], c[i]); } then vectorize for (i) { d[i] = a[i] + a[i+1]; }\n\n案例卡 2: loop peeling: scalarize fixed self-source before vector loop\n- 触发原因: When every iteration writes from a fixed array element that is also written by the loop, peel the self-write and cache the fixed source before the vectorized suffix.\n- 推荐动作:\n  - Identify whether the fixed source element is unchanged in value by its own iteration.\n  - Read the fixed source into a scalar before the vectorized loop.\n  - Handle the source element iteration separately, then vectorize the remaining range.\n  - Keep the outer iteration and helper-call placement unchanged.\n- 明确避免:\n  - Do not cache a fixed element if an earlier iteration changes its value before later reads.\n  - Do not peel only to silence diagnostics; require correctness and benchmark evidence.\n  - Do not generalize this card to true recurrences such as a[i+1] depending on the newly written a[i].\n- 代表函数: s293\n- 验证结论: oracle_batch6_dependency_reduction_20260527: ours_full 1.910x mean / 1.830x median, correctness passed, 1 vectorized / 0 missed. oracle_s293_loop_peeling_plain_20260528: llm_plain 2.428x mean / 2.403x median, correctness passed, 1 vectorized / 0 missed.\n- 验证日期: 2026-05-28\n- 语义安全理由: For s293, the i=0 assignment writes a[0] back to itself, so caching a[0] before the suffix preserves the value read by every later iteration.\n- 有利于向量化的原因: After peeling i=0, the suffix loop writes a contiguous range from one invariant scalar and no longer reads from a location written by the same vectorized loop.\n- 性能风险: This pattern is narrow. If the fixed source element can change before later iterations, scalarization changes semantics. The s293 baseline shows this is a transform-family positive, not a full-method advantage case.\n- 关键风险约束: Use s293 as a loop-peeling transform-family positive example. Do not claim full-method advantage because llm_plain also found scalarization and was faster in this run.\n- 最小示例 before: for (i = 0; i < N; i++) { a[i] = a[0]; }\n- 最小示例 after: real_t first = a[0]; a[0] = first; vectorize for (i = 1; i < N; i++) { a[i] = first; }\n\n案例卡 3: unsafe dependence: isolate the offending statement\n- 触发原因: When clang reports unsafe dependent memory operations, first try to isolate the dependent statement rather than rewriting the whole loop.\n- 推荐动作:\n  - Split the loop into vectorizable and non-vectorizable phases.\n  - Hoist invariant scalar reads outside the inner loop only when the source location is provably outside the loop's write domain.\n  - Use temporary scalars or arrays only for the dependent fragment.\n- 明确避免:\n  - Do not flatten the whole loop into a large new data structure if only one statement is problematic.\n  - Do not hoist a fixed-index read from the same array if the loop may later overwrite that index in the same pass.\n  - Do not claim full vectorization if one dependent fragment must remain ordered.\n- 代表函数: s1113\n- 验证结论: 2.95x (glm-4.7), 2.96x (deepseek-v4-pro)\n- 验证日期: 2026-05-15\n- 语义安全理由: The split uses the old value of a[mid] before i == mid and the new value after i == mid, matching the original sequential update.\n- 有利于向量化的原因: The i < mid and i > mid segments read a scalar invariant and write disjoint ranges, so each segment becomes a clean vectorizable loop.\n- 性能风险: Hoisting a[mid] once for the entire loop is incorrect; over-splitting would add overhead without changing the dependency.\n- 关键风险约束: Must NOT hoist a[mid] once for the whole loop — must split at mid because a[mid] is overwritten when i==mid.\n- 最小示例 before: a[i] = a[mid] + b[i];\n- 最小示例 after: split into i < mid / i == mid / i > mid segments, or keep ordered reads if no safe split is proven.\n\n案例卡 4: triangular saxpy: keep outer order, scalarize inner invariant\n- 触发原因: For triangular saxpy loops, keep the outer dependency order and expose the inner loop by scalarizing the fixed source element.\n- 推荐动作:\n  - Keep the outer triangular loop order unchanged.\n  - For a fixed outer index, cache the source element such as a[j] into a scalar before the inner loop.\n  - Use restrict local pointers for the destination array and the current matrix row.\n  - Vectorize only the inner contiguous update loop.\n- 明确避免:\n  - Do not interchange the triangular loops unless the sequential triangular dependence is proven equivalent.\n  - Do not treat a[j] as an original array value; it may include earlier outer-loop updates.\n  - Do not claim a general dependence solution if only the inner loop was exposed.\n- 代表函数: s115\n- 验证结论: oracle_batch1_core_20260522: ours_full 4.045x mean / 4.030x median, 1 vectorized / 0 missed; oracle_s115_plain_baseline_20260522: llm_plain 0 vectorized / 2 missed and benchmark timeout.\n- 验证日期: 2026-05-22\n- 语义安全理由: The outer j order is preserved. For a fixed j, the inner loop writes only a[i] where i > j, so it does not modify a[j]; caching a[j] as a scalar preserves the value used by all inner iterations.\n- 有利于向量化的原因: After scalarizing a[j] and using restrict row pointers, the inner loop becomes a contiguous update with one invariant scalar and no loop-carried write to the scalar source.\n- 性能风险: The verifier reports NaN state metrics for s115, so this card needs runtime equality and repeated benchmark evidence before it is used as final paper-grade proof.\n- 关键风险约束: The important transformation is not loop interchange. The plain baseline interchanged loops, preserved correctness, but remained non-vectorized and timed out in benchmark.\n- 最小示例 before: for (int j = 0; j < N; j++) { for (int i = j + 1; i < N; i++) { a[i] -= aa[j][i] * a[j]; } }\n- 最小示例 after: for each j in order, read real_t a_j = a[j]; then vectorize the i > j update using a_j and aa[j][i].",
+    "included": true
+  },
+  "system_prompt": "你是 ACPO-LLM（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。\n\n## 你的核心能力\n1. **向量化障碍诊断**：分析代码中阻止编译器向量化的原因\n2. **代码重构**：在不改变语义的前提下，重构代码以消除向量化障碍\n3. **知识应用**：应用常见的向量化优化模式（Loop Distribution, Scalar Promotion 等）\n\n## 你必须遵守的原则\n1. **正确性第一（最重要）**：优化后的代码必须保持与原始代码完全相同的语义，宁可不向量化也不能破坏正确性\n2. **语义等价**：优化后的代码计算结果必须与原始代码一致，会通过校验和验证\n3. **TSVC 兼容性**：代码必须符合 TSVC 测试框架的规范\n4. **可编译性**：生成的代码必须能通过 Clang 编译\n5. **禁止硬编码**：不要硬编码 LEN_1D 等宏的具体数值\n\n## 正确性保证检查清单\n在提交优化后的代码前，请确认：\n- [ ] 所有数组访问都在合法范围内\n- [ ] 循环边界条件与原始代码一致\n- [ ] 浮点运算顺序改变不会影响精度（避免过度重排）\n- [ ] 条件分支的逻辑与原始代码等价\n- [ ] 使用 restrict 时确保指针确实不重叠\n- [ ] 使用了 #pragma vectorize 时确保循环确实是可向量化的\n- [ ] **禁止移动 dummy() 调用**：dummy() 在原始代码中位于哪个循环层级，优化后必须保持在同一层级，不可移出循环\n\n## 高风险改写禁令（必须遵守）\n- **禁止把递推变量直接改成闭式公式**：如果原始代码中存在 `k += ...` / `sum += ...` 这类跨迭代递推，且该变量参与索引、地址或控制逻辑，默认不能直接改成 `k = f(i)`。只有在你能严格保证首项、更新顺序、每轮值序列完全一致时才允许这样做；否则优先使用“预计算数组 + 第二阶段消费”。\n- **禁止折叠外层迭代语义**：不要把 `for (nl = 0; nl < iterations; nl++)` 改写成“乘法放大”“批量累加”或其他一次性聚合形式。每一轮对数组和 `dummy()` 的副作用次数、顺序和层级都必须保持一致。\n- **禁止只针对默认参数取值投机优化**：若循环步长/边界由 `arg_info` 决定（如 `n1/n3`），不要只为 `n3 == 1`、`n1 == 1` 等默认值设计“快路径”而忽略通用情况。任何特化都必须保留对所有参数的通用正确路径。\n- **禁止使用与 TSVC 全局数组同名的局部变量/循环变量**：不要新引入名为 `a/b/c/d/e/aa/bb/cc/tt/x/xx/yy/indx` 的局部变量或循环变量，这会导致遮蔽和编译/语义问题。\n- **禁止把“同数组固定位置读”误当成整轮不变量**：如果循环一边写 `a[i]`，一边读 `a[k]`，且 `i` 可能命中 `k`，那么 `a[k]` 在同一轮后续迭代中可能变化。此时不能把 `a[k]` 整轮外提为标量；若要优化，必须按命中点拆分循环或保留逐迭代读取语义。\n- **如果不确定，选择保守可验证的重构**：优先索引预计算、循环拆分、掩码/条件选择；不要做无法直接证明等价的“聪明”代数化简。\n\n## 你可以使用的技术\n\n### 源码修改技术（当编译器指令无效时使用）\n- **循环拆分（Loop Distribution/Fission）**：将有依赖的语句分离到不同循环\n- **标量提升（Scalar Promotion）**：将标量变量提升为数组元素\n- **索引预计算**：将复杂索引计算提前到单独阶段\n- **循环归一化**：将非规范循环转为标准形式\n- **条件转换**：将 if-else 转为条件选择表达式\n\n### 编译器指令技术（优先尝试，改动最小）\n- **restrict 关键字**：`real_t * __restrict__ ptr = a;` - 消除指针别名顾虑\n- **vectorize pragma**：`#pragma clang loop vectorize(enable)` - 强制向量化\n- **interleave pragma**：`#pragma clang loop interleave(enable)` - 增加指令级并行\n- **width pragma**：`#pragma clang loop vectorize_width(4)` - 指定向量宽度\n\n## 决策优先级\n1. **首先尝试编译器指令**（restrict + pragma）- 改动最小，成功率往往很高\n2. **分析失败原因**：如果是归纳变量/真依赖，必须重构代码\n3. **如果是边界/别名问题**：指令通常有效，无需大规模重构\n\n## 输出格式要求\n1. **策略描述**：首先描述你识别的向量化障碍和采用的优化策略（2-4行）\n2. **代码块**：使用 ```c 和 ``` 包裹优化后的完整函数代码\n3. **只输出函数**：不要包含 main 函数或其他辅助代码\n4. **代码块内只能包含纯 C 代码**：不要在代码块里写中文解释、分析过程、项目符号或额外说明\n5. **禁止省略**：不要输出 `...`、`TODO`、伪代码或“其余部分同上”之类占位内容；必须给出完整可编译函数\n6. **如果不确定**：请返回完整的保守版本函数，也不要返回半截代码或解释性文字代替代码\n\n示例输出格式：\n策略：识别到归纳变量 k 导致的反向索引依赖。采用循环拆分技术，将索引预计算与数据访问分离，并使用 restrict 消除别名顾虑。\n\n```c\n// 优化后的代码\n```\n",
+  "user_prompt": "【函数名】: s1244\n【当前轮次】: 第 1 轮 / 共 1 轮\n\n【待优化代码】:\n```c\nreal_t s1244(struct args_t * func_args)\n{\n\n//    node splitting\n//    cycle with ture and anti dependency\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < iterations; nl++) {\n        for (int i = 0; i < LEN_1D-1; i++) {\n            a[i] = b[i] + c[i] * c[i] + b[i]*b[i] + c[i];\n            d[i] = a[i] + a[i+1];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}\n```\n\n【向量化失败原因】(2 个问题):\n1. unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop\n2. /tmp/acpo_s1244_exx8re5t/minimal_s1244.c:55:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]\n\n【结构化反馈摘要】:\n- 静态严重度: medium\n- 当前更像的模式族: loop_distribution_dependence_isolation\n- compile-level: 可编译\n- vectorization-level: vectorized=0, missed=2, primary blockers=unsafe dependence / isolate dependent ops\n  - 动态诊断: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop\n  - 静态问题图谱: unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop\n\n【语义安全提示】:\n- 检测到 `dummy()` 位于外层 `nl/iterations` 循环内。禁止改变 dummy() 的调用次数、顺序或循环层级，也不要折叠外层迭代。\n- 若需要重构跨多次 `iterations` 的逻辑，只能做等价的逐轮改写；不要用乘法放大、批量累加或一次性聚合替代多轮副作用。\n\n【类别化案例卡】:\n案例卡 1: node splitting: separate producer and shifted consumer\n- 触发原因: When one statement produces a shifted array value and a later statement consumes the completed array, split the producer and consumer into two ordered loops.\n- 推荐动作:\n  - Confirm that the first statement computes the full producer array values needed by the second statement.\n  - Run the producer loop first, then the consumer loop.\n  - Preserve the original outer iteration boundary and keep helper calls after both loops.\n  - Add vectorization pragmas only after the split preserves the same per-outer-iteration state.\n- 明确避免:\n  - Do not split loops whose original result overflows to inf/nan and then treat matching inf as sufficient correctness.\n  - Do not split when the consumer needs a value that would not yet exist in the original sequential order.\n  - Do not move dummy() between the producer and consumer phases.\n- 代表函数: s1244\n- 验证结论: oracle_batch5_statement_node_splitting_20260527: ours_full 2.561x mean / 2.612x median, correctness passed, 2 vectorized / 0 missed. oracle_s1244_node_splitting_plain_20260527: llm_plain also passed correctness and vectorized fully, 2.442x mean / 2.559x median.\n- 验证日期: 2026-05-27\n- 语义安全理由: For s1244, the second statement reads a[i] and a[i+1] after the producer assignment for i has completed. Splitting first computes all producer values for the current outer iteration, then consumes the completed array.\n- 有利于向量化的原因: After splitting, both loops are simple contiguous array loops with no loop-carried update in the vectorized dimension.\n- 性能风险: Similar-looking statement-reordering cases can fail runtime validation with inf/nan comparisons. oracle_batch5_statement_node_splitting_20260527 rejected s212, s1213, s241 and s244 despite vectorized diagnostics because final runtime verification failed.\n- 关键风险约束: Use s1244 as a node-splitting transform-family positive example. Do not claim full-method advantage from this case alone because llm_plain also found the same split and succeeded.\n- 最小示例 before: for (i) { a[i] = f(b[i], c[i]); d[i] = a[i] + a[i+1]; }\n- 最小示例 after: for (i) { a[i] = f(b[i], c[i]); } then vectorize for (i) { d[i] = a[i] + a[i+1]; }\n\n案例卡 2: loop peeling: scalarize fixed self-source before vector loop\n- 触发原因: When every iteration writes from a fixed array element that is also written by the loop, peel the self-write and cache the fixed source before the vectorized suffix.\n- 推荐动作:\n  - Identify whether the fixed source element is unchanged in value by its own iteration.\n  - Read the fixed source into a scalar before the vectorized loop.\n  - Handle the source element iteration separately, then vectorize the remaining range.\n  - Keep the outer iteration and helper-call placement unchanged.\n- 明确避免:\n  - Do not cache a fixed element if an earlier iteration changes its value before later reads.\n  - Do not peel only to silence diagnostics; require correctness and benchmark evidence.\n  - Do not generalize this card to true recurrences such as a[i+1] depending on the newly written a[i].\n- 代表函数: s293\n- 验证结论: oracle_batch6_dependency_reduction_20260527: ours_full 1.910x mean / 1.830x median, correctness passed, 1 vectorized / 0 missed. oracle_s293_loop_peeling_plain_20260528: llm_plain 2.428x mean / 2.403x median, correctness passed, 1 vectorized / 0 missed.\n- 验证日期: 2026-05-28\n- 语义安全理由: For s293, the i=0 assignment writes a[0] back to itself, so caching a[0] before the suffix preserves the value read by every later iteration.\n- 有利于向量化的原因: After peeling i=0, the suffix loop writes a contiguous range from one invariant scalar and no longer reads from a location written by the same vectorized loop.\n- 性能风险: This pattern is narrow. If the fixed source element can change before later iterations, scalarization changes semantics. The s293 baseline shows this is a transform-family positive, not a full-method advantage case.\n- 关键风险约束: Use s293 as a loop-peeling transform-family positive example. Do not claim full-method advantage because llm_plain also found scalarization and was faster in this run.\n- 最小示例 before: for (i = 0; i < N; i++) { a[i] = a[0]; }\n- 最小示例 after: real_t first = a[0]; a[0] = first; vectorize for (i = 1; i < N; i++) { a[i] = first; }\n\n案例卡 3: unsafe dependence: isolate the offending statement\n- 触发原因: When clang reports unsafe dependent memory operations, first try to isolate the dependent statement rather than rewriting the whole loop.\n- 推荐动作:\n  - Split the loop into vectorizable and non-vectorizable phases.\n  - Hoist invariant scalar reads outside the inner loop only when the source location is provably outside the loop's write domain.\n  - Use temporary scalars or arrays only for the dependent fragment.\n- 明确避免:\n  - Do not flatten the whole loop into a large new data structure if only one statement is problematic.\n  - Do not hoist a fixed-index read from the same array if the loop may later overwrite that index in the same pass.\n  - Do not claim full vectorization if one dependent fragment must remain ordered.\n- 代表函数: s1113\n- 验证结论: 2.95x (glm-4.7), 2.96x (deepseek-v4-pro)\n- 验证日期: 2026-05-15\n- 语义安全理由: The split uses the old value of a[mid] before i == mid and the new value after i == mid, matching the original sequential update.\n- 有利于向量化的原因: The i < mid and i > mid segments read a scalar invariant and write disjoint ranges, so each segment becomes a clean vectorizable loop.\n- 性能风险: Hoisting a[mid] once for the entire loop is incorrect; over-splitting would add overhead without changing the dependency.\n- 关键风险约束: Must NOT hoist a[mid] once for the whole loop — must split at mid because a[mid] is overwritten when i==mid.\n- 最小示例 before: a[i] = a[mid] + b[i];\n- 最小示例 after: split into i < mid / i == mid / i > mid segments, or keep ordered reads if no safe split is proven.\n\n案例卡 4: triangular saxpy: keep outer order, scalarize inner invariant\n- 触发原因: For triangular saxpy loops, keep the outer dependency order and expose the inner loop by scalarizing the fixed source element.\n- 推荐动作:\n  - Keep the outer triangular loop order unchanged.\n  - For a fixed outer index, cache the source element such as a[j] into a scalar before the inner loop.\n  - Use restrict local pointers for the destination array and the current matrix row.\n  - Vectorize only the inner contiguous update loop.\n- 明确避免:\n  - Do not interchange the triangular loops unless the sequential triangular dependence is proven equivalent.\n  - Do not treat a[j] as an original array value; it may include earlier outer-loop updates.\n  - Do not claim a general dependence solution if only the inner loop was exposed.\n- 代表函数: s115\n- 验证结论: oracle_batch1_core_20260522: ours_full 4.045x mean / 4.030x median, 1 vectorized / 0 missed; oracle_s115_plain_baseline_20260522: llm_plain 0 vectorized / 2 missed and benchmark timeout.\n- 验证日期: 2026-05-22\n- 语义安全理由: The outer j order is preserved. For a fixed j, the inner loop writes only a[i] where i > j, so it does not modify a[j]; caching a[j] as a scalar preserves the value used by all inner iterations.\n- 有利于向量化的原因: After scalarizing a[j] and using restrict row pointers, the inner loop becomes a contiguous update with one invariant scalar and no loop-carried write to the scalar source.\n- 性能风险: The verifier reports NaN state metrics for s115, so this card needs runtime equality and repeated benchmark evidence before it is used as final paper-grade proof.\n- 关键风险约束: The important transformation is not loop interchange. The plain baseline interchanged loops, preserved correctness, but remained non-vectorized and timed out in benchmark.\n- 最小示例 before: for (int j = 0; j < N; j++) { for (int i = j + 1; i < N; i++) { a[i] -= aa[j][i] * a[j]; } }\n- 最小示例 after: for each j in order, read real_t a_j = a[j]; then vectorize the i > j update using a_j and aa[j][i].\n\n【向量化知识库参考】:\n============================================================\n【深度诊断分析】\n============================================================\n\n问题 1: /tmp/acpo_s1244_exx8re5t/minimal_s1244.c:57:27: remark: loop not vectorized: uns...\n  根因: 循环携带依赖（Loop-Carried Dependency）\n  类别: loop_carried_dependency\n  解决类型: source_change_required\n  成功概率: low\n\n  推荐方案:\n    1. 首先分析依赖类型\n       成功率: low_to_medium\n\n【编译器指令】: 可尝试 #pragma clang loop vectorize(enable)\n\n\n【决策流程】:\n1. 首先尝试编译器指令（pragma）- 改动最小\n2. 如果 pragma 无效，分析是否需要源码修改\n3. 对于归纳变量/真依赖问题，必须重构代码\n4. 对于别名/边界问题，pragma + restrict 通常有效\n\n【编译选项建议】:\n确保使用 -O3 -march=native 编译以启用所有优化\n\n\n【快速修复建议（按成功率排序）】:\n  1. dependency_analysis (成功率: low_to_medium)\n\n【你的任务】:\n分析上述代码的向量化障碍，应用适当的优化技术，输出优化后的代码。\n如果存在递推变量、参数化步长或 dummy() 语义风险，优先使用可验证的保守重构，不要做未经证明的闭式化简或批量折叠。\n\n请输出优化策略和完整代码：\n- 先给 2-4 行策略说明，再给一个 ```c 代码块\n- 代码块内只能包含纯 C 代码，禁止夹带解释文字\n- 不要输出 `...`、`TODO`、伪代码或半截函数\n- 如果不确定优化是否成立，返回完整保守版本函数，不要只给分析"
+}

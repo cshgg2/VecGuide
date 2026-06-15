@@ -1,0 +1,42 @@
+{
+  "run_id": "cgo_strong_plain_timeout_candidates_20260604",
+  "timestamp": "2026-06-04T16:50:43.232707",
+  "total_rows": 2,
+  "benchmark_config": {
+    "protocol_name": "timeout_limited",
+    "protocol_role": "timeout_limited_evidence",
+    "display_name": "timeout_limited(warmup=1,timing=3,batches=3)",
+    "warmup_runs": 1,
+    "timing_runs": 3,
+    "batches": 3,
+    "paper_main_table_eligible": false,
+    "description": "Protocol label for heavyweight kernels where formal or mid-size benchmark attempts timed out; report only as protocol-limited evidence.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 2,
+        "status_counts": {
+          "failed": 2
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_slowdown": 1,
+          "correctness_failed": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 0.6461666666666667,
+        "median_speedup": 0.6461666666666667,
+        "avg_improvement_pct": -35.38333333333333,
+        "negative_optimization_count": 1
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_strong_plain_timeout_candidates_20260604/strategies/strong_plain/paper_summary.json"
+    }
+  ]
+}

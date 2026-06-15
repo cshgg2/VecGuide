@@ -1,0 +1,27 @@
+{
+  "case_card_set_version": "experiment_case_cards_v1_20260601",
+  "case_card_format_version": "case_card_format_v1_20260601",
+  "structured_feedback_available": true,
+  "limit": 4,
+  "selected_count": 1,
+  "selected_cards": [
+    {
+      "rank": 1,
+      "score": 2,
+      "id": "branch_hoisting_predication",
+      "title": "control flow rewrite: branch hoisting before heavy refactoring",
+      "summary": "For branch-heavy loops, start from branch hoisting, predication or path splitting before introducing complex table-based rewrites.",
+      "oracle_function": "s1161",
+      "oracle_speedup": "1.69x (deepseek-v4-pro); glm-4.7: non-vectorized 1.21x (if/else version), vectorized but slowdown 0.59x (ternary) — predication alone not sufficient on all models",
+      "oracle_failure": null,
+      "oracle_verified": "2026-05-15",
+      "semantic_safety": "Each predicated assignment must preserve the original branch condition and leave the untouched array value unchanged.",
+      "vectorization_rationale": "Replacing goto/if regions with conditional expressions gives the compiler a straight-line loop body suitable for if-conversion.",
+      "performance_risk": "Predication can execute extra arithmetic and may be slower on GLM-generated variants, so correctness and vectorization are not enough. oracle_batch1_control_20260522 showed this again: s276 became vectorized after ternary if-conversion, but benchmark timed out after 120 seconds.",
+      "oracle_critical_note": "Ternary (?:) predication works better than if/else for Clang if-conversion. But GLM r2 and s276 showed that predication can cause slowdown or timeout — verify with benchmark before accepting.",
+      "failure_asset": null
+    }
+  ],
+  "formatted_text": "案例卡 1: control flow rewrite: branch hoisting before heavy refactoring\n- 触发原因: For branch-heavy loops, start from branch hoisting, predication or path splitting before introducing complex table-based rewrites.\n- 推荐动作:\n  - Convert simple if/else into predicated assignments when cost is low.\n  - Split mutually exclusive paths into separate loops when that preserves semantics.\n  - Keep the transformation local to the hot loop body.\n- 明确避免:\n  - Do not introduce many helper arrays unless reuse clearly amortizes the cost.\n  - Do not move dummy() or fold outer iterations.\n- 代表函数: s1161\n- 验证结论: 1.69x (deepseek-v4-pro); glm-4.7: non-vectorized 1.21x (if/else version), vectorized but slowdown 0.59x (ternary) — predication alone not sufficient on all models\n- 验证日期: 2026-05-15\n- 语义安全理由: Each predicated assignment must preserve the original branch condition and leave the untouched array value unchanged.\n- 有利于向量化的原因: Replacing goto/if regions with conditional expressions gives the compiler a straight-line loop body suitable for if-conversion.\n- 性能风险: Predication can execute extra arithmetic and may be slower on GLM-generated variants, so correctness and vectorization are not enough. oracle_batch1_control_20260522 showed this again: s276 became vectorized after ternary if-conversion, but benchmark timed out after 120 seconds.\n- 关键风险约束: Ternary (?:) predication works better than if/else for Clang if-conversion. But GLM r2 and s276 showed that predication can cause slowdown or timeout — verify with benchmark before accepting.\n- 最小示例 before: if (cond) { a[i] = x; } else { a[i] = y; }\n- 最小示例 after: a[i] = cond ? x : y;",
+  "included": true
+}

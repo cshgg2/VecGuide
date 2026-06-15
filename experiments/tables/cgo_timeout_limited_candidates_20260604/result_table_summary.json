@@ -1,0 +1,25 @@
+{
+  "total_long_rows": 12,
+  "total_functions": 7,
+  "total_wide_rows": 7,
+  "total_main_table_wide_rows": 5,
+  "counts_by_blocker": {
+    "dependency_unsafe": 5,
+    "recurrence_reduction": 6,
+    "control_flow": 1
+  },
+  "counts_by_strategy": {
+    "strong_plain": 2,
+    "full_method": 8,
+    "diagnostic_only": 2
+  },
+  "counts_by_conclusion": {
+    "protocol_limited_or_nonformal": 2,
+    "correctness_failed": 3,
+    "non_vectorized_flat": 2,
+    "vectorized_speedup": 1,
+    "non_vectorized_slowdown": 1,
+    "benchmark_failed": 2,
+    "non_vectorized_speedup": 1
+  }
+}

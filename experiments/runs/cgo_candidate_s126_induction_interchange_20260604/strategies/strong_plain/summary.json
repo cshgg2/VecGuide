@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-06-04T19:25:51.377230",
+  "strategy": "strong_plain",
+  "strategy_description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s126"
+  ],
+  "results": [
+    {
+      "function": "s126",
+      "strategy": "strong_plain",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 2,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s126(struct args_t * func_args)\n{\n\n//    induction variable recognition\n//    induction variable in two loops; recurrence in inner loop\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    int k;\n    for (int nl = 0; nl < 10*(iterations/LEN_2D); nl++) {\n        k = 1;\n        for (int i = 0; i < LEN_2D; i++) {\n            for (int j = 1; j < LEN_2D; j++) {\n                // Original: bb[j][i] = bb[j-1][i] + flat_2d_array[k-1] * cc[j][i]; ++k;\n                // k starts at 1. Inner loop runs LEN_2D-1 times (j=1 to LEN_2D-1).\n                // k increments once per inner iteration.\n                // k = 1 + (i * (LEN_2D - 1)) + (j - 1)\n                int idx = 1 + (i * (LEN_2D - 1)) + (j - 1);\n                bb[j][i] = bb[j-1][i] + flat_2d_array[idx-1] * cc[j][i];\n            }\n            // Original: ++k; (Skip one element in flat_2d_array after each row)\n            // The formula above implicitly handles the reset of k for the next row\n            // based on the outer loop variable i, effectively skipping the gap.\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s126_1xs80jur/minimal_s126.c:64:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s126_1xs80jur/minimal_s126.c:58:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s126_1xs80jur/minimal_s126.c:64:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s126_1xs80jur/minimal_s126.c:58:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s126_1xs80jur/minimal_s126.c:64:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 64,
+              "column": 28,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s126_1xs80jur/minimal_s126.c:58:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 58,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s126_1xs80jur/minimal_s126.c:64:28: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 64,
+              "column": 28,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s126_1xs80jur/minimal_s126.c:58:13: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 58,
+              "column": 13,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "analysis_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "all_categories": [
+            "recurrence_reduction",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s126",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": false,
+          "error": "[n1=1, n3=1] STATE_SUM 不匹配: 原始=2985537586.467053, 优化=2984927609.452014, diff=609977.015038, tol=29855.375865",
+          "original_checksum": null,
+          "optimized_checksum": null,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512002944.0,
+              "optimized_checksum": 512002944.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2985537586.467053,
+                "STATE_ABS_SUM": 2991129906.467053,
+                "STATE_WEIGHTED_SUM": 72972289118550.28
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2984927609.4520144,
+                "STATE_ABS_SUM": 2990519929.4520144,
+                "STATE_WEIGHTED_SUM": 72946860474110.8
+              },
+              "equivalent": false,
+              "error": "STATE_SUM 不匹配: 原始=2985537586.467053, 优化=2984927609.452014, diff=609977.015038, tol=29855.375865"
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": false,
+          "error": null,
+          "details": []
+        },
+        "overall": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "strategy": "origin",
+  "results": {
+    "s1221": {
+      "func_name": "s1221",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s1232": {
+      "func_name": "s1232",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s257": {
+      "func_name": "s257",
+      "overall": true,
+      "mode": "origin_baseline"
+    },
+    "s3251": {
+      "func_name": "s3251",
+      "overall": true,
+      "mode": "origin_baseline"
+    }
+  }
+}

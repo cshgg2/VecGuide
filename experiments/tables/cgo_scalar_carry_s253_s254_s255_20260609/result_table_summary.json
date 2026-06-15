@@ -1,0 +1,24 @@
+{
+  "total_long_rows": 15,
+  "total_functions": 3,
+  "total_wide_rows": 3,
+  "total_main_table_wide_rows": 3,
+  "counts_by_blocker": {
+    "unknown_or_already_vectorized": 15
+  },
+  "counts_by_strategy": {
+    "origin": 3,
+    "strong_plain": 3,
+    "diagnostic_only": 3,
+    "case_card_only": 3,
+    "full_method": 3
+  },
+  "counts_by_conclusion": {
+    "origin_not_vectorized_baseline": 1,
+    "origin_vectorized_baseline": 2,
+    "non_vectorized_speedup": 2,
+    "already_vectorized_skipped": 8,
+    "non_vectorized_flat": 1,
+    "vectorized_speedup": 1
+  }
+}

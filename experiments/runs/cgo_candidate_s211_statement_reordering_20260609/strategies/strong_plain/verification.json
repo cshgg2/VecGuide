@@ -1,0 +1,63 @@
+{
+  "strategy": "strong_plain",
+  "results": {
+    "s211": {
+      "func_name": "s211",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": -2.6218236157414605e+17,
+        "optimized_checksum": -2.6218236157414605e+17,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": -2.6218236157414605e+17,
+            "optimized_checksum": -2.6218236157414605e+17,
+            "original_state_metrics": {
+              "STATE_SUM": -5.243752066035145e+17,
+              "STATE_ABS_SUM": 5.243752102190168e+17,
+              "STATE_WEIGHTED_SUM": -6.712458191581847e+21
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": -5.243752066035145e+17,
+              "STATE_ABS_SUM": 5.243752102190168e+17,
+              "STATE_WEIGHTED_SUM": -6.712458191581847e+21
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": false,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=-10914722006171648.000000 ret_opt=-10903799904337920.000000 max_rel=1.00e-03 FAIL",
+          "[n1=1, n3=1] TEST1: ret_orig=-10914722006171648.000000 ret_opt=-10903799904337920.000000 max_rel=1.00e-03 FAIL",
+          "[n1=1, n3=1] TEST2: ret_orig=-10914722006171648.000000 ret_opt=-10903799904337920.000000 max_rel=1.00e-03 FAIL",
+          "[n1=1, n3=1] PASSED 0/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": false
+    }
+  }
+}

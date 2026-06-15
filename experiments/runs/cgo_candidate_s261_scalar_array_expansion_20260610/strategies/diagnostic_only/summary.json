@@ -1,0 +1,159 @@
+{
+  "timestamp": "2026-06-10T13:00:22.749192",
+  "strategy": "diagnostic_only",
+  "strategy_description": "投稿版诊断基线：保留编译诊断和结构化反馈，去掉案例卡、Few-shot 和多轮反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s261"
+  ],
+  "results": [
+    {
+      "function": "s261",
+      "strategy": "diagnostic_only",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 2,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s261(struct args_t * func_args)\n{\n\n//    scalar and array expansion\n//    wrap-around scalar under an if\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    real_t t_arr[LEN_1D];\n    for (int nl = 0; nl < iterations; nl++) {\n        real_t * __restrict__ a_ptr = a;\n        real_t * __restrict__ b_ptr = b;\n        real_t * __restrict__ c_ptr = c;\n        real_t * __restrict__ d_ptr = d;\n        real_t * __restrict__ t_ptr = t_arr;\n\n        for (int i = 1; i < LEN_1D; ++i) {\n            t_ptr[i] = a_ptr[i] + b_ptr[i];\n            a_ptr[i] = t_ptr[i] + c_ptr[i-1];\n            t_ptr[i] = c_ptr[i] * d_ptr[i];\n            c_ptr[i] = t_ptr[i];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 2,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:64:35: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:62:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:64:35: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:62:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:64:35: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 64,
+              "column": 35,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:62:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 62,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:64:35: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 64,
+              "column": 35,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s261_wkaw9drm/minimal_s261.c:62:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 62,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "analysis_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "all_categories": [
+            "recurrence_reduction",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s261",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": Infinity,
+          "optimized_checksum": Infinity,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": Infinity,
+              "optimized_checksum": Infinity,
+              "original_state_metrics": {
+                "STATE_SUM": Infinity,
+                "STATE_ABS_SUM": Infinity,
+                "STATE_WEIGHTED_SUM": Infinity
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": Infinity,
+                "STATE_ABS_SUM": Infinity,
+                "STATE_WEIGHTED_SUM": Infinity
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": false,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=inf ret_opt=inf max_rel=nan FAIL",
+            "[n1=1, n3=1] TEST1: ret_orig=inf ret_opt=inf max_rel=nan FAIL",
+            "[n1=1, n3=1] TEST2: ret_orig=inf ret_opt=inf max_rel=nan FAIL",
+            "[n1=1, n3=1] PASSED 0/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": false
+      }
+    }
+  ]
+}

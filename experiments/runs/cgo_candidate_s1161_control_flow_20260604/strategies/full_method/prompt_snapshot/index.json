@@ -1,0 +1,52 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-04T23:35:31.920006",
+      "function": "s1161",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "slowdown_guard_materialization",
+        "branch_hoisting_predication",
+        "call_side_effect_boundary",
+        "goto_if_else_structuring"
+      ]
+    },
+    {
+      "timestamp": "2026-06-04T23:35:42.660945",
+      "function": "s1161",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 2,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round02_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round02_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round02_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    },
+    {
+      "timestamp": "2026-06-04T23:35:54.985154",
+      "function": "s1161",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 3,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round03_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round03_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/s1161/round03_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

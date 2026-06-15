@@ -1,0 +1,48 @@
+{
+  "strategy": "full_method",
+  "rows": [
+    {
+      "run_id": "cgo_candidate_s126_induction_interchange_20260604",
+      "strategy": "full_method",
+      "function": "s126",
+      "severity": "medium",
+      "problem_count": 1,
+      "line_range": [
+        500,
+        527
+      ],
+      "status": "failed",
+      "rounds": 3,
+      "best_round": 2,
+      "stored_correctness_overall": true,
+      "correctness_overall": true,
+      "verification_error": null,
+      "analysis_compilable": true,
+      "analysis_vectorized": false,
+      "analysis_vectorized_count": 0,
+      "analysis_missed_count": 2,
+      "benchmark_mode": "optimized_vs_original",
+      "benchmark_protocol": "formal",
+      "benchmark_protocol_role": "formal_main_table",
+      "benchmark_protocol_display": "formal(warmup=3,timing=10,batches=5)",
+      "paper_main_table_eligible": true,
+      "benchmark_protocol_warning": null,
+      "benchmark_success": true,
+      "benchmark_warmup_runs": 3,
+      "benchmark_timing_runs": 10,
+      "benchmark_batches": 5,
+      "original_time_ms": 570.4079956,
+      "optimized_time_ms": 550.3181089999999,
+      "speedup": 1.03518,
+      "improvement_pct": 3.518,
+      "speedup_median": 0.9951,
+      "speedup_stddev": 0.0984797542645188,
+      "observed_outcome": "non_vectorized_speedup",
+      "performance_guard_rejected": false,
+      "performance_guard_reason": null,
+      "performance_guard_speedup": null,
+      "performance_guard_speedup_median": null,
+      "error": null
+    }
+  ]
+}

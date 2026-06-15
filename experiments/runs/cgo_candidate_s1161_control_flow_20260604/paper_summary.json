@@ -1,0 +1,110 @@
+{
+  "run_id": "cgo_candidate_s1161_control_flow_20260604",
+  "timestamp": "2026-06-04T23:39:43.527355",
+  "total_rows": 4,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 1.112,
+        "median_speedup": 1.112,
+        "avg_improvement_pct": 11.2,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/strong_plain/paper_summary.json"
+    },
+    {
+      "strategy": "diagnostic_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "diagnostic_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 1.09144,
+        "median_speedup": 1.09144,
+        "avg_improvement_pct": 9.144,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/diagnostic_only/paper_summary.json"
+    },
+    {
+      "strategy": "case_card_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "case_card_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 1.0731,
+        "median_speedup": 1.0731,
+        "avg_improvement_pct": 7.3100000000000005,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/case_card_only/paper_summary.json"
+    },
+    {
+      "strategy": "full_method",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "full_method",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 1.10058,
+        "median_speedup": 1.10058,
+        "avg_improvement_pct": 10.058,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/paper_summary.json"
+    }
+  ]
+}

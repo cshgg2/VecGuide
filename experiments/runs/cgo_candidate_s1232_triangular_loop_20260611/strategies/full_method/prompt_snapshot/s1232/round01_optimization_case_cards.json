@@ -1,0 +1,11 @@
+{
+  "case_card_set_version": "experiment_case_cards_v1_20260601",
+  "case_card_format_version": "case_card_format_v1_20260601",
+  "structured_feedback_available": true,
+  "limit": 4,
+  "selected_count": 0,
+  "selected_cards": [],
+  "formatted_text": "",
+  "included": false,
+  "reason": "no_matching_case_cards"
+}

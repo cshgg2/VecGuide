@@ -1,0 +1,42 @@
+{
+  "run_id": "cgo_probe_remaining_light_origin_20260611",
+  "timestamp": "2026-06-11T23:11:49.065232",
+  "total_rows": 4,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 4,
+        "status_counts": {
+          "origin_baseline": 4
+        },
+        "observed_outcome_counts": {
+          "origin_vectorized_baseline": 3,
+          "origin_not_vectorized_baseline": 1
+        },
+        "correctness_passed": 4,
+        "fully_vectorized": 3,
+        "benchmark_success_count": 4,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_remaining_light_origin_20260611/strategies/origin/paper_summary.json"
+    }
+  ]
+}

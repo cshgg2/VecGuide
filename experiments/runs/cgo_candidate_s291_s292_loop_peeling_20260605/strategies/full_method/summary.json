@@ -1,0 +1,325 @@
+{
+  "timestamp": "2026-06-05T11:20:43.234829",
+  "strategy": "full_method",
+  "strategy_description": "投稿版完整方法：诊断路由 + 案例卡约束 + 多轮反馈 + 性能筛选。",
+  "requested_rounds": 3,
+  "effective_rounds": 3,
+  "single_round": false,
+  "functions": [
+    "s291",
+    "s292"
+  ],
+  "results": [
+    {
+      "function": "s291",
+      "strategy": "full_method",
+      "status": "success",
+      "success": true,
+      "partial": false,
+      "vectorized_count": 1,
+      "missed_count": 0,
+      "rounds": 3,
+      "best_round": 3,
+      "final_code": "real_t s291(struct args_t * func_args)\n{\n\n//    loop peeling\n//    wrap around variable, 1 level\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    real_t * __restrict__ a_ptr = a;\n    real_t * __restrict__ b_ptr = b;\n\n    for (int nl = 0; nl < 2*iterations; nl++) {\n        \n        // The recurrence im1 = i implies im1_hist[i] = i-1 (with im1_hist[0] = LEN_1D-1).\n        // We can initialize the first element directly to match the original semantic.\n        // This eliminates the loop-carried dependency.\n        int im1_hist_0 = LEN_1D - 1;\n\n        // Main loop: vectorized using the mathematical equivalence im1 = i-1\n        #pragma clang loop vectorize(enable)\n        for (int i = 0; i < LEN_1D; i++) {\n            int idx = (i == 0) ? im1_hist_0 : (i - 1);\n            a_ptr[i] = (b_ptr[i] + b_ptr[idx]) * (real_t).5;\n        }\n\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s291_nqwt07q_/minimal_s291.c:66:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s291_nqwt07q_/minimal_s291.c:66:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s291_nqwt07q_/minimal_s291.c:66:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s291_nqwt07q_/minimal_s291.c:66:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s291_nqwt07q_/minimal_s291.c:66:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s291_nqwt07q_/minimal_s291.c:66:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s291",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 512048000.0,
+          "optimized_checksum": 512048000.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512048000.0,
+              "optimized_checksum": 512048000.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828987042.056498,
+                "STATE_ABS_SUM": 2834579362.056498,
+                "STATE_WEIGHTED_SUM": 66442796913923.63
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828987042.056498,
+                "STATE_ABS_SUM": 2834579362.056498,
+                "STATE_WEIGHTED_SUM": 66442796913923.63
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=512048000.000000 ret_opt=512048000.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=512048000.000000 ret_opt=512048000.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=512048000.000000 ret_opt=512048000.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    },
+    {
+      "function": "s292",
+      "strategy": "full_method",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 1,
+      "missed_count": 2,
+      "rounds": 3,
+      "best_round": 3,
+      "final_code": "real_t s292(struct args_t * func_args)\n{\n\n//    loop peeling\n//    wrap around variable, 2 levels\n//    similar to S291\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    int im1, im2;\n    for (int nl = 0; nl < iterations; nl++) {\n        im1 = LEN_1D-1;\n        im2 = LEN_1D-2;\n        \n        // Scalar Promotion: 将递推变量转换为数组以消除循环携带依赖\n        int im1_arr[LEN_1D];\n        int im2_arr[LEN_1D];\n        \n        // 预计算索引阶段\n        // 移除 vectorize(enable)，因为此循环包含跨迭代依赖 (im2=im1, im1=i)，无法向量化\n        for (int i = 0; i < LEN_1D; i++) {\n            im1_arr[i] = im1;\n            im2_arr[i] = im2;\n            im2 = im1;\n            im1 = i;\n        }\n        \n        // 数据访问阶段\n        real_t * __restrict__ a_ptr = a;\n        real_t * __restrict__ b_ptr = b;\n        #pragma clang loop vectorize(enable)\n        for (int i = 0; i < LEN_1D; i++) {\n            a_ptr[i] = (b_ptr[i] + b_ptr[im1_arr[i]] + b_ptr[im2_arr[i]]) * (real_t).333;\n        }\n        \n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 1,
+        "missed_count": 2,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:77:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:77:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:77:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:77:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "line": 77,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:77:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "line": 77,
+              "column": 9,
+              "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:77:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "line": 77,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "reason": "value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "recurrence_reduction"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s292_qe3a7xb5/minimal_s292.c:66:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 66,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "recurrence_reduction",
+            "other"
+          ],
+          "analysis_categories": [
+            "other",
+            "recurrence_reduction"
+          ],
+          "all_categories": [
+            "recurrence_reduction",
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s292",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 511536128.0,
+          "optimized_checksum": 511536128.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 511536128.0,
+              "optimized_checksum": 511536128.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828475000.64426,
+                "STATE_ABS_SUM": 2834067320.64426,
+                "STATE_WEIGHTED_SUM": 66431617894351.42
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828475000.64426,
+                "STATE_ABS_SUM": 2834067320.64426,
+                "STATE_WEIGHTED_SUM": 66431617894351.42
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=511536128.000000 ret_opt=511536128.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=511536128.000000 ret_opt=511536128.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=511536128.000000 ret_opt=511536128.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

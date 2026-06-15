@@ -1,0 +1,143 @@
+{
+  "timestamp": "2026-06-09T22:18:33.652784",
+  "strategy": "strong_plain",
+  "strategy_description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s279"
+  ],
+  "results": [
+    {
+      "function": "s279",
+      "strategy": "strong_plain",
+      "status": "success",
+      "success": true,
+      "partial": false,
+      "vectorized_count": 1,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s279(struct args_t * func_args)\n{\n\n//    control flow\n//    vector if/gotos\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < iterations/2; nl++) {\n        for (int i = 0; i < LEN_1D; i++) {\n            real_t t_a, t_b, t_c, t_d, t_e;\n            real_t val_b, val_c;\n\n            t_a = a[i];\n            t_b = b[i];\n            t_c = c[i];\n            t_d = d[i];\n            t_e = e[i];\n\n            if (t_a > (real_t)0.) {\n                // Path corresponding to L20\n                val_c = -t_c + t_e * t_e;\n                val_b = t_b;\n            } else {\n                // Path corresponding to the else branch\n                val_b = -t_b + t_d * t_d;\n                if (val_b <= t_a) {\n                    // goto L30\n                    val_c = t_c;\n                } else {\n                    val_c = t_c + t_d * t_e;\n                }\n            }\n\n            // L30\n            a[i] = val_b + val_c * t_d;\n            b[i] = val_b;\n            c[i] = val_c;\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s279_25ks7vzk/minimal_s279.c:55:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s279_25ks7vzk/minimal_s279.c:55:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s279_25ks7vzk/minimal_s279.c:55:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s279_25ks7vzk/minimal_s279.c:55:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s279_25ks7vzk/minimal_s279.c:55:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s279_25ks7vzk/minimal_s279.c:55:9: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "line": 55,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s279",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 10926255243264.0,
+          "optimized_checksum": 10926255243264.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 10926255243264.0,
+              "optimized_checksum": 10926255243264.0,
+              "original_state_metrics": {
+                "STATE_SUM": 10928569919048.057,
+                "STATE_ABS_SUM": 10928575511368.057,
+                "STATE_WEIGHTED_SUM": 2.6228154995337702e+17
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 10928569919048.057,
+                "STATE_ABS_SUM": 10928575511368.057,
+                "STATE_WEIGHTED_SUM": 2.6228154995337702e+17
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

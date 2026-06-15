@@ -1,0 +1,63 @@
+{
+  "strategy": "full_method",
+  "results": {
+    "s279": {
+      "func_name": "s279",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 10926255243264.0,
+        "optimized_checksum": 10926255243264.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 10926255243264.0,
+            "optimized_checksum": 10926255243264.0,
+            "original_state_metrics": {
+              "STATE_SUM": 10928569919048.057,
+              "STATE_ABS_SUM": 10928575511368.057,
+              "STATE_WEIGHTED_SUM": 2.6228154995337702e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 10928569919048.057,
+              "STATE_ABS_SUM": 10928575511368.057,
+              "STATE_WEIGHTED_SUM": 2.6228154995337702e+17
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=10926255243264.000000 ret_opt=10926255243264.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": true
+    }
+  }
+}

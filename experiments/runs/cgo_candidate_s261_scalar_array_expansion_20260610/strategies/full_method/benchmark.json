@@ -1,0 +1,15 @@
+{
+  "strategy": "full_method",
+  "results": {
+    "s261": {
+      "func_name": "s261",
+      "success": false,
+      "error": "正确性验证失败，未执行 benchmark",
+      "benchmark_protocol": "formal",
+      "benchmark_protocol_role": "formal_main_table",
+      "benchmark_protocol_display": "formal(warmup=3,timing=10,batches=5)",
+      "paper_main_table_eligible": true,
+      "benchmark_protocol_warning": null
+    }
+  }
+}

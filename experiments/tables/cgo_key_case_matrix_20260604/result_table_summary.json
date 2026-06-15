@@ -1,0 +1,24 @@
+{
+  "total_long_rows": 20,
+  "total_functions": 5,
+  "total_wide_rows": 5,
+  "total_main_table_wide_rows": 4,
+  "counts_by_blocker": {
+    "unknown_or_already_vectorized": 4,
+    "recurrence_reduction": 8,
+    "dependency_unsafe": 8
+  },
+  "counts_by_strategy": {
+    "strong_plain": 5,
+    "diagnostic_only": 5,
+    "case_card_only": 5,
+    "full_method": 5
+  },
+  "counts_by_conclusion": {
+    "non_vectorized_flat": 2,
+    "benchmark_failed": 4,
+    "non_vectorized_speedup": 2,
+    "vectorized_speedup": 11,
+    "non_vectorized_slowdown": 1
+  }
+}

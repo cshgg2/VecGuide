@@ -1,0 +1,52 @@
+{
+  "strategy": "strong_plain",
+  "results": {
+    "s126": {
+      "func_name": "s126",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": false,
+        "error": "[n1=1, n3=1] STATE_SUM 不匹配: 原始=2985537586.467053, 优化=2984927609.452014, diff=609977.015038, tol=29855.375865",
+        "original_checksum": null,
+        "optimized_checksum": null,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 512002944.0,
+            "optimized_checksum": 512002944.0,
+            "original_state_metrics": {
+              "STATE_SUM": 2985537586.467053,
+              "STATE_ABS_SUM": 2991129906.467053,
+              "STATE_WEIGHTED_SUM": 72972289118550.28
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 2984927609.4520144,
+              "STATE_ABS_SUM": 2990519929.4520144,
+              "STATE_WEIGHTED_SUM": 72946860474110.8
+            },
+            "equivalent": false,
+            "error": "STATE_SUM 不匹配: 原始=2985537586.467053, 优化=2984927609.452014, diff=609977.015038, tol=29855.375865"
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": false,
+        "error": null,
+        "details": []
+      },
+      "overall": false
+    }
+  }
+}

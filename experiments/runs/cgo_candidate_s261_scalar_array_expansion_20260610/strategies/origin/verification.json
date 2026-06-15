@@ -1,0 +1,10 @@
+{
+  "strategy": "origin",
+  "results": {
+    "s261": {
+      "func_name": "s261",
+      "overall": true,
+      "mode": "origin_baseline"
+    }
+  }
+}

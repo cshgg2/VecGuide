@@ -1,0 +1,155 @@
+{
+  "strategy": "strong_plain",
+  "results": {
+    "s115": {
+      "success": true,
+      "func_name": "s115",
+      "protocol_name": "timeout_limited",
+      "protocol_role": "timeout_limited_evidence",
+      "protocol_display_name": "timeout_limited(warmup=1,timing=3,batches=3)",
+      "paper_main_table_eligible": false,
+      "batch_count": 3,
+      "warmup_runs": 1,
+      "timing_runs": 3,
+      "batches": [
+        {
+          "original_time_ms": 5745.455967,
+          "optimized_time_ms": 9137.056961,
+          "speedup": 0.6288,
+          "improvement_pct": -37.12,
+          "batch": 1,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 1,
+          "sample_index": 1
+        },
+        {
+          "original_time_ms": 6506.839461,
+          "optimized_time_ms": 9544.522212,
+          "speedup": 0.6817,
+          "improvement_pct": -31.83,
+          "batch": 2,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 2,
+          "sample_index": 2
+        },
+        {
+          "original_time_ms": 5947.304299,
+          "optimized_time_ms": 9470.609564,
+          "speedup": 0.628,
+          "improvement_pct": -37.2,
+          "batch": 3,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 3,
+          "sample_index": 3
+        }
+      ],
+      "arg_cases": [
+        {
+          "a": 1,
+          "b": 1
+        }
+      ],
+      "arg_case_results": [
+        {
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "batch_count": 3,
+          "original_time_ms": 6066.533242333333,
+          "optimized_time_ms": 9384.062912333333,
+          "speedup": 0.6461666666666667,
+          "improvement_pct": -35.38333333333333,
+          "original_time_median_ms": 5947.304299,
+          "optimized_time_median_ms": 9470.609564,
+          "speedup_median": 0.6288,
+          "improvement_pct_median": -37.12,
+          "original_time_stddev_ms": 394.44627255204125,
+          "optimized_time_stddev_ms": 217.08229978318522,
+          "speedup_stddev": 0.03077536893902869,
+          "improvement_pct_stddev": 3.0775368939028724,
+          "batches": [
+            {
+              "original_time_ms": 5745.455967,
+              "optimized_time_ms": 9137.056961,
+              "speedup": 0.6288,
+              "improvement_pct": -37.12,
+              "batch": 1,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 1,
+              "sample_index": 1
+            },
+            {
+              "original_time_ms": 6506.839461,
+              "optimized_time_ms": 9544.522212,
+              "speedup": 0.6817,
+              "improvement_pct": -31.83,
+              "batch": 2,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 2,
+              "sample_index": 2
+            },
+            {
+              "original_time_ms": 5947.304299,
+              "optimized_time_ms": 9470.609564,
+              "speedup": 0.628,
+              "improvement_pct": -37.2,
+              "batch": 3,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 3,
+              "sample_index": 3
+            }
+          ]
+        }
+      ],
+      "arg_case_count": 1,
+      "sample_count": 3,
+      "benchmark_scope": "batches_only",
+      "original_time_ms": 6066.533242333333,
+      "optimized_time_ms": 9384.062912333333,
+      "speedup": 0.6461666666666667,
+      "improvement_pct": -35.38333333333333,
+      "original_time_median_ms": 5947.304299,
+      "optimized_time_median_ms": 9470.609564,
+      "speedup_median": 0.6288,
+      "improvement_pct_median": -37.12,
+      "original_time_stddev_ms": 394.44627255204125,
+      "optimized_time_stddev_ms": 217.08229978318522,
+      "speedup_stddev": 0.03077536893902869,
+      "improvement_pct_stddev": 3.0775368939028724,
+      "error": null,
+      "benchmark_protocol": "timeout_limited",
+      "benchmark_protocol_role": "timeout_limited_evidence",
+      "benchmark_protocol_display": "timeout_limited(warmup=1,timing=3,batches=3)",
+      "benchmark_protocol_warning": null
+    },
+    "s235": {
+      "func_name": "s235",
+      "success": false,
+      "error": "正确性验证失败，未执行 benchmark",
+      "benchmark_protocol": "timeout_limited",
+      "benchmark_protocol_role": "timeout_limited_evidence",
+      "benchmark_protocol_display": "timeout_limited(warmup=1,timing=3,batches=3)",
+      "paper_main_table_eligible": false,
+      "benchmark_protocol_warning": null
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "strategy": "strong_plain",
+  "exit_code": 0,
+  "total_functions": 3,
+  "status_counts": {
+    "failed": 1,
+    "skipped": 2
+  },
+  "observed_outcome_counts": {
+    "non_vectorized_speedup": 1,
+    "already_vectorized_skipped": 2
+  },
+  "correctness_passed": 3,
+  "fully_vectorized": 0,
+  "benchmark_success_count": 3,
+  "avg_speedup": 1.1445400000000001,
+  "median_speedup": 1.1445400000000001,
+  "avg_improvement_pct": 14.454,
+  "negative_optimization_count": 0
+}

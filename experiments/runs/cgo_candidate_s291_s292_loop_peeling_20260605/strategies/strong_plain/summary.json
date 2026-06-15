@@ -1,0 +1,252 @@
+{
+  "timestamp": "2026-06-05T10:50:11.093789",
+  "strategy": "strong_plain",
+  "strategy_description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s291",
+    "s292"
+  ],
+  "results": [
+    {
+      "function": "s291",
+      "strategy": "strong_plain",
+      "status": "success",
+      "success": true,
+      "partial": false,
+      "vectorized_count": 1,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s291(struct args_t * func_args)\n{\n\n//    loop peeling\n//    wrap around variable, 1 level\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    int im1;\n    for (int nl = 0; nl < 2*iterations; nl++) {\n        // Peel the first iteration to handle the wrap-around case (im1 = LEN_1D-1)\n        // This sets up the state for the vectorizable loop\n        im1 = LEN_1D - 1;\n        a[0] = (b[0] + b[im1]) * (real_t).5;\n        \n        // Main loop: regular dependency pattern a[i] = (b[i] + b[i-1]) * 0.5\n        // No loop-carried dependencies on 'a' or 'b' writes, only on read indices.\n        // This structure is friendly to auto-vectorization.\n        #pragma clang loop vectorize(enable)\n        for (int i = 1; i < LEN_1D; i++) {\n            a[i] = (b[i] + b[i-1]) * (real_t).5;\n        }\n        \n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s291_2tlxlzx6/minimal_s291.c:65:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s291_2tlxlzx6/minimal_s291.c:65:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s291_2tlxlzx6/minimal_s291.c:65:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 65,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s291_2tlxlzx6/minimal_s291.c:65:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 65,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s291",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 512048000.0,
+          "optimized_checksum": 512048000.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512048000.0,
+              "optimized_checksum": 512048000.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828987042.056498,
+                "STATE_ABS_SUM": 2834579362.056498,
+                "STATE_WEIGHTED_SUM": 66442796913923.63
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828987042.056498,
+                "STATE_ABS_SUM": 2834579362.056498,
+                "STATE_WEIGHTED_SUM": 66442796913923.63
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=512048000.000000 ret_opt=512048000.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=512048000.000000 ret_opt=512048000.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=512048000.000000 ret_opt=512048000.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    },
+    {
+      "function": "s292",
+      "strategy": "strong_plain",
+      "status": "success",
+      "success": true,
+      "partial": false,
+      "vectorized_count": 1,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s292(struct args_t * func_args)\n{\n\n//    loop peeling\n//    wrap around variable, 2 levels\n//    similar to S291\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    int im1, im2;\n    for (int nl = 0; nl < iterations; nl++) {\n        im1 = LEN_1D-1;\n        im2 = LEN_1D-2;\n        \n        // Peeling the first two iterations to resolve loop-carried dependencies\n        // Iteration i = 0\n        a[0] = (b[0] + b[im1] + b[im2]) * (real_t).333;\n        im2 = im1;\n        im1 = 0;\n\n        // Iteration i = 1\n        a[1] = (b[1] + b[im1] + b[im2]) * (real_t).333;\n        im2 = im1;\n        im1 = 1;\n\n        // Main loop: dependencies are resolved, im1=i-1, im2=i-2\n        // Vectorizable\n        for (int i = 2; i < LEN_1D; i++) {\n            a[i] = (b[i] + b[i-1] + b[i-2]) * (real_t).333;\n        }\n\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s292_gae2lz3f/minimal_s292.c:73:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s292_gae2lz3f/minimal_s292.c:73:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s292_gae2lz3f/minimal_s292.c:73:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 73,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s292_gae2lz3f/minimal_s292.c:73:9: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 73,
+              "column": 9,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s292",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 511536128.0,
+          "optimized_checksum": 511536128.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 511536128.0,
+              "optimized_checksum": 511536128.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828475000.64426,
+                "STATE_ABS_SUM": 2834067320.64426,
+                "STATE_WEIGHTED_SUM": 66431617894351.42
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828475000.64426,
+                "STATE_ABS_SUM": 2834067320.64426,
+                "STATE_WEIGHTED_SUM": 66431617894351.42
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=511536128.000000 ret_opt=511536128.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=511536128.000000 ret_opt=511536128.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=511536128.000000 ret_opt=511536128.000000 max_rel=0.00e+00 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "case_card_set_version": "experiment_case_cards_v1_20260601",
+  "case_card_format_version": "case_card_format_v1_20260601",
+  "structured_feedback_available": true,
+  "limit": 4,
+  "selected_count": 2,
+  "selected_cards": [
+    {
+      "rank": 1,
+      "score": 5,
+      "id": "goto_if_else_structuring",
+      "title": "goto if/else: structure local updates before predication",
+      "summary": "For goto-shaped if/else blocks, first rewrite the labels into local ordered updates, then let the compiler if-convert the structured loop.",
+      "oracle_function": "s278",
+      "oracle_speedup": "oracle_batch2_loop_control_20260526: ours_full 2.163x mean / 2.201x median, correctness passed, 1 vectorized / 0 missed. oracle_s278_repeat1_20260527: ours_full 1.952x mean / 2.087x median. oracle_s278_plain_baseline_20260527: llm_plain also succeeded at 1.451x mean / 1.446x median.",
+      "oracle_failure": null,
+      "oracle_verified": "2026-05-27",
+      "semantic_safety": "The branch-local scalar values preserve the original path updates, and the joined assignment still sees the updated b or c value from the same iteration.",
+      "vectorization_rationale": "Removing labels gives the compiler a structured loop body. The branch is local to each iteration and can be if-converted or vectorized by the backend.",
+      "performance_risk": "Independent-condition predication can be much slower when it adds unconditional arithmetic. oracle_batch2_loop_control_20260526 rejected s272 at 0.330x even though it was correct and vectorized.",
+      "oracle_critical_note": "This card is for structured goto-to-if/else rewrites with local value preservation. It should not be claimed as a plain-baseline failure case, because llm_plain also found a positive s278 rewrite, though with lower speedup.",
+      "failure_asset": null
+    },
+    {
+      "rank": 2,
+      "score": 2,
+      "id": "branch_hoisting_predication",
+      "title": "control flow rewrite: branch hoisting before heavy refactoring",
+      "summary": "For branch-heavy loops, start from branch hoisting, predication or path splitting before introducing complex table-based rewrites.",
+      "oracle_function": "s1161",
+      "oracle_speedup": "1.69x (deepseek-v4-pro); glm-4.7: non-vectorized 1.21x (if/else version), vectorized but slowdown 0.59x (ternary) — predication alone not sufficient on all models",
+      "oracle_failure": null,
+      "oracle_verified": "2026-05-15",
+      "semantic_safety": "Each predicated assignment must preserve the original branch condition and leave the untouched array value unchanged.",
+      "vectorization_rationale": "Replacing goto/if regions with conditional expressions gives the compiler a straight-line loop body suitable for if-conversion.",
+      "performance_risk": "Predication can execute extra arithmetic and may be slower on GLM-generated variants, so correctness and vectorization are not enough. oracle_batch1_control_20260522 showed this again: s276 became vectorized after ternary if-conversion, but benchmark timed out after 120 seconds.",
+      "oracle_critical_note": "Ternary (?:) predication works better than if/else for Clang if-conversion. But GLM r2 and s276 showed that predication can cause slowdown or timeout — verify with benchmark before accepting.",
+      "failure_asset": null
+    }
+  ],
+  "formatted_text": "案例卡 1: goto if/else: structure local updates before predication\n- 触发原因: For goto-shaped if/else blocks, first rewrite the labels into local ordered updates, then let the compiler if-convert the structured loop.\n- 推荐动作:\n  - Replace forward goto labels with a local if/else block when both paths rejoin in the same iteration.\n  - Cache the values updated on each path in local scalars, then write arrays back once in original order.\n  - Keep the final use of updated values after the branch, such as a[i] depending on the new b[i] or c[i].\n- 明确避免:\n  - Do not move the post-join assignment before branch-specific updates.\n  - Do not turn every conditional into unconditional arithmetic if the skipped work is large.\n  - Do not claim a generic control-flow solution without benchmark evidence.\n- 代表函数: s278\n- 验证结论: oracle_batch2_loop_control_20260526: ours_full 2.163x mean / 2.201x median, correctness passed, 1 vectorized / 0 missed. oracle_s278_repeat1_20260527: ours_full 1.952x mean / 2.087x median. oracle_s278_plain_baseline_20260527: llm_plain also succeeded at 1.451x mean / 1.446x median.\n- 验证日期: 2026-05-27\n- 语义安全理由: The branch-local scalar values preserve the original path updates, and the joined assignment still sees the updated b or c value from the same iteration.\n- 有利于向量化的原因: Removing labels gives the compiler a structured loop body. The branch is local to each iteration and can be if-converted or vectorized by the backend.\n- 性能风险: Independent-condition predication can be much slower when it adds unconditional arithmetic. oracle_batch2_loop_control_20260526 rejected s272 at 0.330x even though it was correct and vectorized.\n- 关键风险约束: This card is for structured goto-to-if/else rewrites with local value preservation. It should not be claimed as a plain-baseline failure case, because llm_plain also found a positive s278 rewrite, though with lower speedup.\n- 最小示例 before: if (a[i] > 0) goto L20; b[i] = f(b[i]); goto L30; L20: c[i] = g(c[i]); L30: a[i] = b[i] + c[i] * d[i];\n- 最小示例 after: load b_val/c_val; if (cond) update c_val else update b_val; then compute a[i] from the updated local values and store b/c.\n\n案例卡 2: control flow rewrite: branch hoisting before heavy refactoring\n- 触发原因: For branch-heavy loops, start from branch hoisting, predication or path splitting before introducing complex table-based rewrites.\n- 推荐动作:\n  - Convert simple if/else into predicated assignments when cost is low.\n  - Split mutually exclusive paths into separate loops when that preserves semantics.\n  - Keep the transformation local to the hot loop body.\n- 明确避免:\n  - Do not introduce many helper arrays unless reuse clearly amortizes the cost.\n  - Do not move dummy() or fold outer iterations.\n- 代表函数: s1161\n- 验证结论: 1.69x (deepseek-v4-pro); glm-4.7: non-vectorized 1.21x (if/else version), vectorized but slowdown 0.59x (ternary) — predication alone not sufficient on all models\n- 验证日期: 2026-05-15\n- 语义安全理由: Each predicated assignment must preserve the original branch condition and leave the untouched array value unchanged.\n- 有利于向量化的原因: Replacing goto/if regions with conditional expressions gives the compiler a straight-line loop body suitable for if-conversion.\n- 性能风险: Predication can execute extra arithmetic and may be slower on GLM-generated variants, so correctness and vectorization are not enough. oracle_batch1_control_20260522 showed this again: s276 became vectorized after ternary if-conversion, but benchmark timed out after 120 seconds.\n- 关键风险约束: Ternary (?:) predication works better than if/else for Clang if-conversion. But GLM r2 and s276 showed that predication can cause slowdown or timeout — verify with benchmark before accepting.\n- 最小示例 before: if (cond) { a[i] = x; } else { a[i] = y; }\n- 最小示例 after: a[i] = cond ? x : y;",
+  "included": true
+}

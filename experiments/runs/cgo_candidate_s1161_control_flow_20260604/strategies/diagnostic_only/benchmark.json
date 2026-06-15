@@ -1,0 +1,197 @@
+{
+  "strategy": "diagnostic_only",
+  "results": {
+    "s1161": {
+      "success": true,
+      "func_name": "s1161",
+      "protocol_name": "formal",
+      "protocol_role": "formal_main_table",
+      "protocol_display_name": "formal(warmup=3,timing=10,batches=5)",
+      "paper_main_table_eligible": true,
+      "batch_count": 5,
+      "warmup_runs": 3,
+      "timing_runs": 10,
+      "batches": [
+        {
+          "original_time_ms": 1504.724371,
+          "optimized_time_ms": 1368.677811,
+          "speedup": 1.0994,
+          "improvement_pct": 9.94,
+          "batch": 1,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 1,
+          "sample_index": 1
+        },
+        {
+          "original_time_ms": 1511.090654,
+          "optimized_time_ms": 1371.955687,
+          "speedup": 1.1014,
+          "improvement_pct": 10.14,
+          "batch": 2,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 2,
+          "sample_index": 2
+        },
+        {
+          "original_time_ms": 1500.681404,
+          "optimized_time_ms": 1414.408299,
+          "speedup": 1.061,
+          "improvement_pct": 6.1,
+          "batch": 3,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 3,
+          "sample_index": 3
+        },
+        {
+          "original_time_ms": 1497.088703,
+          "optimized_time_ms": 1369.291472,
+          "speedup": 1.0933,
+          "improvement_pct": 9.33,
+          "batch": 4,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 4,
+          "sample_index": 4
+        },
+        {
+          "original_time_ms": 1513.586241,
+          "optimized_time_ms": 1373.304044,
+          "speedup": 1.1021,
+          "improvement_pct": 10.21,
+          "batch": 5,
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "case_batch": 5,
+          "sample_index": 5
+        }
+      ],
+      "arg_cases": [
+        {
+          "a": 1,
+          "b": 1
+        }
+      ],
+      "arg_case_results": [
+        {
+          "arg_info": {
+            "a": 1,
+            "b": 1
+          },
+          "batch_count": 5,
+          "original_time_ms": 1505.4342746,
+          "optimized_time_ms": 1379.5274626,
+          "speedup": 1.09144,
+          "improvement_pct": 9.144,
+          "original_time_median_ms": 1504.724371,
+          "optimized_time_median_ms": 1371.955687,
+          "speedup_median": 1.0994,
+          "improvement_pct_median": 9.94,
+          "original_time_stddev_ms": 6.913600572347236,
+          "optimized_time_stddev_ms": 19.590979532528564,
+          "speedup_stddev": 0.01736556938312132,
+          "improvement_pct_stddev": 1.7365569383121306,
+          "batches": [
+            {
+              "original_time_ms": 1504.724371,
+              "optimized_time_ms": 1368.677811,
+              "speedup": 1.0994,
+              "improvement_pct": 9.94,
+              "batch": 1,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 1,
+              "sample_index": 1
+            },
+            {
+              "original_time_ms": 1511.090654,
+              "optimized_time_ms": 1371.955687,
+              "speedup": 1.1014,
+              "improvement_pct": 10.14,
+              "batch": 2,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 2,
+              "sample_index": 2
+            },
+            {
+              "original_time_ms": 1500.681404,
+              "optimized_time_ms": 1414.408299,
+              "speedup": 1.061,
+              "improvement_pct": 6.1,
+              "batch": 3,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 3,
+              "sample_index": 3
+            },
+            {
+              "original_time_ms": 1497.088703,
+              "optimized_time_ms": 1369.291472,
+              "speedup": 1.0933,
+              "improvement_pct": 9.33,
+              "batch": 4,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 4,
+              "sample_index": 4
+            },
+            {
+              "original_time_ms": 1513.586241,
+              "optimized_time_ms": 1373.304044,
+              "speedup": 1.1021,
+              "improvement_pct": 10.21,
+              "batch": 5,
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "case_batch": 5,
+              "sample_index": 5
+            }
+          ]
+        }
+      ],
+      "arg_case_count": 1,
+      "sample_count": 5,
+      "benchmark_scope": "batches_only",
+      "original_time_ms": 1505.4342746,
+      "optimized_time_ms": 1379.5274626,
+      "speedup": 1.09144,
+      "improvement_pct": 9.144,
+      "original_time_median_ms": 1504.724371,
+      "optimized_time_median_ms": 1371.955687,
+      "speedup_median": 1.0994,
+      "improvement_pct_median": 9.94,
+      "original_time_stddev_ms": 6.913600572347236,
+      "optimized_time_stddev_ms": 19.590979532528564,
+      "speedup_stddev": 0.01736556938312132,
+      "improvement_pct_stddev": 1.7365569383121306,
+      "error": null,
+      "benchmark_protocol": "formal",
+      "benchmark_protocol_role": "formal_main_table",
+      "benchmark_protocol_display": "formal(warmup=3,timing=10,batches=5)",
+      "benchmark_protocol_warning": null
+    }
+  }
+}

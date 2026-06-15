@@ -1,0 +1,62 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-04T12:07:06.294764",
+      "function": "s172",
+      "strategy": "case_card_only",
+      "publication_name": "case_card_only",
+      "prompt_version": "case_card_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s172/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s172/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s172/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "runtime_stride_simple_multiversion",
+        "call_side_effect_boundary",
+        "runtime_stride_complex_two_phase",
+        "branch_hoisting_predication"
+      ]
+    },
+    {
+      "timestamp": "2026-06-04T12:07:18.173914",
+      "function": "s1113",
+      "strategy": "case_card_only",
+      "publication_name": "case_card_only",
+      "prompt_version": "case_card_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s1113/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s1113/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s1113/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "loop_distribution_dependency_isolation",
+        "loop_peeling_fixed_source_scalarization",
+        "node_splitting_true_anti_dependency",
+        "triangular_saxpy_inner_loop_scalarization"
+      ]
+    },
+    {
+      "timestamp": "2026-06-04T12:07:31.722719",
+      "function": "s122",
+      "strategy": "case_card_only",
+      "publication_name": "case_card_only",
+      "prompt_version": "case_card_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s122/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s122/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/prompt_snapshot/s122/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "runtime_stride_complex_two_phase",
+        "call_side_effect_boundary",
+        "runtime_stride_simple_multiversion",
+        "branch_hoisting_predication"
+      ]
+    }
+  ]
+}

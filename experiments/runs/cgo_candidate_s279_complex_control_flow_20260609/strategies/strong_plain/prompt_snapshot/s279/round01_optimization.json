@@ -1,0 +1,121 @@
+{
+  "snapshot_schema_version": 1,
+  "timestamp": "2026-06-09T22:18:22.703027",
+  "function": "s279",
+  "strategy": "strong_plain",
+  "publication_name": "strong_plain",
+  "paper_role": "公平强基础大模型基线。",
+  "prompt_version": "strong_plain_v1_20260601",
+  "round": 1,
+  "max_rounds": 1,
+  "prompt_kind": "optimization",
+  "prompt_options": {
+    "system_prompt_profile": "strong_plain",
+    "include_strong_baseline_guidance": true,
+    "include_diagnostics": false,
+    "include_structured_feedback": false,
+    "include_semantic_hints": false,
+    "include_knowledge": false,
+    "include_examples": false,
+    "include_history": false,
+    "include_progress_analysis": false,
+    "use_multi_round_system_prompt": false
+  },
+  "template_versions": {
+    "method_system": "method_system_v1_20260601",
+    "strong_plain_system": "strong_plain_system_v1_20260601",
+    "multi_round_system": "multi_round_system_v1_20260601",
+    "optimization_user": "optimization_user_v1_20260601",
+    "retry_prompt": "retry_prompt_v1_20260601",
+    "structured_feedback_format": "structured_feedback_v1_20260601"
+  },
+  "system_prompt_template": {
+    "name": "strong_plain_system",
+    "version": "strong_plain_system_v1_20260601"
+  },
+  "user_prompt_template": {
+    "name": "optimization_user",
+    "version": "optimization_user_v1_20260601"
+  },
+  "diagnostics": {
+    "vectorized": [],
+    "missed": [],
+    "analysis": [
+      "/tmp/acpo_s279_y2m651ix/minimal_s279.c:55:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+      "/tmp/acpo_s279_y2m651ix/minimal_s279.c:55:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]"
+    ],
+    "errors": [],
+    "vectorized_entries": [],
+    "missed_entries": [],
+    "analysis_entries": [
+      {
+        "raw": "/tmp/acpo_s279_y2m651ix/minimal_s279.c:55:9: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+        "line": 55,
+        "column": 9,
+        "message": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+        "reason": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      },
+      {
+        "raw": "/tmp/acpo_s279_y2m651ix/minimal_s279.c:55:9: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+        "line": 55,
+        "column": 9,
+        "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+        "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      }
+    ],
+    "missed_categories": [],
+    "analysis_categories": [
+      "other"
+    ],
+    "all_categories": [
+      "other"
+    ],
+    "structured_feedback": {
+      "func_name": "s279",
+      "severity": "low",
+      "pattern_family": null,
+      "primary_categories": [],
+      "compile_level": {
+        "compilable": true,
+        "error_preview": null
+      },
+      "vectorization_level": {
+        "vectorized_count": 0,
+        "missed_count": 0,
+        "missed_categories": [],
+        "dynamic_missed_reasons": [],
+        "static_problem_reasons": []
+      },
+      "performance_level": {
+        "available": false,
+        "anti_patterns": []
+      },
+      "code_facts": {
+        "has_runtime_stride": false,
+        "has_indexed_recurrence": false,
+        "has_control_flow": true,
+        "has_indirect_indexing": false,
+        "has_fixed_index_self_read_hazard": false,
+        "has_outer_iterations_loop": true
+      }
+    }
+  },
+  "case_cards": {
+    "included": false,
+    "case_card_set_version": "experiment_case_cards_v1_20260601",
+    "case_card_format_version": "case_card_format_v1_20260601",
+    "structured_feedback_available": true,
+    "selected_count": 0,
+    "selected_cards": [],
+    "formatted_text": "",
+    "reason": "include_knowledge_disabled"
+  },
+  "system_prompt": "你是一个擅长 C 程序性能优化和自动向量化友好改写的大模型。你的任务是在不依赖项目案例库、历史反馈或编译器诊断路由的情况下，根据给定函数源码生成一个更容易被 Clang 自动向量化的等价版本。\n\n## 任务目标\n1. 识别源码中可能阻碍自动向量化的结构，例如循环携带依赖、复杂索引、运行时步长、控制流、别名疑虑、不规范循环边界和混合语句。\n2. 在保持语义完全一致的前提下，尝试常见且可证明安全的源码级改写。\n3. 输出完整、可编译的 C 函数代码，而不是解释性建议。\n\n## 允许尝试的通用优化\n- 循环交换：当交换循环顺序能让内层循环连续访问且不破坏依赖顺序时使用。\n- 循环分发/拆分：将生产语句和消费语句拆成多个有序循环，降低单个循环内的依赖复杂度。\n- 循环剥离：单独处理少量边界迭代，使主循环更规则。\n- 节点拆分：把混在一个循环中的多个语句拆成语义等价的阶段。\n- 标量临时变量：缓存循环不变或固定源值，但必须确认该值不会在后续迭代中被本循环更新。\n- 条件结构化：将 goto 或复杂分支改写为等价的 if/else 或条件选择。\n- restrict 与局部指针：在能保证不改变语义的情况下帮助编译器消除别名疑虑。\n- pragma：可以添加 Clang loop pragma，但不能只依赖 pragma；若存在真实依赖，应先做源码结构改写。\n\n## 必须遵守的正确性约束\n- 不改变函数签名、全局数组含义、dummy() 调用层级和调用次数。\n- 不硬编码 LEN_1D、LEN_2D、iterations 等宏的具体数值。\n- 不把跨迭代递推变量随意改成闭式公式，除非能严格保证每轮值序列一致。\n- 不把同时被当前循环写入的固定数组位置当作整轮不变量。\n- 对运行时参数控制的循环，不能只针对默认参数投机优化；若做特化，必须保留通用正确路径。\n- 不引入与 TSVC 全局数组同名的局部变量或循环变量。\n- 如果无法证明激进改写等价，返回保守但完整的函数版本。\n\n## 输出格式\n先用 2-4 行说明采用的优化策略，然后输出一个 ```c 代码块。代码块内只能包含完整 C 函数代码，不能包含省略号、TODO、伪代码或自然语言解释。\n",
+  "user_prompt": "【函数名】: s279\n【当前轮次】: 第 1 轮 / 共 1 轮\n\n【待优化代码】:\n```c\nreal_t s279(struct args_t * func_args)\n{\n\n//    control flow\n//    vector if/gotos\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < iterations/2; nl++) {\n        for (int i = 0; i < LEN_1D; i++) {\n            if (a[i] > (real_t)0.) {\n                goto L20;\n            }\n            b[i] = -b[i] + d[i] * d[i];\n            if (b[i] <= a[i]) {\n                goto L30;\n            }\n            c[i] += d[i] * e[i];\n            goto L30;\nL20:\n            c[i] = -c[i] + e[i] * e[i];\nL30:\n            a[i] = b[i] + c[i] * d[i];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}\n```\n\n【通用自动向量化改写建议】:\n- 先检查循环是否存在真实跨迭代依赖；有真实依赖时不要强行加 pragma。\n- 可以尝试循环交换、循环分发、循环剥离、节点拆分、标量临时变量、条件结构化、restrict 和 Clang loop pragma。\n- 每个改写都必须保持原始迭代空间、数组写入集合、dummy() 调用层级和运行时参数语义。\n- 若使用运行时参数特化，必须保留覆盖所有参数的通用正确路径。\n- 不要使用项目案例卡、历史反馈或特定已知函数经验；只依据当前源码做通用优化判断。\n\n【你的任务】:\n分析上述代码的向量化障碍，应用适当的优化技术，输出优化后的代码。\n如果存在递推变量、参数化步长或 dummy() 语义风险，优先使用可验证的保守重构，不要做未经证明的闭式化简或批量折叠。\n\n请输出优化策略和完整代码：\n- 先给 2-4 行策略说明，再给一个 ```c 代码块\n- 代码块内只能包含纯 C 代码，禁止夹带解释文字\n- 不要输出 `...`、`TODO`、伪代码或半截函数\n- 如果不确定优化是否成立，返回完整保守版本函数，不要只给分析"
+}

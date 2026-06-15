@@ -1,0 +1,37 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-11T19:04:49.652344",
+      "function": "s274",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/prompt_snapshot/s274/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/prompt_snapshot/s274/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/prompt_snapshot/s274/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "branch_hoisting_predication"
+      ]
+    },
+    {
+      "timestamp": "2026-06-11T19:05:14.518486",
+      "function": "s2710",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/prompt_snapshot/s2710/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/prompt_snapshot/s2710/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/prompt_snapshot/s2710/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "branch_hoisting_predication"
+      ]
+    }
+  ]
+}

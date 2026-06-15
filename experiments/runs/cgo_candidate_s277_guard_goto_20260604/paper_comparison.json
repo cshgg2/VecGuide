@@ -1,0 +1,494 @@
+{
+  "run_id": "cgo_candidate_s277_guard_goto_20260604",
+  "timestamp": "2026-06-04T23:06:08.603510",
+  "strategies": [
+    "strong_plain",
+    "diagnostic_only",
+    "case_card_only",
+    "full_method"
+  ],
+  "total_functions": 1,
+  "outcome_counts_by_strategy": {
+    "strong_plain": {
+      "non_vectorized_flat": 1
+    },
+    "diagnostic_only": {
+      "non_vectorized_flat": 1
+    },
+    "case_card_only": {
+      "non_vectorized_flat": 1
+    },
+    "full_method": {
+      "performance_guard_rejected": 1
+    }
+  },
+  "pairwise_summaries": [
+    {
+      "pair": "strong_plain_vs_diagnostic_only",
+      "left_strategy": "strong_plain",
+      "right_strategy": "diagnostic_only",
+      "comparison_tolerance_speedup": 0.02,
+      "total_functions": 1,
+      "comparable_functions": 1,
+      "verdict_counts": {
+        "better": 0,
+        "tie": 1,
+        "worse": 0
+      },
+      "left_status_counts": {
+        "ok": 1
+      },
+      "right_status_counts": {
+        "ok": 1
+      },
+      "avg_delta_speedup": 0.0043800000000000505,
+      "median_delta_speedup": 0.0043800000000000505,
+      "avg_delta_improvement_pct": 0.43800000000000006,
+      "top_left_advantages": [],
+      "top_right_advantages": [],
+      "function_results": [
+        {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "strong_plain",
+          "right_strategy": "diagnostic_only",
+          "left_status": "ok",
+          "right_status": "ok",
+          "comparable": true,
+          "left_speedup": 1.00156,
+          "right_speedup": 0.99718,
+          "delta_speedup": 0.0043800000000000505,
+          "delta_improvement_pct": 0.43800000000000006,
+          "verdict": "tie"
+        }
+      ]
+    },
+    {
+      "pair": "strong_plain_vs_case_card_only",
+      "left_strategy": "strong_plain",
+      "right_strategy": "case_card_only",
+      "comparison_tolerance_speedup": 0.02,
+      "total_functions": 1,
+      "comparable_functions": 1,
+      "verdict_counts": {
+        "better": 0,
+        "tie": 1,
+        "worse": 0
+      },
+      "left_status_counts": {
+        "ok": 1
+      },
+      "right_status_counts": {
+        "ok": 1
+      },
+      "avg_delta_speedup": 0.019320000000000004,
+      "median_delta_speedup": 0.019320000000000004,
+      "avg_delta_improvement_pct": 1.9320000000000002,
+      "top_left_advantages": [],
+      "top_right_advantages": [],
+      "function_results": [
+        {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "strong_plain",
+          "right_strategy": "case_card_only",
+          "left_status": "ok",
+          "right_status": "ok",
+          "comparable": true,
+          "left_speedup": 1.00156,
+          "right_speedup": 0.98224,
+          "delta_speedup": 0.019320000000000004,
+          "delta_improvement_pct": 1.9320000000000002,
+          "verdict": "tie"
+        }
+      ]
+    },
+    {
+      "pair": "strong_plain_vs_full_method",
+      "left_strategy": "strong_plain",
+      "right_strategy": "full_method",
+      "comparison_tolerance_speedup": 0.02,
+      "total_functions": 1,
+      "comparable_functions": 0,
+      "verdict_counts": {
+        "better": 0,
+        "tie": 0,
+        "worse": 0
+      },
+      "left_status_counts": {
+        "ok": 1
+      },
+      "right_status_counts": {
+        "performance_guard_rejected": 1
+      },
+      "avg_delta_speedup": null,
+      "median_delta_speedup": null,
+      "avg_delta_improvement_pct": null,
+      "top_left_advantages": [],
+      "top_right_advantages": [],
+      "function_results": [
+        {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "strong_plain",
+          "right_strategy": "full_method",
+          "left_status": "ok",
+          "right_status": "performance_guard_rejected",
+          "comparable": false,
+          "left_speedup": 1.00156,
+          "right_speedup": null,
+          "delta_speedup": null,
+          "delta_improvement_pct": null,
+          "verdict": null
+        }
+      ]
+    },
+    {
+      "pair": "diagnostic_only_vs_case_card_only",
+      "left_strategy": "diagnostic_only",
+      "right_strategy": "case_card_only",
+      "comparison_tolerance_speedup": 0.02,
+      "total_functions": 1,
+      "comparable_functions": 1,
+      "verdict_counts": {
+        "better": 0,
+        "tie": 1,
+        "worse": 0
+      },
+      "left_status_counts": {
+        "ok": 1
+      },
+      "right_status_counts": {
+        "ok": 1
+      },
+      "avg_delta_speedup": 0.014939999999999953,
+      "median_delta_speedup": 0.014939999999999953,
+      "avg_delta_improvement_pct": 1.4940000000000002,
+      "top_left_advantages": [],
+      "top_right_advantages": [],
+      "function_results": [
+        {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "diagnostic_only",
+          "right_strategy": "case_card_only",
+          "left_status": "ok",
+          "right_status": "ok",
+          "comparable": true,
+          "left_speedup": 0.99718,
+          "right_speedup": 0.98224,
+          "delta_speedup": 0.014939999999999953,
+          "delta_improvement_pct": 1.4940000000000002,
+          "verdict": "tie"
+        }
+      ]
+    },
+    {
+      "pair": "diagnostic_only_vs_full_method",
+      "left_strategy": "diagnostic_only",
+      "right_strategy": "full_method",
+      "comparison_tolerance_speedup": 0.02,
+      "total_functions": 1,
+      "comparable_functions": 0,
+      "verdict_counts": {
+        "better": 0,
+        "tie": 0,
+        "worse": 0
+      },
+      "left_status_counts": {
+        "ok": 1
+      },
+      "right_status_counts": {
+        "performance_guard_rejected": 1
+      },
+      "avg_delta_speedup": null,
+      "median_delta_speedup": null,
+      "avg_delta_improvement_pct": null,
+      "top_left_advantages": [],
+      "top_right_advantages": [],
+      "function_results": [
+        {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "diagnostic_only",
+          "right_strategy": "full_method",
+          "left_status": "ok",
+          "right_status": "performance_guard_rejected",
+          "comparable": false,
+          "left_speedup": 0.99718,
+          "right_speedup": null,
+          "delta_speedup": null,
+          "delta_improvement_pct": null,
+          "verdict": null
+        }
+      ]
+    },
+    {
+      "pair": "case_card_only_vs_full_method",
+      "left_strategy": "case_card_only",
+      "right_strategy": "full_method",
+      "comparison_tolerance_speedup": 0.02,
+      "total_functions": 1,
+      "comparable_functions": 0,
+      "verdict_counts": {
+        "better": 0,
+        "tie": 0,
+        "worse": 0
+      },
+      "left_status_counts": {
+        "ok": 1
+      },
+      "right_status_counts": {
+        "performance_guard_rejected": 1
+      },
+      "avg_delta_speedup": null,
+      "median_delta_speedup": null,
+      "avg_delta_improvement_pct": null,
+      "top_left_advantages": [],
+      "top_right_advantages": [],
+      "function_results": [
+        {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "case_card_only",
+          "right_strategy": "full_method",
+          "left_status": "ok",
+          "right_status": "performance_guard_rejected",
+          "comparable": false,
+          "left_speedup": 0.98224,
+          "right_speedup": null,
+          "delta_speedup": null,
+          "delta_improvement_pct": null,
+          "verdict": null
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "s277",
+      "severity": "medium",
+      "problem_count": 2,
+      "line_range": [
+        1844,
+        1875
+      ],
+      "strategies": {
+        "strong_plain": {
+          "available": true,
+          "strategy": "strong_plain",
+          "severity": "medium",
+          "problem_count": 2,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 3,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 1.00156,
+          "speedup_median": 1.0004,
+          "speedup_stddev": 0.0036011109396962638,
+          "improvement_pct": 0.156,
+          "observed_outcome": "non_vectorized_flat",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        },
+        "diagnostic_only": {
+          "available": true,
+          "strategy": "diagnostic_only",
+          "severity": "medium",
+          "problem_count": 2,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 3,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 0.99718,
+          "speedup_median": 0.9969,
+          "speedup_stddev": 0.01621826131248351,
+          "improvement_pct": -0.28200000000000003,
+          "observed_outcome": "non_vectorized_flat",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        },
+        "case_card_only": {
+          "available": true,
+          "strategy": "case_card_only",
+          "severity": "medium",
+          "problem_count": 2,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 0,
+          "analysis_missed_count": 3,
+          "benchmark_success": true,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": 0.98224,
+          "speedup_median": 0.9976,
+          "speedup_stddev": 0.05598877566084117,
+          "improvement_pct": -1.7760000000000002,
+          "observed_outcome": "non_vectorized_flat",
+          "performance_guard_rejected": false,
+          "performance_guard_reason": null,
+          "performance_guard_speedup": null,
+          "performance_guard_speedup_median": null,
+          "verification_error": null,
+          "error": null
+        },
+        "full_method": {
+          "available": true,
+          "strategy": "full_method",
+          "severity": "medium",
+          "problem_count": 2,
+          "status": "failed",
+          "correctness_overall": true,
+          "analysis_vectorized": false,
+          "analysis_vectorized_count": 1,
+          "analysis_missed_count": 3,
+          "benchmark_success": false,
+          "benchmark_protocol": "formal",
+          "benchmark_protocol_role": "formal_main_table",
+          "paper_main_table_eligible": true,
+          "benchmark_warmup_runs": 3,
+          "benchmark_timing_runs": 10,
+          "benchmark_batches": 5,
+          "speedup": null,
+          "speedup_median": null,
+          "speedup_stddev": null,
+          "improvement_pct": null,
+          "observed_outcome": "performance_guard_rejected",
+          "performance_guard_rejected": true,
+          "performance_guard_reason": "轻量 benchmark 显示明显负优化： median=0.563x, mean=0.563x， 低于守护阈值 median<0.80x 且 mean<0.80x",
+          "performance_guard_speedup": 0.5626,
+          "performance_guard_speedup_median": 0.5626,
+          "verification_error": null,
+          "error": "轻量 benchmark 显示明显负优化： median=0.563x, mean=0.563x， 低于守护阈值 median<0.80x 且 mean<0.80x"
+        }
+      },
+      "pairwise": {
+        "strong_plain_vs_diagnostic_only": {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "strong_plain",
+          "right_strategy": "diagnostic_only",
+          "left_status": "ok",
+          "right_status": "ok",
+          "comparable": true,
+          "left_speedup": 1.00156,
+          "right_speedup": 0.99718,
+          "delta_speedup": 0.0043800000000000505,
+          "delta_improvement_pct": 0.43800000000000006,
+          "verdict": "tie"
+        },
+        "strong_plain_vs_case_card_only": {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "strong_plain",
+          "right_strategy": "case_card_only",
+          "left_status": "ok",
+          "right_status": "ok",
+          "comparable": true,
+          "left_speedup": 1.00156,
+          "right_speedup": 0.98224,
+          "delta_speedup": 0.019320000000000004,
+          "delta_improvement_pct": 1.9320000000000002,
+          "verdict": "tie"
+        },
+        "strong_plain_vs_full_method": {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "strong_plain",
+          "right_strategy": "full_method",
+          "left_status": "ok",
+          "right_status": "performance_guard_rejected",
+          "comparable": false,
+          "left_speedup": 1.00156,
+          "right_speedup": null,
+          "delta_speedup": null,
+          "delta_improvement_pct": null,
+          "verdict": null
+        },
+        "diagnostic_only_vs_case_card_only": {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "diagnostic_only",
+          "right_strategy": "case_card_only",
+          "left_status": "ok",
+          "right_status": "ok",
+          "comparable": true,
+          "left_speedup": 0.99718,
+          "right_speedup": 0.98224,
+          "delta_speedup": 0.014939999999999953,
+          "delta_improvement_pct": 1.4940000000000002,
+          "verdict": "tie"
+        },
+        "diagnostic_only_vs_full_method": {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "diagnostic_only",
+          "right_strategy": "full_method",
+          "left_status": "ok",
+          "right_status": "performance_guard_rejected",
+          "comparable": false,
+          "left_speedup": 0.99718,
+          "right_speedup": null,
+          "delta_speedup": null,
+          "delta_improvement_pct": null,
+          "verdict": null
+        },
+        "case_card_only_vs_full_method": {
+          "function": "s277",
+          "severity": "medium",
+          "problem_count": 2,
+          "left_strategy": "case_card_only",
+          "right_strategy": "full_method",
+          "left_status": "ok",
+          "right_status": "performance_guard_rejected",
+          "comparable": false,
+          "left_speedup": 0.98224,
+          "right_speedup": null,
+          "delta_speedup": null,
+          "delta_improvement_pct": null,
+          "verdict": null
+        }
+      }
+    }
+  ]
+}

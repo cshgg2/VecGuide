@@ -1,0 +1,60 @@
+{
+  "run_id": "cgo_probe_s252_origin_20260611",
+  "timestamp": "2026-06-11T17:26:33.950600",
+  "functions": [
+    "s252"
+  ],
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategies/origin/summary.json",
+      "state_file": null,
+      "optimized_prefix": null,
+      "prompt_snapshot_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategies/origin/prompt_snapshot",
+      "verification_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategies/origin/verification.json",
+      "benchmark_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategies/origin/benchmark.json",
+      "paper_rows_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategies/origin/paper_rows.json",
+      "paper_summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategies/origin/paper_summary.json",
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "origin_baseline": 1
+        },
+        "observed_outcome_counts": {
+          "origin_vectorized_baseline": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 1,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      }
+    }
+  ],
+  "paper_summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/paper_summary.json",
+  "paper_rows_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/paper_rows.json",
+  "paper_csv_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/paper_results.csv",
+  "paper_comparison_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/paper_comparison.json",
+  "paper_report_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/paper_report.md",
+  "strategy_config_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/strategy_config.json",
+  "prompt_snapshot_index_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/prompt_snapshot/index.json",
+  "raw_logs_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/raw_logs",
+  "artifact_index_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_probe_s252_origin_20260611/artifact_index.json",
+  "all_succeeded": true
+}

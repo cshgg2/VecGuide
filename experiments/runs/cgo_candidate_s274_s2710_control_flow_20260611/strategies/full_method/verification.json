@@ -1,0 +1,121 @@
+{
+  "strategy": "full_method",
+  "results": {
+    "s274": {
+      "func_name": "s274",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 10927277604864.0,
+        "optimized_checksum": 10927277604864.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 10927277604864.0,
+            "optimized_checksum": 10927277604864.0,
+            "original_state_metrics": {
+              "STATE_SUM": 1.0927375693201903e+18,
+              "STATE_ABS_SUM": 1.0927375693257827e+18,
+              "STATE_WEIGHTED_SUM": 2.622502958067736e+22
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 1.0927375693201903e+18,
+              "STATE_ABS_SUM": 1.0927375693257827e+18,
+              "STATE_WEIGHTED_SUM": 2.622502958067736e+22
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=10927277604864.000000 ret_opt=10927277604864.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=10927277604864.000000 ret_opt=10927277604864.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=10927277604864.000000 ret_opt=10927277604864.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": true
+    },
+    "s2710": {
+      "func_name": "s2710",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 512002944.0,
+        "optimized_checksum": 512002944.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 512002944.0,
+            "optimized_checksum": 512002944.0,
+            "original_state_metrics": {
+              "STATE_SUM": 21856355241350.055,
+              "STATE_ABS_SUM": 21856360833670.055,
+              "STATE_WEIGHTED_SUM": 5.2454014757801197e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 21856355241350.055,
+              "STATE_ABS_SUM": 21856360833670.055,
+              "STATE_WEIGHTED_SUM": 5.2454014757801197e+17
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          }
+        ]
+      },
+      "overall": true
+    }
+  }
+}

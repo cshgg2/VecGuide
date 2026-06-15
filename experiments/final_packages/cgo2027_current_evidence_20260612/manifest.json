@@ -1,0 +1,70 @@
+{
+  "package_id": "cgo2027_current_evidence_20260612",
+  "frozen_date": "2026-06-12",
+  "scope": "current public evidence package for CGO 2027 preparation",
+  "primary_formal_runs": [
+    "experiments/runs/cgo_method_matrix_key_cases_20260604",
+    "experiments/runs/cgo_strong_plain_key_cases_20260603",
+    "experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608",
+    "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609",
+    "experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609"
+  ],
+  "supplemental_formal_runs": [
+    "experiments/runs/cgo_method_matrix_runtime_stride_core_20260604",
+    "experiments/runs/cgo_strong_plain_runtime_stride_core_20260604",
+    "experiments/runs/cgo_candidate_s279_complex_control_flow_20260609",
+    "experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611",
+    "experiments/runs/cgo_candidate_s2710_control_flow_repeat1_20260611",
+    "experiments/runs/cgo_candidate_s1232_triangular_loop_20260611"
+  ],
+  "timeout_limited_runs": [
+    "experiments/runs/cgo_strong_plain_timeout_candidates_20260604",
+    "experiments/runs/cgo_method_matrix_timeout_candidates_20260604"
+  ],
+  "boundary_runs": [
+    "experiments/runs/cgo_candidate_s1161_control_flow_20260604",
+    "experiments/runs/cgo_candidate_s126_induction_interchange_20260604",
+    "experiments/runs/cgo_candidate_s277_guard_goto_20260604",
+    "experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605",
+    "experiments/runs/cgo_candidate_s211_statement_reordering_20260609",
+    "experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610"
+  ],
+  "screening_runs": [
+    "experiments/runs/cgo_probe_s252_origin_20260611",
+    "experiments/runs/cgo_probe_boundary_candidates_origin_20260611",
+    "experiments/runs/cgo_probe_light_candidates_origin_20260611",
+    "experiments/runs/cgo_probe_remaining_light_origin_20260611"
+  ],
+  "table_artifacts": [
+    "experiments/tables/cgo_key_case_matrix_20260604",
+    "experiments/tables/cgo_s258_scalar_carry_20260609",
+    "experiments/tables/cgo_scalar_carry_s253_s254_s255_20260609",
+    "experiments/tables/cgo_runtime_stride_matrix_20260604",
+    "experiments/tables/cgo_timeout_limited_candidates_20260604",
+    "experiments/tables/cgo_timeout_limited_matrix_20260604",
+    "experiments/tables/cgo_s1161_control_flow_20260604",
+    "experiments/tables/cgo_s126_induction_interchange_20260604",
+    "experiments/tables/cgo_s277_guard_goto_20260604",
+    "experiments/tables/cgo_s291_s292_loop_peeling_20260605"
+  ],
+  "frozen_docs": [
+    "docs/evidence_map.md",
+    "experiments/runs/README.md",
+    "docs/reproduction.md",
+    "docs/experiment_protocol.md",
+    "docs/artifact_index.md",
+    "PROJECT_INDEX.md"
+  ],
+  "excluded_from_main_table": [
+    "timeout_limited_runs",
+    "screening_runs",
+    "smoke_runs",
+    "debug_runs",
+    "ad_hoc_reports",
+    "private_local_notes"
+  ],
+  "known_gaps": [
+    "2026-06-11 control-flow and triangular-loop runs are frozen as run artifacts, but do not yet have table artifacts in this package.",
+    "This package freezes the 2026-06-12 evidence scope, not a camera-ready final paper table."
+  ]
+}

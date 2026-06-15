@@ -1,0 +1,1519 @@
+{
+  "s111": {
+    "severity": "low",
+    "line_range": [
+      68,
+      87
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s1111": {
+    "severity": "low",
+    "line_range": [
+      88,
+      109
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s112": {
+    "severity": "medium",
+    "line_range": [
+      110,
+      129
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 121
+      }
+    ]
+  },
+  "s1113": {
+    "severity": "medium",
+    "line_range": [
+      172,
+      193
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 183
+      }
+    ]
+  },
+  "s114": {
+    "severity": "medium",
+    "line_range": [
+      194,
+      218
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 207
+      }
+    ]
+  },
+  "s115": {
+    "severity": "medium",
+    "line_range": [
+      219,
+      240
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 231
+      }
+    ]
+  },
+  "s116": {
+    "severity": "medium",
+    "line_range": [
+      265,
+      289
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 275
+      },
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 279
+      }
+    ]
+  },
+  "s118": {
+    "severity": "medium",
+    "line_range": [
+      290,
+      313
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 302
+      }
+    ]
+  },
+  "s122": {
+    "severity": "high",
+    "line_range": [
+      384,
+      414
+    ],
+    "total_diagnostics": 5,
+    "not_vectorized_count": 3,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 406
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 399
+      },
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 402
+      }
+    ]
+  },
+  "s123": {
+    "severity": "medium",
+    "line_range": [
+      415,
+      444
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 428
+      },
+      {
+        "reason": "cannot identify array bounds",
+        "line": 430
+      }
+    ]
+  },
+  "s126": {
+    "severity": "medium",
+    "line_range": [
+      500,
+      527
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 514
+      }
+    ]
+  },
+  "s127": {
+    "severity": "low",
+    "line_range": [
+      528,
+      554
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s128": {
+    "severity": "low",
+    "line_range": [
+      555,
+      582
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s141": {
+    "severity": "medium",
+    "line_range": [
+      629,
+      663
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 643
+      },
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 644
+      }
+    ]
+  },
+  "s152": {
+    "severity": "low",
+    "line_range": [
+      689,
+      711
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s161": {
+    "severity": "medium",
+    "line_range": [
+      712,
+      740
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 723
+      },
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 723
+      }
+    ]
+  },
+  "s1161": {
+    "severity": "medium",
+    "line_range": [
+      741,
+      772
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "cannot identify array bounds",
+        "line": 741
+      }
+    ]
+  },
+  "s162": {
+    "severity": "medium",
+    "line_range": [
+      773,
+      798
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 789
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 783
+      }
+    ]
+  },
+  "s172": {
+    "severity": "high",
+    "line_range": [
+      824,
+      848
+    ],
+    "total_diagnostics": 5,
+    "not_vectorized_count": 3,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 840
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 836
+      },
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 837
+      }
+    ]
+  },
+  "s174": {
+    "severity": "medium",
+    "line_range": [
+      872,
+      896
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 887
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 883
+      }
+    ]
+  },
+  "s211": {
+    "severity": "medium",
+    "line_range": [
+      952,
+      974
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 963
+      }
+    ]
+  },
+  "s212": {
+    "severity": "medium",
+    "line_range": [
+      975,
+      995
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 986
+      },
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 987
+      }
+    ]
+  },
+  "s1213": {
+    "severity": "medium",
+    "line_range": [
+      996,
+      1018
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1007
+      },
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 1008
+      }
+    ]
+  },
+  "s221": {
+    "severity": "medium",
+    "line_range": [
+      1019,
+      1039
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1031
+      }
+    ]
+  },
+  "s1221": {
+    "severity": "low",
+    "line_range": [
+      1040,
+      1060
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s222": {
+    "severity": "medium",
+    "line_range": [
+      1061,
+      1084
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1073
+      }
+    ]
+  },
+  "s231": {
+    "severity": "medium",
+    "line_range": [
+      1085,
+      1107
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1096
+      }
+    ]
+  },
+  "s232": {
+    "severity": "medium",
+    "line_range": [
+      1108,
+      1129
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1120
+      }
+    ]
+  },
+  "s1232": {
+    "severity": "low",
+    "line_range": [
+      1130,
+      1153
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s233": {
+    "severity": "medium",
+    "line_range": [
+      1154,
+      1178
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1166
+      }
+    ]
+  },
+  "s2233": {
+    "severity": "medium",
+    "line_range": [
+      1179,
+      1204
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1191
+      }
+    ]
+  },
+  "s235": {
+    "severity": "medium",
+    "line_range": [
+      1205,
+      1229
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1218
+      }
+    ]
+  },
+  "s241": {
+    "severity": "medium",
+    "line_range": [
+      1230,
+      1253
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 1242
+      }
+    ]
+  },
+  "s242": {
+    "severity": "medium",
+    "line_range": [
+      1254,
+      1278
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1268
+      }
+    ]
+  },
+  "s243": {
+    "severity": "low",
+    "line_range": [
+      1279,
+      1302
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s244": {
+    "severity": "medium",
+    "line_range": [
+      1303,
+      1324
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 1316
+      }
+    ]
+  },
+  "s1244": {
+    "severity": "medium",
+    "line_range": [
+      1325,
+      1345
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 1337
+      }
+    ]
+  },
+  "s2244": {
+    "severity": "low",
+    "line_range": [
+      1346,
+      1368
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s1251": {
+    "severity": "low",
+    "line_range": [
+      1391,
+      1413
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s2251": {
+    "severity": "medium",
+    "line_range": [
+      1414,
+      1436
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1425
+      }
+    ]
+  },
+  "s3251": {
+    "severity": "low",
+    "line_range": [
+      1437,
+      1460
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s253": {
+    "severity": "low",
+    "line_range": [
+      1487,
+      1513
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s256": {
+    "severity": "medium",
+    "line_range": [
+      1566,
+      1590
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1578
+      }
+    ]
+  },
+  "s257": {
+    "severity": "low",
+    "line_range": [
+      1591,
+      1613
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s258": {
+    "severity": "medium",
+    "line_range": [
+      1614,
+      1641
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1626
+      }
+    ]
+  },
+  "s261": {
+    "severity": "medium",
+    "line_range": [
+      1642,
+      1665
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1655
+      }
+    ]
+  },
+  "s271": {
+    "severity": "low",
+    "line_range": [
+      1666,
+      1690
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s272": {
+    "severity": "low",
+    "line_range": [
+      1691,
+      1717
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s273": {
+    "severity": "low",
+    "line_range": [
+      1718,
+      1742
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s274": {
+    "severity": "low",
+    "line_range": [
+      1743,
+      1769
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s275": {
+    "severity": "medium",
+    "line_range": [
+      1770,
+      1793
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1783
+      }
+    ]
+  },
+  "s2275": {
+    "severity": "low",
+    "line_range": [
+      1794,
+      1817
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s276": {
+    "severity": "low",
+    "line_range": [
+      1818,
+      1843
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s277": {
+    "severity": "medium",
+    "line_range": [
+      1844,
+      1875
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 1854
+      },
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 1854
+      }
+    ]
+  },
+  "s278": {
+    "severity": "low",
+    "line_range": [
+      1876,
+      1905
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s279": {
+    "severity": "low",
+    "line_range": [
+      1906,
+      1937
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s1279": {
+    "severity": "low",
+    "line_range": [
+      1938,
+      1964
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s2710": {
+    "severity": "low",
+    "line_range": [
+      1965,
+      2002
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s2711": {
+    "severity": "low",
+    "line_range": [
+      2003,
+      2026
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s2712": {
+    "severity": "low",
+    "line_range": [
+      2027,
+      2050
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s281": {
+    "severity": "medium",
+    "line_range": [
+      2051,
+      2074
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 2065
+      }
+    ]
+  },
+  "s1281": {
+    "severity": "low",
+    "line_range": [
+      2075,
+      2100
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s291": {
+    "severity": "medium",
+    "line_range": [
+      2101,
+      2125
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2113
+      }
+    ]
+  },
+  "s292": {
+    "severity": "medium",
+    "line_range": [
+      2126,
+      2153
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2140
+      }
+    ]
+  },
+  "s293": {
+    "severity": "medium",
+    "line_range": [
+      2154,
+      2175
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "unsafe dependent memory operations in loop. Use #pragma loop distribute(enable) to allow loop distribution to attempt to isolate the offending operations into a separate loop",
+        "line": 2165
+      }
+    ]
+  },
+  "s2101": {
+    "severity": "low",
+    "line_range": [
+      2176,
+      2198
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s2102": {
+    "severity": "low",
+    "line_range": [
+      2199,
+      2223
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s2111": {
+    "severity": "medium",
+    "line_range": [
+      2224,
+      2252
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2235
+      }
+    ]
+  },
+  "s311": {
+    "severity": "medium",
+    "line_range": [
+      2253,
+      2281
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2266
+      }
+    ]
+  },
+  "s31111": {
+    "severity": "medium",
+    "line_range": [
+      2282,
+      2310
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 2302
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 2292
+      }
+    ]
+  },
+  "s312": {
+    "severity": "medium",
+    "line_range": [
+      2311,
+      2333
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2324
+      }
+    ]
+  },
+  "s313": {
+    "severity": "medium",
+    "line_range": [
+      2334,
+      2357
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2347
+      }
+    ]
+  },
+  "s314": {
+    "severity": "medium",
+    "line_range": [
+      2358,
+      2383
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2370
+      }
+    ]
+  },
+  "s315": {
+    "severity": "medium",
+    "line_range": [
+      2384,
+      2416
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2401
+      }
+    ]
+  },
+  "s316": {
+    "severity": "medium",
+    "line_range": [
+      2417,
+      2441
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2429
+      }
+    ]
+  },
+  "s317": {
+    "severity": "medium",
+    "line_range": [
+      2442,
+      2468
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2457
+      }
+    ]
+  },
+  "s318": {
+    "severity": "medium",
+    "line_range": [
+      2469,
+      2505
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2487
+      }
+    ]
+  },
+  "s319": {
+    "severity": "medium",
+    "line_range": [
+      2506,
+      2532
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2520
+      }
+    ]
+  },
+  "s3110": {
+    "severity": "medium",
+    "line_range": [
+      2533,
+      2565
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2550
+      }
+    ]
+  },
+  "s13110": {
+    "severity": "medium",
+    "line_range": [
+      2566,
+      2599
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2582
+      }
+    ]
+  },
+  "s3111": {
+    "severity": "medium",
+    "line_range": [
+      2600,
+      2625
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2613
+      }
+    ]
+  },
+  "s3112": {
+    "severity": "medium",
+    "line_range": [
+      2626,
+      2650
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2638
+      }
+    ]
+  },
+  "s3113": {
+    "severity": "medium",
+    "line_range": [
+      2651,
+      2676
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2663
+      }
+    ]
+  },
+  "s321": {
+    "severity": "medium",
+    "line_range": [
+      2677,
+      2698
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2688
+      }
+    ]
+  },
+  "s322": {
+    "severity": "medium",
+    "line_range": [
+      2699,
+      2720
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2710
+      }
+    ]
+  },
+  "s323": {
+    "severity": "medium",
+    "line_range": [
+      2721,
+      2743
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2732
+      }
+    ]
+  },
+  "s331": {
+    "severity": "medium",
+    "line_range": [
+      2744,
+      2771
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2757
+      }
+    ]
+  },
+  "s332": {
+    "severity": "medium",
+    "line_range": [
+      2772,
+      2806
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 2789
+      }
+    ]
+  },
+  "s341": {
+    "severity": "medium",
+    "line_range": [
+      2807,
+      2834
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2820
+      }
+    ]
+  },
+  "s342": {
+    "severity": "medium",
+    "line_range": [
+      2835,
+      2862
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2848
+      }
+    ]
+  },
+  "s343": {
+    "severity": "medium",
+    "line_range": [
+      2863,
+      2892
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "value that could not be identified as reduction is used outside the loop",
+        "line": 2877
+      }
+    ]
+  },
+  "s351": {
+    "severity": "low",
+    "line_range": [
+      2893,
+      2917
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s352": {
+    "severity": "medium",
+    "line_range": [
+      2945,
+      2970
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 2958
+      }
+    ]
+  },
+  "s353": {
+    "severity": "low",
+    "line_range": [
+      2971,
+      3007
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s441": {
+    "severity": "low",
+    "line_range": [
+      3159,
+      3186
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s442": {
+    "severity": "medium",
+    "line_range": [
+      3187,
+      3226
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "loop contains a switch statement",
+        "line": 3198
+      }
+    ]
+  },
+  "s451": {
+    "severity": "medium",
+    "line_range": [
+      3260,
+      3281
+    ],
+    "total_diagnostics": 3,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "library call cannot be vectorized. Try compiling with -fno-math-errno, -ffast-math, or similar flags",
+        "line": 3271
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 3270
+      }
+    ]
+  },
+  "s453": {
+    "severity": "medium",
+    "line_range": [
+      3304,
+      3334
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 3317
+      }
+    ]
+  },
+  "s471": {
+    "severity": "low",
+    "line_range": [
+      3335,
+      3358
+    ],
+    "total_diagnostics": 1,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s481": {
+    "severity": "medium",
+    "line_range": [
+      3359,
+      3384
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 3369
+      }
+    ]
+  },
+  "s482": {
+    "severity": "medium",
+    "line_range": [
+      3385,
+      3408
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "could not determine number of loop iterations",
+        "line": 3395
+      }
+    ]
+  },
+  "s491": {
+    "severity": "low",
+    "line_range": [
+      3409,
+      3434
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s4112": {
+    "severity": "low",
+    "line_range": [
+      3435,
+      3462
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s4113": {
+    "severity": "low",
+    "line_range": [
+      3463,
+      3488
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 0,
+    "problems": []
+  },
+  "s4114": {
+    "severity": "medium",
+    "line_range": [
+      3489,
+      3519
+    ],
+    "total_diagnostics": 5,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 3510
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 3504
+      }
+    ]
+  },
+  "s4115": {
+    "severity": "medium",
+    "line_range": [
+      3520,
+      3547
+    ],
+    "total_diagnostics": 4,
+    "not_vectorized_count": 2,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 3536
+      }
+    ]
+  },
+  "s4116": {
+    "severity": "medium",
+    "line_range": [
+      3548,
+      3579
+    ],
+    "total_diagnostics": 2,
+    "not_vectorized_count": 1,
+    "problems": [
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 3569
+      }
+    ]
+  },
+  "s4121": {
+    "severity": "high",
+    "line_range": [
+      3606,
+      4121
+    ],
+    "total_diagnostics": 19,
+    "not_vectorized_count": 8,
+    "problems": [
+      {
+        "reason": "call instruction cannot be vectorized",
+        "line": 3639
+      },
+      {
+        "reason": "instruction cannot be vectorized",
+        "line": 3637
+      },
+      {
+        "reason": "cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'.",
+        "line": 3874
+      }
+    ]
+  }
+}
