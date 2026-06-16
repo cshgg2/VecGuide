@@ -60,6 +60,7 @@ FINAL_SELECTION_BENCHMARK_TIMING_RUNS = 3
 FINAL_SELECTION_BENCHMARK_BATCHES = 1
 DEFAULT_PERFORMANCE_GUARD_MIN_MEDIAN_SPEEDUP = 0.80
 DEFAULT_PERFORMANCE_GUARD_MIN_MEAN_SPEEDUP = 0.80
+DEFAULT_OPTIMIZATION_STRATEGY = "full_method"
 
 
 def load_problem_map():
@@ -1943,7 +1944,7 @@ def optimize_single_function(func_name: str, api_key: str, model_name: str,
     }
     """
     if strategy_config is None:
-        strategy_config = get_experiment_strategy("ours_full")
+        strategy_config = get_experiment_strategy(DEFAULT_OPTIMIZATION_STRATEGY)
 
     section(f"优化函数: {func_name}")
     info(f"实验策略: {strategy_config['name']}")
@@ -2342,7 +2343,7 @@ def run_batch_optimization(functions: List[str], api_key: Optional[str] = None,
                            model_name: Optional[str] = None, clang_path: Optional[str] = None,
                            max_rounds: int = 3, verbose: bool = False,
                            single_round: bool = False,
-                           strategy_name: str = "ours_full") -> List[Dict]:
+                           strategy_name: str = DEFAULT_OPTIMIZATION_STRATEGY) -> List[Dict]:
     """
     批量优化多个函数
 
@@ -2456,8 +2457,8 @@ def main():
     parser.add_argument("--status", action="store_true", help="显示当前优化状态")
     parser.add_argument("--severity", default=None,
                         help="按严重程度筛选函数进行优化 (例如: high, medium, low, 或组合 high,medium)")
-    parser.add_argument("--strategy", default="ours_full",
-                        help="实验策略 (例如: ours_full, llm_plain, ablate_kb)")
+    parser.add_argument("--strategy", default=DEFAULT_OPTIMIZATION_STRATEGY,
+                        help="实验策略；默认 full_method。投稿版名称: origin, strong_plain, diagnostic_only, case_card_only, full_method；旧名 ours_full/llm_plain 仍兼容。")
     parser.add_argument("--list-strategies", action="store_true",
                         help="列出可用实验策略")
     parser.add_argument("--json-summary", metavar="FILE",

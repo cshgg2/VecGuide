@@ -58,6 +58,15 @@ class ExperimentStrategyConfigTests(unittest.TestCase):
         self.assertFalse(strategy["prompt_options"]["include_history"])
         self.assertTrue(strategy["single_round"])
 
+    def test_optimizer_default_strategy_uses_publication_name(self):
+        from optimizer_pipeline import DEFAULT_OPTIMIZATION_STRATEGY
+
+        self.assertEqual(DEFAULT_OPTIMIZATION_STRATEGY, "full_method")
+        self.assertEqual(
+            get_experiment_strategy(DEFAULT_OPTIMIZATION_STRATEGY)["publication_name"],
+            "full_method",
+        )
+
     def test_publication_strategy_definitions_use_paper_order(self):
         definitions = list_publication_strategy_definitions()
 

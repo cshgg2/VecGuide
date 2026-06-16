@@ -32,6 +32,21 @@ Paper-facing strategy names are:
 
 Legacy names such as `ours_full` and `llm_plain` are compatibility aliases. New public commands should use paper-facing names.
 
+
+## Prompt Option Contract
+
+The public strategy names also define the prompt switch contract:
+
+| Strategy | Main prompt inputs | Iteration | Performance guard |
+| --- | --- | --- | --- |
+| `origin` | original source only | none | off |
+| `strong_plain` | generic vectorization guidance | single round | off |
+| `diagnostic_only` | compiler diagnostics and structured feedback | single round | off |
+| `case_card_only` | diagnostics, structured feedback, and retrieved case cards | single round | off |
+| `full_method` | diagnostics, case cards, few-shot examples, history, and progress analysis | multi-round | on |
+
+New experiments should use these paper-facing names. Legacy aliases remain only to read older artifacts and scripts.
+
 ## Experiment Runner
 
 Owned by: `experiment_runner.py`
