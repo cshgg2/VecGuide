@@ -2,6 +2,7 @@ import unittest
 
 from experiment_config import (
     LEGACY_STRATEGY_NAME_MAP,
+    PAPER_STRATEGY_NAMES,
     get_experiment_strategy,
     get_publication_strategy_definition,
     list_publication_strategy_definitions,
@@ -56,6 +57,14 @@ class ExperimentStrategyConfigTests(unittest.TestCase):
         self.assertFalse(strategy["prompt_options"]["include_examples"])
         self.assertFalse(strategy["prompt_options"]["include_history"])
         self.assertTrue(strategy["single_round"])
+
+    def test_publication_strategy_definitions_use_paper_order(self):
+        definitions = list_publication_strategy_definitions()
+
+        self.assertEqual(
+            [item["name"] for item in definitions],
+            PAPER_STRATEGY_NAMES,
+        )
 
     def test_publication_strategy_definitions_include_legacy_mapping(self):
         definitions = {

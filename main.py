@@ -247,8 +247,8 @@ def main():
     optimize_parser.add_argument('--clean', action='store_true', help='重置时同时删除函数目录和文件')
     optimize_parser.add_argument('--severity', default=None,
                                  help='按严重程度筛选函数 (high, medium, low, 或组合 high,medium)')
-    optimize_parser.add_argument('--strategy', default='ours_full',
-                                 help='实验策略 (默认: ours_full)')
+    optimize_parser.add_argument('--strategy', default='full_method',
+                                 help='实验策略 (默认: full_method；旧名 ours_full 仍兼容)')
     optimize_parser.add_argument('--list-strategies', action='store_true',
                                  help='列出可用实验策略')
     optimize_parser.add_argument('--json-summary', metavar='FILE',

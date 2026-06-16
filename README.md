@@ -22,8 +22,10 @@ Start here if you are reviewing the artifact:
 
 - `PROJECT_INDEX.md`: repository map.
 - `docs/reproduction.md`: how to inspect existing results and run non-API checks.
+- `docs/current_status.md`: current public project state and near-term work.
 - `docs/evidence_map.md`: current public evidence classification.
 - `docs/experiment_protocol.md`: strategy names, benchmark protocol, and main-table eligibility.
+- `docs/engineering_boundaries.md`: module responsibilities and strategy naming boundaries.
 - `docs/artifact_index.md`: migrated run/table/frozen-package inventory.
 - `experiments/runs/README.md`: run-level evidence index.
 - `experiments/final_packages/cgo2027_current_evidence_20260612/`: frozen evidence package.

@@ -1,7 +1,15 @@
 """
-实验策略配置
-============
-为 baseline / full method / ablation 提供统一配置。
+Experiment strategy configuration.
+
+This module owns strategy definitions only. It does not execute experiments,
+write run artifacts, build prompts, or decide paper-table eligibility.
+
+Naming policy:
+- Paper-facing strategy names are: origin, strong_plain, diagnostic_only,
+  case_card_only, and full_method.
+- Legacy operational names such as ours_full and llm_plain remain available
+  only for reading old artifacts or running compatibility checks.
+- New public experiments should use the paper-facing names.
 """
 
 from copy import deepcopy
@@ -275,6 +283,15 @@ PUBLICATION_STRATEGY_DEFINITIONS = {
 }
 
 
+PAPER_STRATEGY_NAMES = [
+    "origin",
+    "strong_plain",
+    "diagnostic_only",
+    "case_card_only",
+    "full_method",
+]
+
+
 LEGACY_STRATEGY_NAME_MAP = {
     "ours_full": "full_method",
     "llm_plain": "diagnostic_only",
@@ -337,5 +354,5 @@ def list_publication_strategy_definitions() -> List[Dict]:
     """返回投稿版策略定义，供文档和 manifest 使用。"""
     return [
         get_publication_strategy_definition(name)
-        for name in sorted(PUBLICATION_STRATEGY_DEFINITIONS)
+        for name in PAPER_STRATEGY_NAMES
     ]

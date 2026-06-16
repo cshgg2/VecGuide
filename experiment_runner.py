@@ -162,10 +162,28 @@ def write_text(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
-def path_payload(path: Path | str) -> Dict:
+def public_path(path: Path | str | None, base_dir: Path | None = None) -> str | None:
+    """Return a stable artifact path without machine-specific absolute prefixes."""
+    if path is None:
+        return None
+
+    item = Path(path)
+    if base_dir is not None:
+        try:
+            return item.relative_to(base_dir).as_posix()
+        except ValueError:
+            pass
+
+    try:
+        return item.relative_to(Path.cwd()).as_posix()
+    except ValueError:
+        return item.as_posix() if not item.is_absolute() else item.name
+
+
+def path_payload(path: Path | str, base_dir: Path | None = None) -> Dict:
     item = Path(path)
     return {
-        "path": str(item),
+        "path": public_path(item, base_dir=base_dir),
         "exists": item.exists(),
         "is_dir": item.is_dir(),
         "sha256": hash_file(item) if item.exists() and item.is_file() else None,
@@ -1119,19 +1137,24 @@ def build_manifest(
         "run_id": run_id,
         "timestamp": datetime.now().isoformat(),
         "dry_run": dry_run,
-        "repo_root": str(repo_root),
+        "repo_root": "<repo>",
         "git": {
             "commit": git_commit,
             "is_dirty": bool(git_status_short),
-            "status_short": git_status_short.splitlines() if git_status_short else [],
+            "status_short": [],
+            "status_sanitized": True,
+            "status_sanitized_reason": "Local working-tree paths are omitted from public artifacts.",
         },
         "source": {
-            "path": str(source_file),
+            "path": public_path(source_file, base_dir=repo_root),
             "sha256": hash_file(source_file),
         },
         "toolchain": {
-            "clang_path": clang_path,
-            "clang_version": clang_version.splitlines() if clang_version else None,
+            "clang_path": "${CLANG_PATH}" if clang_path else None,
+            "clang_version": [
+                line if not line.startswith("InstalledDir:") else "InstalledDir: <clang-install-dir>"
+                for line in clang_version.splitlines()
+            ] if clang_version else None,
         },
         "runtime": {
             "python_executable": sys.executable,
@@ -1144,7 +1167,7 @@ def build_manifest(
         "benchmark_config": benchmark_config,
         "functions": functions,
         "shared_problem_map": {
-            "path": str(shared_problem_map) if shared_problem_map else None,
+            "path": public_path(shared_problem_map, base_dir=repo_root) if shared_problem_map else None,
             "sha256": hash_file(shared_problem_map),
         },
         "strategies": [
@@ -1252,8 +1275,8 @@ def write_run_prompt_snapshot_index(
         strategies.append(
             {
                 "strategy": strategy_name,
-                "prompt_snapshot_dir": str(snapshot_dir),
-                "strategy_index_file": str(strategy_index_file),
+                "prompt_snapshot_dir": public_path(snapshot_dir, base_dir=run_dir),
+                "strategy_index_file": public_path(strategy_index_file, base_dir=run_dir),
                 "strategy_index_exists": strategy_index_file.exists(),
                 "snapshot_count": len(snapshots),
                 "selected_case_card_ids": selected_card_ids,
@@ -1304,17 +1327,18 @@ def build_artifact_index_payload(
                 "strategy": strategy_name,
                 "publication_name": strategy.get("publication_name"),
                 "prompt_version": strategy.get("prompt_version"),
-                "strategy_dir": path_payload(strategy_dir),
-                "summary_file": path_payload(result.get("summary_file") or strategy_dir / "summary.json"),
-                "state_file": path_payload(result.get("state_file") or strategy_dir / "optimization_state.json"),
+                "strategy_dir": path_payload(strategy_dir, base_dir=run_dir),
+                "summary_file": path_payload(result.get("summary_file") or strategy_dir / "summary.json", base_dir=run_dir),
+                "state_file": path_payload(result.get("state_file") or strategy_dir / "optimization_state.json", base_dir=run_dir),
                 "prompt_snapshot_dir": path_payload(
-                    result.get("prompt_snapshot_dir") or strategy_dir / "prompt_snapshot"
+                    result.get("prompt_snapshot_dir") or strategy_dir / "prompt_snapshot",
+                    base_dir=run_dir,
                 ),
-                "reports_dir": path_payload(strategy_dir / "reports"),
-                "verification_file": path_payload(result.get("verification_file") or strategy_dir / "verification.json"),
-                "benchmark_file": path_payload(result.get("benchmark_file") or strategy_dir / "benchmark.json"),
-                "paper_rows_file": path_payload(result.get("paper_rows_file") or strategy_dir / "paper_rows.json"),
-                "paper_summary_file": path_payload(result.get("paper_summary_file") or strategy_dir / "paper_summary.json"),
+                "reports_dir": path_payload(strategy_dir / "reports", base_dir=run_dir),
+                "verification_file": path_payload(result.get("verification_file") or strategy_dir / "verification.json", base_dir=run_dir),
+                "benchmark_file": path_payload(result.get("benchmark_file") or strategy_dir / "benchmark.json", base_dir=run_dir),
+                "paper_rows_file": path_payload(result.get("paper_rows_file") or strategy_dir / "paper_rows.json", base_dir=run_dir),
+                "paper_summary_file": path_payload(result.get("paper_summary_file") or strategy_dir / "paper_summary.json", base_dir=run_dir),
             }
         )
 
@@ -1323,14 +1347,14 @@ def build_artifact_index_payload(
         "run_id": run_id,
         "timestamp": datetime.now().isoformat(),
         "dry_run": dry_run,
-        "run_dir": str(run_dir),
-        "fixed_files": {name: path_payload(path) for name, path in fixed_files.items()},
-        "paper_outputs": {name: path_payload(path) for name, path in paper_files.items()},
+        "run_dir": public_path(run_dir),
+        "fixed_files": {name: path_payload(path, base_dir=run_dir) for name, path in fixed_files.items()},
+        "paper_outputs": {name: path_payload(path, base_dir=run_dir) for name, path in paper_files.items()},
         "directories": {
-            "shared": path_payload(run_dir / "shared"),
-            "strategies": path_payload(run_dir / "strategies"),
-            "prompt_snapshot": path_payload(run_dir / "prompt_snapshot"),
-            "raw_logs": path_payload(run_dir / "raw_logs"),
+            "shared": path_payload(run_dir / "shared", base_dir=run_dir),
+            "strategies": path_payload(run_dir / "strategies", base_dir=run_dir),
+            "prompt_snapshot": path_payload(run_dir / "prompt_snapshot", base_dir=run_dir),
+            "raw_logs": path_payload(run_dir / "raw_logs", base_dir=run_dir),
         },
         "strategies": strategy_items,
     }
@@ -1391,15 +1415,15 @@ def write_run_paper_outputs(
         "functions": functions,
         "benchmark_config": benchmark_config,
         "strategies": strategy_results,
-        "paper_summary_file": str(run_dir / "paper_summary.json"),
-        "paper_rows_file": str(run_dir / "paper_rows.json"),
-        "paper_csv_file": str(run_dir / "paper_results.csv"),
-        "paper_comparison_file": str(run_dir / "paper_comparison.json"),
-        "paper_report_file": str(run_dir / "paper_report.md"),
-        "strategy_config_file": str(strategy_config_file),
-        "prompt_snapshot_index_file": str(prompt_snapshot_index_file),
-        "raw_logs_dir": str(run_dir / "raw_logs"),
-        "artifact_index_file": str(run_dir / "artifact_index.json"),
+        "paper_summary_file": public_path(run_dir / "paper_summary.json", base_dir=run_dir),
+        "paper_rows_file": public_path(run_dir / "paper_rows.json", base_dir=run_dir),
+        "paper_csv_file": public_path(run_dir / "paper_results.csv", base_dir=run_dir),
+        "paper_comparison_file": public_path(run_dir / "paper_comparison.json", base_dir=run_dir),
+        "paper_report_file": public_path(run_dir / "paper_report.md", base_dir=run_dir),
+        "strategy_config_file": public_path(strategy_config_file, base_dir=run_dir),
+        "prompt_snapshot_index_file": public_path(prompt_snapshot_index_file, base_dir=run_dir),
+        "raw_logs_dir": public_path(run_dir / "raw_logs", base_dir=run_dir),
+        "artifact_index_file": public_path(run_dir / "artifact_index.json", base_dir=run_dir),
         "all_succeeded": all(item["exit_code"] == 0 for item in strategy_results),
     }
     write_json(run_dir / "summary.json", overall)
@@ -1727,10 +1751,10 @@ def main():
                 "functions": functions,
                 "strategies": strategy_names,
                 "benchmark_config": benchmark_config,
-                "strategy_config_file": str(strategy_config_file),
-                "prompt_snapshot_index_file": str(prompt_snapshot_index_file),
-                "artifact_index_file": str(artifact_index_file),
-                "raw_logs_dir": str(run_dir / "raw_logs"),
+                "strategy_config_file": public_path(strategy_config_file, base_dir=run_dir),
+                "prompt_snapshot_index_file": public_path(prompt_snapshot_index_file, base_dir=run_dir),
+                "artifact_index_file": public_path(artifact_index_file, base_dir=run_dir),
+                "raw_logs_dir": public_path(run_dir / "raw_logs", base_dir=run_dir),
             },
         )
         write_artifact_index(

@@ -12,6 +12,7 @@ from experiment_runner import (
     PAPER_ROW_FIELDS,
     build_artifact_index_payload,
     build_strategy_config_payload,
+    build_manifest,
     collect_existing_run,
     initialize_run_directory_contract,
     write_run_prompt_snapshot_index,
@@ -123,9 +124,50 @@ class ExperimentRunStructureTests(unittest.TestCase):
             )
 
             self.assertTrue(payload["fixed_files"]["manifest"]["exists"])
+            self.assertEqual(payload["fixed_files"]["manifest"]["path"], "manifest.json")
             self.assertTrue(payload["directories"]["raw_logs"]["exists"])
+            self.assertEqual(payload["directories"]["raw_logs"]["path"], "raw_logs")
             self.assertEqual(payload["strategies"][0]["strategy"], "full_method")
             self.assertTrue(payload["strategies"][0]["state_file"]["exists"])
+            self.assertEqual(
+                payload["strategies"][0]["state_file"]["path"],
+                "strategies/full_method/optimization_state.json",
+            )
+
+    def test_run_manifest_payload_uses_public_paths(self):
+        strategies = [get_experiment_strategy("origin")]
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir)
+            source_file = repo_root / "TSVC_2" / "src" / "tsvc.c"
+            source_file.parent.mkdir(parents=True)
+            source_file.write_text("void s111(void) {}\n", encoding="utf-8")
+            shared_problem_map = repo_root / "experiments" / "runs" / "unit" / "shared" / "problem_map.json"
+            shared_problem_map.parent.mkdir(parents=True)
+            shared_problem_map.write_text("{}", encoding="utf-8")
+
+            payload = build_manifest(
+                repo_root=repo_root,
+                run_id="unit",
+                strategies=strategies,
+                functions=["s111"],
+                clang_path="/local/bin/clang",
+                model_name="glm-4.7",
+                requested_rounds=3,
+                shared_problem_map=shared_problem_map,
+                benchmark_config=resolve_benchmark_protocol("formal"),
+                dry_run=False,
+            )
+
+            self.assertEqual(payload["repo_root"], "<repo>")
+            self.assertEqual(payload["source"]["path"], "TSVC_2/src/tsvc.c")
+            self.assertEqual(
+                payload["shared_problem_map"]["path"],
+                "experiments/runs/unit/shared/problem_map.json",
+            )
+            self.assertEqual(payload["toolchain"]["clang_path"], "${CLANG_PATH}")
+            self.assertEqual(payload["git"]["status_short"], [])
+            self.assertTrue(payload["git"]["status_sanitized"])
 
     def test_paper_results_fields_include_benchmark_protocol_metadata(self):
         self.assertIn("benchmark_protocol", PAPER_ROW_FIELDS)
