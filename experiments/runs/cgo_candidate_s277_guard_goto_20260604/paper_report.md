@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_candidate_s277_guard_goto_20260604）
+# VecGuide 实验汇总（cgo_candidate_s277_guard_goto_20260604）
 
 - 生成时间：2026-06-04T23:06:08.603227
 - 函数数量：1

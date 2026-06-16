@@ -36,7 +36,7 @@
         "avg_improvement_pct": -64.924,
         "negative_optimization_count": 1
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_strong_plain_runtime_stride_core_20260604/strategies/strong_plain/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_strong_plain_runtime_stride_core_20260604/strategies/strong_plain/paper_summary.json"
     }
   ]
 }

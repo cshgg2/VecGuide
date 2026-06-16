@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_method_matrix_runtime_stride_core_20260604）
+# VecGuide 实验汇总（cgo_method_matrix_runtime_stride_core_20260604）
 
 - 生成时间：2026-06-04T12:36:57.206478
 - 函数数量：3

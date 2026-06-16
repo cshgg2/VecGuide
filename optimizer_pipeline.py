@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ACPO-LLM 优化流水线
+VecGuide 优化流水线
 整合多轮优化流程，支持自动反馈迭代
 支持单轮和多轮优化模式
 """
@@ -2440,7 +2440,7 @@ def run_batch_optimization(functions: List[str], api_key: Optional[str] = None,
 def main():
     import argparse
 
-    parser = argparse.ArgumentParser(description="ACPO-LLM 优化流水线")
+    parser = argparse.ArgumentParser(description="VecGuide 优化流水线")
     parser.add_argument("functions", nargs="*", help="要优化的函数名 (例如: s111 s112)")
     parser.add_argument("-r", "--rounds", type=int, default=config.DEFAULT_MAX_ROUNDS,
                         help=f"最大优化轮数 (默认: {config.DEFAULT_MAX_ROUNDS})")

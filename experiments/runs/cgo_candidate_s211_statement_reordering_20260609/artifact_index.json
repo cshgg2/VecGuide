@@ -3,28 +3,28 @@
   "run_id": "cgo_candidate_s211_statement_reordering_20260609",
   "timestamp": "2026-06-09T11:38:27.424677",
   "dry_run": false,
-  "run_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609",
+  "run_dir": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609",
   "fixed_files": {
     "manifest": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/manifest.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/manifest.json",
       "exists": true,
       "is_dir": false,
       "sha256": "467d0501fbabf7b6ad4978cf317dc3cfc816514e97c98c8e23764161efd2d087"
     },
     "strategy_config": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategy_config.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategy_config.json",
       "exists": true,
       "is_dir": false,
       "sha256": "f912a0120855a20480b43c3007f4881c826ecd769eaa60465c2d0e0b322c815d"
     },
     "summary": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/summary.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/summary.json",
       "exists": true,
       "is_dir": false,
       "sha256": "e07ba2446b3270b4cbdb9f113ee586cb3846ded4a417c485734a880a3046a6a1"
     },
     "prompt_snapshot_index": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/prompt_snapshot/index.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/prompt_snapshot/index.json",
       "exists": true,
       "is_dir": false,
       "sha256": "1c53ad1a742d6fb2db082407fcafd0cc48e99b50907ebbc99c7c053d3b8bf20c"
@@ -32,31 +32,31 @@
   },
   "paper_outputs": {
     "paper_results_csv": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_results.csv",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_results.csv",
       "exists": true,
       "is_dir": false,
       "sha256": "8e4aeb9b945ea66ef5b4ca76cec1016e71f654898f3e32937449ca7204cd42a7"
     },
     "paper_rows_json": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_rows.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_rows.json",
       "exists": true,
       "is_dir": false,
       "sha256": "ea09548e544282e53e6ea48fe95432e7d29ea051d746902cdace0baa7f4a277d"
     },
     "paper_summary_json": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_summary.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_summary.json",
       "exists": true,
       "is_dir": false,
       "sha256": "037868a110d2fdf2f60985dafe01ad6fffcd4419e6706ab4d2cc7e6fb8665303"
     },
     "paper_comparison_json": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_comparison.json",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_comparison.json",
       "exists": true,
       "is_dir": false,
       "sha256": "c869c2ee383f759a55b596318565f60334bdbcdf11fcefedd42b9091a69bbca9"
     },
     "paper_report_md": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_report.md",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/paper_report.md",
       "exists": true,
       "is_dir": false,
       "sha256": "32ddaf63d83bda8724a5e439fef71ca4808b6ef13a970fe6688e877bc888ca49"
@@ -64,25 +64,25 @@
   },
   "directories": {
     "shared": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/shared",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/shared",
       "exists": true,
       "is_dir": true,
       "sha256": null
     },
     "strategies": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies",
       "exists": true,
       "is_dir": true,
       "sha256": null
     },
     "prompt_snapshot": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/prompt_snapshot",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/prompt_snapshot",
       "exists": true,
       "is_dir": true,
       "sha256": null
     },
     "raw_logs": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/raw_logs",
+      "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/raw_logs",
       "exists": true,
       "is_dir": true,
       "sha256": null
@@ -94,55 +94,55 @@
       "publication_name": "origin",
       "prompt_version": "origin_no_prompt_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "48fe2df773dcda529ef0ac649f1bf5f6c62db6fdf1015ca60389407bb290cd2c"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/optimization_state.json",
         "exists": false,
         "is_dir": false,
         "sha256": null
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/reports",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/verification.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "ecb106f465b524733fecf34b3cb20d7ebfae682e5d724072874adb023045dddf"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "34ad393591f4deba744f6a1e99ffa5a555962ad43f17b33c8cb38b1bf3497b9f"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "b4d059f612ffbdd1a85edfd8e772d5978dbc4fe1e05be0349d98955281346a94"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/origin/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "5e09be05422807f2c0b3897cbb0e7a3724126564867d13ccdc36d0278130f0a6"
@@ -153,55 +153,55 @@
       "publication_name": "strong_plain",
       "prompt_version": "strong_plain_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "0ddb993a1c149bbd1cba34e0c0b70a078688b3dcd57663e635d9f8bb5ee3493d"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "d9275e46ff823c2cdd60d809cad67c9da5aa4d277987f2ee6c275641136f2e84"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/reports",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/verification.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "2f838dc5baf9b2df15b2405ab71ca3a9b34666ed73cf3cae54a4ec83200aed73"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "3ba4d4a5a0b3babacf8d400c63ea952eab4f0388885af3d0d1b3a244fc7ca5c1"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "a98527a8fa97fe1bcc042cd6081dbfab75ac95c6cd178ccc3d49b6c96e374547"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/strong_plain/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "f747ef8c123f31d29078decb55d58ba56ad552c2309a0e9895545ba1b2390ff5"
@@ -212,55 +212,55 @@
       "publication_name": "diagnostic_only",
       "prompt_version": "diagnostic_only_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "ac5168f2ed96b43153aff129797be900b8e164e1a38f7d028fc6fed4e0e57456"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "78506751fe6c20544d0baf3f94b210d7146b0e3a1b4dfb4265c1c8b1f5c6a0ba"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/reports",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/verification.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "66b926676a05fc637a5745250d3f5d340e7cc3058debd6ec41af1d10227bf2b8"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "5558d21f40fb9a14e788e61a37631d46756b5b474068a390592460229adf1157"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "ef5047314a2c4e4a5f245ec31bde33d0474acae4d30d39feaef1d31831e65c02"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/diagnostic_only/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "3ee49b67775de13cddb87a09491b0de4b94b5cfa915d6dac7f2cb2369d0d1f7d"
@@ -271,55 +271,55 @@
       "publication_name": "case_card_only",
       "prompt_version": "case_card_only_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "ead56f380df9865d7c3dc3c9e33d307720f5991b7ce0f1cc84ba78bbeafa7bc6"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "57d7fad3b0dfba368da634b24fee0e13428d61e2fa18b66b50779beaf2444131"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/reports",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/verification.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "1677147251cb04a03b4c667ccea8d6cb0365010ffbbb58d625f35beb3232a6b1"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "05fa9a439e8199c280818936b1447ce643041a36fa1a4a55792696f81ba03a66"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "c5a2fc4473a74a65141f773d2ab77fd484fc497aa4f0f7aad51f437ad134fa1b"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/case_card_only/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "9ed362c9abf4095591dbd85a8aefef3c758e80aaabdc321eedd22deadd115b88"
@@ -330,55 +330,55 @@
       "publication_name": "full_method",
       "prompt_version": "full_method_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "f1f80cd5730bdc062db9bbbd2e0e387001ab116b1e544721d9f838e8748b9957"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "802df4a166f27b75666ec3c13958588ddedd25448734251295a74bee080cd193"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/reports",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/verification.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "d456fbab79a9ae26587182ab61c5c25e014e5c6b0fc24ed158d94df90189ee41"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "7d79e88b6b0a032cc56c84995d5699690d74f64707a33b4f8fea70d9527af334"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "277d522af73e9de49afaf699afac6fafc2dd2326f4d8492a2f5cee457f43df00"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "4b4688dce1dce65ac0135c3dd159b1146c088fcdd9044d9dd26ef960485ed6a1"

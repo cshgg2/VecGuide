@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_probe_boundary_candidates_origin_20260611）
+# VecGuide 实验汇总（cgo_probe_boundary_candidates_origin_20260611）
 
 - 生成时间：2026-06-11T17:42:36.887932
 - 函数数量：6

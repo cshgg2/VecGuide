@@ -38,7 +38,7 @@
         "avg_improvement_pct": 55.979,
         "negative_optimization_count": 1
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -62,7 +62,7 @@
         "avg_improvement_pct": 87.29066666666667,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -86,7 +86,7 @@
         "avg_improvement_pct": 91.06911111111111,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_runtime_stride_core_20260604/strategies/full_method/paper_summary.json"
     }
   ]
 }

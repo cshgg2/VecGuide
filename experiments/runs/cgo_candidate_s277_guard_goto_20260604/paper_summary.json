@@ -35,7 +35,7 @@
         "avg_improvement_pct": 0.156,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/strong_plain/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/strong_plain/paper_summary.json"
     },
     {
       "strategy": "diagnostic_only",
@@ -58,7 +58,7 @@
         "avg_improvement_pct": -0.28200000000000003,
         "negative_optimization_count": 1
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -81,7 +81,7 @@
         "avg_improvement_pct": -1.7760000000000002,
         "negative_optimization_count": 1
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -104,7 +104,7 @@
         "avg_improvement_pct": null,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s277_guard_goto_20260604/strategies/full_method/paper_summary.json"
     }
   ]
 }

@@ -37,7 +37,7 @@
         "avg_improvement_pct": 159.78333333333333,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -60,7 +60,7 @@
         "avg_improvement_pct": 1178.9333333333334,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -83,7 +83,7 @@
         "avg_improvement_pct": 1331.65,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_timeout_candidates_20260604/strategies/full_method/paper_summary.json"
     }
   ]
 }

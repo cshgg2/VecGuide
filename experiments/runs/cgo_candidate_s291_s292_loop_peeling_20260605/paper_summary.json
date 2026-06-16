@@ -35,7 +35,7 @@
         "avg_improvement_pct": 132.738,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/strong_plain/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/strong_plain/paper_summary.json"
     },
     {
       "strategy": "diagnostic_only",
@@ -59,7 +59,7 @@
         "avg_improvement_pct": -56.11800000000001,
         "negative_optimization_count": 2
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -83,7 +83,7 @@
         "avg_improvement_pct": -56.022000000000006,
         "negative_optimization_count": 2
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -108,7 +108,7 @@
         "avg_improvement_pct": 58.424,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s291_s292_loop_peeling_20260605/strategies/full_method/paper_summary.json"
     }
   ]
 }

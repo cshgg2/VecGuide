@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ACPO-LLM 正确性验证 CLI
+VecGuide 正确性验证 CLI
 ============================
 对已优化的函数独立执行三层正确性验证：
   1. 编译检查
@@ -294,7 +294,7 @@ def verify_file_with_state_origin(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="ACPO-LLM 正确性验证工具",
+        description="VecGuide 正确性验证工具",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 示例:

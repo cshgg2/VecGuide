@@ -823,7 +823,7 @@ def render_markdown_table(headers: List[str], rows: List[List[str]]) -> str:
 def render_run_markdown_report(run_summary: Dict, comparison: Dict) -> str:
     benchmark_config = run_summary.get("benchmark_config", {})
     lines = [
-        f"# ACPO-LLM 实验汇总（{run_summary['run_id']}）",
+        f"# VecGuide 实验汇总（{run_summary['run_id']}）",
         "",
         f"- 生成时间：{run_summary['timestamp']}",
         f"- 函数数量：{comparison['total_functions']}",
@@ -1218,7 +1218,7 @@ def initialize_run_directory_contract(run_dir: Path, strategy_root: Path, strate
     )
     write_text(
         raw_logs_dir / "external_log_path.txt",
-        "未填写。若终端记录保存在 3temp/<date>/<n>.md，请在归档正式 run 时写入该路径。\n",
+        "未填写。若终端记录保存在 a local private transcript path，请在归档正式 run 时写入该路径。\n",
     )
 
     for strategy in strategies:
@@ -1579,7 +1579,7 @@ def run_strategy(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="ACPO-LLM 实验运行器")
+    parser = argparse.ArgumentParser(description="VecGuide 实验运行器")
     parser.add_argument("functions", nargs="*", help="要纳入实验的函数名")
     parser.add_argument("-c", "--clang", default=get_clang_path(),
                         help=f"Clang 路径 (默认: {get_clang_path()})")

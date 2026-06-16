@@ -9,9 +9,9 @@
       "prompt_version": "diagnostic_only_v1_20260601",
       "round": 1,
       "prompt_kind": "optimization",
-      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610/strategies/diagnostic_only/prompt_snapshot/s261/round01_optimization.json",
-      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610/strategies/diagnostic_only/prompt_snapshot/s261/round01_optimization.md",
-      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610/strategies/diagnostic_only/prompt_snapshot/s261/round01_optimization_case_cards.json",
+      "json_file": "experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610/strategies/diagnostic_only/prompt_snapshot/s261/round01_optimization.json",
+      "markdown_file": "experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610/strategies/diagnostic_only/prompt_snapshot/s261/round01_optimization.md",
+      "case_card_file": "experiments/runs/cgo_candidate_s261_scalar_array_expansion_20260610/strategies/diagnostic_only/prompt_snapshot/s261/round01_optimization_case_cards.json",
       "case_cards_included": false,
       "selected_case_card_ids": []
     }

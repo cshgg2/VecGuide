@@ -9,9 +9,9 @@
       "prompt_version": "full_method_v1_20260601",
       "round": 1,
       "prompt_kind": "optimization",
-      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round01_optimization.json",
-      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round01_optimization.md",
-      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round01_optimization_case_cards.json",
+      "json_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round01_optimization.json",
+      "markdown_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round01_optimization.md",
+      "case_card_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round01_optimization_case_cards.json",
       "case_cards_included": true,
       "selected_case_card_ids": [
         "partial_vectorization_slowdown_boundary",
@@ -28,9 +28,9 @@
       "prompt_version": "full_method_v1_20260601",
       "round": 2,
       "prompt_kind": "optimization",
-      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round02_optimization.json",
-      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round02_optimization.md",
-      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round02_optimization_case_cards.json",
+      "json_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round02_optimization.json",
+      "markdown_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round02_optimization.md",
+      "case_card_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round02_optimization_case_cards.json",
       "case_cards_included": false,
       "selected_case_card_ids": []
     },
@@ -42,9 +42,9 @@
       "prompt_version": "full_method_v1_20260601",
       "round": 3,
       "prompt_kind": "optimization",
-      "json_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round03_optimization.json",
-      "markdown_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round03_optimization.md",
-      "case_card_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round03_optimization_case_cards.json",
+      "json_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round03_optimization.json",
+      "markdown_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round03_optimization.md",
+      "case_card_file": "experiments/runs/cgo_candidate_s211_statement_reordering_20260609/strategies/full_method/prompt_snapshot/s211/round03_optimization_case_cards.json",
       "case_cards_included": false,
       "selected_case_card_ids": []
     }

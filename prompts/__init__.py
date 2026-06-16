@@ -1,5 +1,5 @@
 """
-ACPO-LLM Prompt Engineering Module
+VecGuide Prompt Engineering Module
 ====================================
 提供结构化的 Prompt 生成和管理功能，包括：
 - 向量化知识库

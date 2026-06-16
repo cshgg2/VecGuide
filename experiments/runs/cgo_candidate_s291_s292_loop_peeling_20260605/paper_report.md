@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_candidate_s291_s292_loop_peeling_20260605）
+# VecGuide 实验汇总（cgo_candidate_s291_s292_loop_peeling_20260605）
 
 - 生成时间：2026-06-05T11:24:42.454608
 - 函数数量：2

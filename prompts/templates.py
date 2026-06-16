@@ -48,7 +48,7 @@ def resolve_system_prompt_template_name(round_num: int, prompt_options: Optional
 
 
 # 系统级 Prompt（定义角色和能力）
-SYSTEM_PROMPT_BASE = """你是 ACPO-LLM（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。
+SYSTEM_PROMPT_BASE = """你是 VecGuide（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。
 
 ## 你的核心能力
 1. **向量化障碍诊断**：分析代码中阻止编译器向量化的原因
@@ -149,7 +149,7 @@ SYSTEM_PROMPT_STRONG_PLAIN = """你是一个擅长 C 程序性能优化和自动
 
 
 # 多轮优化的增强系统 Prompt
-SYSTEM_PROMPT_MULTI_ROUND = """你是 ACPO-LLM（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。
+SYSTEM_PROMPT_MULTI_ROUND = """你是 VecGuide（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。
 
 ## 你的核心使命
 通过多轮迭代优化，逐步消除代码中的向量化障碍，最终生成能够被 Clang 自动向量化的代码。
@@ -464,7 +464,7 @@ def build_retry_prompt(
     Returns:
         (system_prompt, user_prompt)
     """
-    system_prompt = """你是 ACPO-LLM 代码修复专家。
+    system_prompt = """你是 VecGuide 代码修复专家。
 
 你的任务是修复编译错误的 C 代码，同时尽可能保留向量化优化意图。
 

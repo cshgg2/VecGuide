@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_candidate_s258_scalar_carry_repeat1_20260609）
+# VecGuide 实验汇总（cgo_candidate_s258_scalar_carry_repeat1_20260609）
 
 - 生成时间：2026-06-09T11:02:57.333194
 - 函数数量：1

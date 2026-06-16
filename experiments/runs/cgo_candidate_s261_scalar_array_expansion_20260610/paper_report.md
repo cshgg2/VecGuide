@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_candidate_s261_scalar_array_expansion_20260610）
+# VecGuide 实验汇总（cgo_candidate_s261_scalar_array_expansion_20260610）
 
 - 生成时间：2026-06-10T13:01:19.700411
 - 函数数量：1

@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_strong_plain_key_cases_20260603）
+# VecGuide 实验汇总（cgo_strong_plain_key_cases_20260603）
 
 - 生成时间：2026-06-04T00:15:24.059888
 - 函数数量：5

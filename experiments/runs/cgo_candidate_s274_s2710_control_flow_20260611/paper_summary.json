@@ -35,7 +35,7 @@
         "avg_improvement_pct": null,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/origin/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/origin/paper_summary.json"
     },
     {
       "strategy": "strong_plain",
@@ -60,7 +60,7 @@
         "avg_improvement_pct": 86.212,
         "negative_optimization_count": 1
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/strong_plain/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/strong_plain/paper_summary.json"
     },
     {
       "strategy": "diagnostic_only",
@@ -85,7 +85,7 @@
         "avg_improvement_pct": 13.225999999999999,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -108,7 +108,7 @@
         "avg_improvement_pct": 42.264,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -131,7 +131,7 @@
         "avg_improvement_pct": 36.666,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s274_s2710_control_flow_20260611/strategies/full_method/paper_summary.json"
     }
   ]
 }

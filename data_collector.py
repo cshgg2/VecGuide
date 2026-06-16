@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ACPO-LLM 数据收集器
+VecGuide 数据收集器
 从 Clang 编译器提取循环向量化失败的诊断信息
 支持函数级别的诊断映射
 """

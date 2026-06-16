@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ACPO-LLM 日志模块
+VecGuide 日志模块
 提供统一的日志输出，包含文件名、函数名和行号信息
 """
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ACPO-LLM 边界条件测试脚本
+VecGuide 边界条件测试脚本
 测试 s122, s172, s4121 等函数的边界条件
 """
 
@@ -89,7 +89,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="ACPO-LLM 边界条件测试工具"
+        description="VecGuide 边界条件测试工具"
     )
     parser.add_argument(
         "functions",

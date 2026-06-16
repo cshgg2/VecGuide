@@ -35,7 +35,7 @@
         "avg_improvement_pct": null,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/origin/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/origin/paper_summary.json"
     },
     {
       "strategy": "strong_plain",
@@ -60,7 +60,7 @@
         "avg_improvement_pct": 80.226,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/strong_plain/paper_summary.json"
     },
     {
       "strategy": "diagnostic_only",
@@ -85,7 +85,7 @@
         "avg_improvement_pct": 334.684,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -110,7 +110,7 @@
         "avg_improvement_pct": 206.079,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -135,7 +135,7 @@
         "avg_improvement_pct": 221.248,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_s258_s256_scalar_array_20260608/strategies/full_method/paper_summary.json"
     }
   ]
 }

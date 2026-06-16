@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_strong_plain_timeout_candidates_20260604）
+# VecGuide 实验汇总（cgo_strong_plain_timeout_candidates_20260604）
 
 - 生成时间：2026-06-04T16:50:43.232707
 - 函数数量：2

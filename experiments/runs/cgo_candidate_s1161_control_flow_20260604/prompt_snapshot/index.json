@@ -5,24 +5,24 @@
   "strategies": [
     {
       "strategy": "strong_plain",
-      "prompt_snapshot_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/strong_plain/prompt_snapshot",
-      "strategy_index_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/strong_plain/prompt_snapshot/index.json",
+      "prompt_snapshot_dir": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/strong_plain/prompt_snapshot",
+      "strategy_index_file": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/strong_plain/prompt_snapshot/index.json",
       "strategy_index_exists": true,
       "snapshot_count": 1,
       "selected_case_card_ids": []
     },
     {
       "strategy": "diagnostic_only",
-      "prompt_snapshot_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/diagnostic_only/prompt_snapshot",
-      "strategy_index_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/diagnostic_only/prompt_snapshot/index.json",
+      "prompt_snapshot_dir": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/diagnostic_only/prompt_snapshot",
+      "strategy_index_file": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/diagnostic_only/prompt_snapshot/index.json",
       "strategy_index_exists": true,
       "snapshot_count": 1,
       "selected_case_card_ids": []
     },
     {
       "strategy": "case_card_only",
-      "prompt_snapshot_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/case_card_only/prompt_snapshot",
-      "strategy_index_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/case_card_only/prompt_snapshot/index.json",
+      "prompt_snapshot_dir": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/case_card_only/prompt_snapshot",
+      "strategy_index_file": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/case_card_only/prompt_snapshot/index.json",
       "strategy_index_exists": true,
       "snapshot_count": 1,
       "selected_case_card_ids": [
@@ -34,8 +34,8 @@
     },
     {
       "strategy": "full_method",
-      "prompt_snapshot_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot",
-      "strategy_index_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/index.json",
+      "prompt_snapshot_dir": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot",
+      "strategy_index_file": "experiments/runs/cgo_candidate_s1161_control_flow_20260604/strategies/full_method/prompt_snapshot/index.json",
       "strategy_index_exists": true,
       "snapshot_count": 3,
       "selected_case_card_ids": [

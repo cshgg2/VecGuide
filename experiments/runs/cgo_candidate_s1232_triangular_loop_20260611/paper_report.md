@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_candidate_s1232_triangular_loop_20260611）
+# VecGuide 实验汇总（cgo_candidate_s1232_triangular_loop_20260611）
 
 - 生成时间：2026-06-11T23:47:41.402597
 - 函数数量：1

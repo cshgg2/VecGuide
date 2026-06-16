@@ -1,4 +1,4 @@
-# ACPO-LLM 实验汇总（cgo_probe_light_candidates_origin_20260611）
+# VecGuide 实验汇总（cgo_probe_light_candidates_origin_20260611）
 
 - 生成时间：2026-06-11T18:11:01.317463
 - 函数数量：8

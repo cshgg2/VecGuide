@@ -36,7 +36,7 @@
         "avg_improvement_pct": null,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/origin/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/origin/paper_summary.json"
     },
     {
       "strategy": "strong_plain",
@@ -61,7 +61,7 @@
         "avg_improvement_pct": 14.454,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/strong_plain/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/strong_plain/paper_summary.json"
     },
     {
       "strategy": "diagnostic_only",
@@ -86,7 +86,7 @@
         "avg_improvement_pct": 0.968,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -111,7 +111,7 @@
         "avg_improvement_pct": 17.14,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -136,7 +136,7 @@
         "avg_improvement_pct": 23.240000000000002,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_candidate_scalar_carry_s253_s254_s255_20260609/strategies/full_method/paper_summary.json"
     }
   ]
 }

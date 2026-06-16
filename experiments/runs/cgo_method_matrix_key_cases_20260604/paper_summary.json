@@ -39,7 +39,7 @@
         "avg_improvement_pct": 71.6695,
         "negative_optimization_count": 1
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/diagnostic_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/diagnostic_only/paper_summary.json"
     },
     {
       "strategy": "case_card_only",
@@ -65,7 +65,7 @@
         "avg_improvement_pct": 236.7675,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/case_card_only/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/case_card_only/paper_summary.json"
     },
     {
       "strategy": "full_method",
@@ -89,7 +89,7 @@
         "avg_improvement_pct": 672.261,
         "negative_optimization_count": 0
       },
-      "summary_file": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/full_method/paper_summary.json"
+      "summary_file": "experiments/runs/cgo_method_matrix_key_cases_20260604/strategies/full_method/paper_summary.json"
     }
   ]
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-ACPO-LLM 统一入口
+VecGuide 统一入口
 提供分析、优化、评估一站式工作流
 """
 
@@ -30,7 +30,7 @@ def print_banner():
     """打印启动横幅"""
     print(f"""
 {Colors.CYAN}╔═══════════════════════════════════════════════════════════════╗
-║              ACPO-LLM: Auto-Vectorization Optimizer           ║
+║              VecGuide: Auto-Vectorization Optimizer           ║
 ║                    基于大模型的代码向量化优化工具               ║
 ╚═══════════════════════════════════════════════════════════════╝{Colors.ENDC}
 """)
@@ -154,7 +154,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="ACPO-LLM: 基于大模型的代码向量化优化工具",
+        description="VecGuide: 基于大模型的代码向量化优化工具",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 使用示例:

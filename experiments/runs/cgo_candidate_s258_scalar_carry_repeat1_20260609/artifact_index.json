@@ -3,28 +3,28 @@
   "run_id": "cgo_candidate_s258_scalar_carry_repeat1_20260609",
   "timestamp": "2026-06-09T11:02:57.336842",
   "dry_run": false,
-  "run_dir": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609",
+  "run_dir": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609",
   "fixed_files": {
     "manifest": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/manifest.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/manifest.json",
       "exists": true,
       "is_dir": false,
       "sha256": "f20ce039947e8340ccfd5403703fda88cec3dfcf1a181fd3d3fa399531860dd6"
     },
     "strategy_config": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategy_config.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategy_config.json",
       "exists": true,
       "is_dir": false,
       "sha256": "1d5431c05b22462369ca3c53cba1ef6910e316095abb3870a1f9e6cded28d0b7"
     },
     "summary": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/summary.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/summary.json",
       "exists": true,
       "is_dir": false,
       "sha256": "6b1a4a74153b5f81c6692431be3a8e4650ee2f563b6f82ea1ba9ecfdedf17055"
     },
     "prompt_snapshot_index": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/prompt_snapshot/index.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/prompt_snapshot/index.json",
       "exists": true,
       "is_dir": false,
       "sha256": "10f01ff2797d52121135186d4490925e1e7ef254a9bf42b282724768419c1da8"
@@ -32,31 +32,31 @@
   },
   "paper_outputs": {
     "paper_results_csv": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_results.csv",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_results.csv",
       "exists": true,
       "is_dir": false,
       "sha256": "06c71225686639e809b182a5668fd909e76bae980beab7f3e629c10b8afed147"
     },
     "paper_rows_json": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_rows.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_rows.json",
       "exists": true,
       "is_dir": false,
       "sha256": "584a968d7242b16c0fa55a5fb4b1d7eea284e19a91ec3dce2b8593f7da23d0e5"
     },
     "paper_summary_json": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_summary.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_summary.json",
       "exists": true,
       "is_dir": false,
       "sha256": "74769fdf83f7d3d161c6cd58e5c03fb7fed176e1c8fb879a3aacd6962892b7ea"
     },
     "paper_comparison_json": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_comparison.json",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_comparison.json",
       "exists": true,
       "is_dir": false,
       "sha256": "545cbc999b4a49b24b9797599244d9ef99e8fa8cc839cad2fd239370cb359dc5"
     },
     "paper_report_md": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_report.md",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/paper_report.md",
       "exists": true,
       "is_dir": false,
       "sha256": "dd9a42a9f787aa2aed38454d98fec4174b7b5dd0738e9d5b602c759c407bbcc2"
@@ -64,25 +64,25 @@
   },
   "directories": {
     "shared": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/shared",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/shared",
       "exists": true,
       "is_dir": true,
       "sha256": null
     },
     "strategies": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies",
       "exists": true,
       "is_dir": true,
       "sha256": null
     },
     "prompt_snapshot": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/prompt_snapshot",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/prompt_snapshot",
       "exists": true,
       "is_dir": true,
       "sha256": null
     },
     "raw_logs": {
-      "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/raw_logs",
+      "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/raw_logs",
       "exists": true,
       "is_dir": true,
       "sha256": null
@@ -94,55 +94,55 @@
       "publication_name": "origin",
       "prompt_version": "origin_no_prompt_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "884de3ac7d0d52bf57b116d1be863c01a7432130693e6c3df1cef648a83d57a8"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/optimization_state.json",
         "exists": false,
         "is_dir": false,
         "sha256": null
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/reports",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/verification.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "781c8180dfea54d3b3202dcbfbb7a7f69c0f06c519c484d1fa68764dbea9e21f"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "1d631dcedc62577c9b42545d7e06bd0d594d3b94c7f2e10f2d74c02f7d9a86c0"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "3aaec2c780c16467508f3cf2ffcf8ccd39e2acac00b81530c071a31c2bd526df"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/origin/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "5e09be05422807f2c0b3897cbb0e7a3724126564867d13ccdc36d0278130f0a6"
@@ -153,55 +153,55 @@
       "publication_name": "strong_plain",
       "prompt_version": "strong_plain_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "eef69c9d64b42dfc26474f73afa169400839d1c97ad4813d3a9cfc187f158f26"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "4288782dd8a29afbe254b8e8caa4b8f02f98937dff51733fd74ad19f3db77d50"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/reports",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/verification.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "10301c27c795b6a18a899d220676cfd4be3d5bd210988feb766d1522489e98dd"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "07a9d231be817654c5c5b5adeeddef44c34bb4e5252e3b5accbebb7d64beddf9"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "19cc3bf4f12a73e5fb86bdea173c7bc85ab9e3d1d853f2bb7953e3394bcfdc26"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/strong_plain/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "5178b5b346dea9326f0f1b121d965b7edcecb351f170b96054ac1803a749ddd4"
@@ -212,55 +212,55 @@
       "publication_name": "diagnostic_only",
       "prompt_version": "diagnostic_only_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "5822efb43e222d05af3d9060d081fa88647f9d40a3e7428c97d7b5fda5b2e164"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "964a94d7d8c0c81b043ad346f174ecccf4a02b4f9d7c9a42369c2615c0aee085"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/reports",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/verification.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "915b6204564e1a5f924915ac35c7063f8f00693ef1008bc2721691acb1e2cec0"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "27f1f3924231289b160072e26daf475188d7e89a2440b99a9402f773113a9828"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "b749bc8fde2a4eae01e43872ecd1b9c30f8d62de24b57aaecb6c696b9725a3ab"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/diagnostic_only/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "e56a2fdcda9caf07a1f97fccc0da2ef88ec1f626714e8a477e5e46bcac3869ae"
@@ -271,55 +271,55 @@
       "publication_name": "case_card_only",
       "prompt_version": "case_card_only_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "43f8c33a659341383d06e2625e365b2d3124c6249e5d90c6df98c0909b6c9603"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "9150c9c8b5c28c1f793a96d655fe1a7ceb510f309a77ee7fb3cdf70260b4b21d"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/reports",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/verification.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "9c772cbf29f11b7750c43200a95964d36f5529e4dac3532937deb261bc0e16ed"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "c9dd9299337444ed98404bc7c224b5cd397b5888dda2f053b502aa61f64275b4"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "c9e0bd5139dfe5e5bb48b811df3526fa812dee2d7ded1ea1615a95fa3eeaec4d"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/case_card_only/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "14aa993436804aa12d5a2abdb9e01e681fcabdc8a6c06aa7cf0b92b849ae274f"
@@ -330,55 +330,55 @@
       "publication_name": "full_method",
       "prompt_version": "full_method_v1_20260601",
       "strategy_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "e383df8a490cf0041a0622a89fc79027372d8f69eed4a7da25af36e7a548edfa"
       },
       "state_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/optimization_state.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/optimization_state.json",
         "exists": true,
         "is_dir": false,
         "sha256": "b5c7eb9fa2b0665d609350dff01e69acf966fe5be4871fa5a506205331ef4d19"
       },
       "prompt_snapshot_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/prompt_snapshot",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/prompt_snapshot",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "reports_dir": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/reports",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/reports",
         "exists": true,
         "is_dir": true,
         "sha256": null
       },
       "verification_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/verification.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/verification.json",
         "exists": true,
         "is_dir": false,
         "sha256": "609f6a07ba03aea718116f0d7356613cf534f96c827ea0422e6a480ba774af60"
       },
       "benchmark_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/benchmark.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/benchmark.json",
         "exists": true,
         "is_dir": false,
         "sha256": "921e18d53b138cbde77c7c3121fcaa8aecabadd5cee4cb4edb394ac1c0c9d4fd"
       },
       "paper_rows_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/paper_rows.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/paper_rows.json",
         "exists": true,
         "is_dir": false,
         "sha256": "a149ff3761a838bb5db37683334103808536c024bc3ff14082f5c8c6109dd2b3"
       },
       "paper_summary_file": {
-        "path": "/home/cshgg2/.lcpr/.01/ACPO-Learn/ACPO-LLM/experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/paper_summary.json",
+        "path": "experiments/runs/cgo_candidate_s258_scalar_carry_repeat1_20260609/strategies/full_method/paper_summary.json",
         "exists": true,
         "is_dir": false,
         "sha256": "56bbe2a6ddfdacd5bf10eb678d0d4167fc891007d26442e99972010b09a54353"

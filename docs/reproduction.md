@@ -20,7 +20,7 @@ Local progress notes and terminal transcripts are not part of the public reposit
 Run commands from the repository root:
 
 ```bash
-cd /home/cshgg2/.lcpr/.01/VecGuide
+cd <repo>
 ```
 
 Install Python dependencies:
