@@ -1,6 +1,6 @@
 # Artifact Index
 
-Updated: 2026-06-15
+Updated: 2026-06-17
 
 This document lists the public artifacts migrated into the VecGuide repository. Older exploratory runs are intentionally excluded from the public evidence set.
 
@@ -44,6 +44,9 @@ Primary and supplemental `cgo_*` runs currently included:
 - `experiments/tables/cgo_s126_induction_interchange_20260604`
 - `experiments/tables/cgo_s277_guard_goto_20260604`
 - `experiments/tables/cgo_s291_s292_loop_peeling_20260605`
+- `experiments/tables/cgo_s274_s2710_control_flow_20260611`
+- `experiments/tables/cgo_s2710_control_flow_repeat1_20260611`
+- `experiments/tables/cgo_s1232_triangular_loop_20260611`
 
 ## Frozen Package
 

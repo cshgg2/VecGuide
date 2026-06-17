@@ -1,6 +1,6 @@
 # VecGuide Evidence Map
 
-Updated: 2026-06-12
+Updated: 2026-06-17
 
 This document records the public evidence scope currently used for the VecGuide paper draft. It is intentionally compact: detailed daily notes, weekly reports, and terminal transcripts remain local-only.
 
@@ -19,8 +19,8 @@ This document records the public evidence scope currently used for the VecGuide 
 | Runtime-stride group | `cgo_method_matrix_runtime_stride_core_20260604`, `cgo_strong_plain_runtime_stride_core_20260604` | `cgo_runtime_stride_matrix_20260604` | Useful supplement, but not the strongest main result group. |
 | `s278` | `cgo_method_matrix_key_cases_20260604`, `cgo_strong_plain_key_cases_20260603` | `cgo_key_case_matrix_20260604` | Control-flow supplement; not an exclusive full-method advantage. |
 | `s279` | `cgo_candidate_s279_complex_control_flow_20260609` | none frozen | Control-flow supplement; the strong plain baseline also succeeds. |
-| `s2710` | `cgo_candidate_s274_s2710_control_flow_20260611`, `cgo_candidate_s2710_control_flow_repeat1_20260611` | none frozen | Stability and boundary evidence; repeat result must be considered. |
-| `s1232` | `cgo_candidate_s1232_triangular_loop_20260611` | none frozen | Loop-interchange / performance-selection boundary; do not report the high case-card-only speedup without the timeout context. |
+| `s2710` | `cgo_candidate_s274_s2710_control_flow_20260611`, `cgo_candidate_s2710_control_flow_repeat1_20260611` | `cgo_s274_s2710_control_flow_20260611`, `cgo_s2710_control_flow_repeat1_20260611` | Stability and boundary evidence; repeat result shows both strong_plain and full_method can speed up. |
+| `s1232` | `cgo_candidate_s1232_triangular_loop_20260611` | `cgo_s1232_triangular_loop_20260611` | Loop-interchange / performance-selection boundary; case_card_only is fast, while other LLM strategies time out in the public table. |
 
 ## Timeout-Limited Evidence
 

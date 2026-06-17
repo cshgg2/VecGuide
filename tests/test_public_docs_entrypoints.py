@@ -16,6 +16,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
             "docs/current_status.md",
             "docs/evidence_map.md",
             "docs/experiment_protocol.md",
+            "docs/submission_readiness.md",
             "docs/engineering_boundaries.md",
             "docs/artifact_index.md",
         ]:
@@ -31,6 +32,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
             "docs/current_status.md",
             "docs/evidence_map.md",
             "docs/experiment_protocol.md",
+            "docs/submission_readiness.md",
             "docs/engineering_boundaries.md",
             "docs/artifact_index.md",
         ]:
@@ -45,6 +47,17 @@ class PublicDocsEntrypointTests(unittest.TestCase):
         ]:
             text = (REPO_ROOT / relative_path).read_text(encoding="utf-8")
             self.assertIn("tests.test_public_api_boundary", text)
+
+    def test_submission_readiness_links_protocol_and_api_boundary(self):
+        doc = (REPO_ROOT / "docs" / "submission_readiness.md").read_text(encoding="utf-8")
+
+        self.assertIn("docs/experiment_protocol.md", doc)
+        self.assertIn("docs/api_boundary.md", doc)
+        self.assertIn("s275", doc)
+        self.assertIn("s258", doc)
+        self.assertIn("Timeout-limited", doc)
+        self.assertIn("cgo_s2710_control_flow_repeat1_20260611", doc)
+        self.assertIn("cgo_s1232_triangular_loop_20260611", doc)
 
 
 if __name__ == "__main__":

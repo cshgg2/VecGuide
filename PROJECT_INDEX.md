@@ -12,6 +12,7 @@ VecGuide is a compiler-diagnostic-guided LLM source rewriting system for automat
 - `docs/current_status.md`: current public project state and near-term work.
 - `docs/evidence_map.md`: current evidence classification for the paper draft.
 - `docs/experiment_protocol.md`: strategy names, benchmark protocol, and result eligibility rules.
+- `docs/submission_readiness.md`: current paper-use classification and remaining evidence gap.
 - `docs/engineering_boundaries.md`: module responsibilities and strategy naming boundaries.
 - `docs/artifact_index.md`: public run/table/frozen-package inventory.
 - `experiments/runs/README.md`: run-level evidence index.
