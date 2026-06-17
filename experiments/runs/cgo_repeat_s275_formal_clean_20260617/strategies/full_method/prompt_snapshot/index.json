@@ -1,0 +1,52 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-17T22:55:21.448392",
+      "function": "s275",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round01_optimization.json",
+      "markdown_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round01_optimization.md",
+      "case_card_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "guarded_loop_interchange_invariant_branch",
+        "partial_vectorization_slowdown_boundary",
+        "reduction_or_recurrence_boundary",
+        "imperfect_nested_distribution_interchange"
+      ]
+    },
+    {
+      "timestamp": "2026-06-17T22:55:32.982030",
+      "function": "s275",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 2,
+      "prompt_kind": "optimization",
+      "json_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round02_optimization.json",
+      "markdown_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round02_optimization.md",
+      "case_card_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round02_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    },
+    {
+      "timestamp": "2026-06-17T22:55:43.709954",
+      "function": "s275",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 3,
+      "prompt_kind": "optimization",
+      "json_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round03_optimization.json",
+      "markdown_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round03_optimization.md",
+      "case_card_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot/s275/round03_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

@@ -70,6 +70,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
         self.assertIn("cgo_repeat_s275_formal_<date>", doc)
         self.assertIn("cgo_repeat_s258_formal_<date>", doc)
         self.assertIn("python3 main.py results-table", doc)
+        self.assertIn("cgo_repeat_s275_formal_clean_20260617", doc)
 
 
 if __name__ == "__main__":

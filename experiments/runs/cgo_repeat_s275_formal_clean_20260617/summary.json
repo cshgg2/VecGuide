@@ -1,0 +1,180 @@
+{
+  "run_id": "cgo_repeat_s275_formal_clean_20260617",
+  "timestamp": "2026-06-17T22:58:34.260545",
+  "functions": [
+    "s275"
+  ],
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/origin/summary.json",
+      "state_file": null,
+      "optimized_prefix": null,
+      "prompt_snapshot_dir": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/origin/prompt_snapshot",
+      "verification_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/origin/verification.json",
+      "benchmark_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/origin/benchmark.json",
+      "paper_rows_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/origin/paper_rows.json",
+      "paper_summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/origin/paper_summary.json",
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "origin_baseline": 1
+        },
+        "observed_outcome_counts": {
+          "origin_not_vectorized_baseline": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      }
+    },
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/summary.json",
+      "state_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/optimization_state.json",
+      "optimized_prefix": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/optimized_",
+      "prompt_snapshot_dir": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/prompt_snapshot",
+      "verification_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/verification.json",
+      "benchmark_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/benchmark.json",
+      "paper_rows_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/paper_rows.json",
+      "paper_summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/strong_plain/paper_summary.json",
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_flat": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 1.0,
+        "median_speedup": 1.0,
+        "avg_improvement_pct": 0.0,
+        "negative_optimization_count": 0
+      }
+    },
+    {
+      "strategy": "diagnostic_only",
+      "exit_code": 0,
+      "summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/summary.json",
+      "state_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/optimization_state.json",
+      "optimized_prefix": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/optimized_",
+      "prompt_snapshot_dir": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/prompt_snapshot",
+      "verification_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/verification.json",
+      "benchmark_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/benchmark.json",
+      "paper_rows_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/paper_rows.json",
+      "paper_summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/diagnostic_only/paper_summary.json",
+      "metrics": {
+        "strategy": "diagnostic_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 6.75678,
+        "median_speedup": 6.75678,
+        "avg_improvement_pct": 575.678,
+        "negative_optimization_count": 0
+      }
+    },
+    {
+      "strategy": "case_card_only",
+      "exit_code": 0,
+      "summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/summary.json",
+      "state_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/optimization_state.json",
+      "optimized_prefix": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/optimized_",
+      "prompt_snapshot_dir": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/prompt_snapshot",
+      "verification_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/verification.json",
+      "benchmark_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/benchmark.json",
+      "paper_rows_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/paper_rows.json",
+      "paper_summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/paper_summary.json",
+      "metrics": {
+        "strategy": "case_card_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 5.47354,
+        "median_speedup": 5.47354,
+        "avg_improvement_pct": 447.354,
+        "negative_optimization_count": 0
+      }
+    },
+    {
+      "strategy": "full_method",
+      "exit_code": 0,
+      "summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/summary.json",
+      "state_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/optimization_state.json",
+      "optimized_prefix": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/optimized_",
+      "prompt_snapshot_dir": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/prompt_snapshot",
+      "verification_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/verification.json",
+      "benchmark_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/benchmark.json",
+      "paper_rows_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/paper_rows.json",
+      "paper_summary_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/full_method/paper_summary.json",
+      "metrics": {
+        "strategy": "full_method",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 7.68156,
+        "median_speedup": 7.68156,
+        "avg_improvement_pct": 668.156,
+        "negative_optimization_count": 0
+      }
+    }
+  ],
+  "paper_summary_file": "paper_summary.json",
+  "paper_rows_file": "paper_rows.json",
+  "paper_csv_file": "paper_results.csv",
+  "paper_comparison_file": "paper_comparison.json",
+  "paper_report_file": "paper_report.md",
+  "strategy_config_file": "strategy_config.json",
+  "prompt_snapshot_index_file": "prompt_snapshot/index.json",
+  "raw_logs_dir": "raw_logs",
+  "artifact_index_file": "artifact_index.json",
+  "all_succeeded": true
+}

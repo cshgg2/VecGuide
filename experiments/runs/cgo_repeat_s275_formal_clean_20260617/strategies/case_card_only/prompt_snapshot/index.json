@@ -1,0 +1,24 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-17T22:53:23.846088",
+      "function": "s275",
+      "strategy": "case_card_only",
+      "publication_name": "case_card_only",
+      "prompt_version": "case_card_only_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/prompt_snapshot/s275/round01_optimization.json",
+      "markdown_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/prompt_snapshot/s275/round01_optimization.md",
+      "case_card_file": "experiments/runs/cgo_repeat_s275_formal_clean_20260617/strategies/case_card_only/prompt_snapshot/s275/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "guarded_loop_interchange_invariant_branch",
+        "partial_vectorization_slowdown_boundary",
+        "reduction_or_recurrence_boundary",
+        "imperfect_nested_distribution_interchange"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "run_id": "cgo_repeat_s275_formal_clean_20260617",
+  "timestamp": "2026-06-17T22:58:34.264956",
+  "dry_run": false,
+  "run_dir": "experiments/runs/cgo_repeat_s275_formal_clean_20260617",
+  "fixed_files": {
+    "manifest": {
+      "path": "manifest.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "fdbe9bfdbeb193c3672029b47f02ea57bbe20a68790e35d2c2f532cb33a27ee1"
+    },
+    "strategy_config": {
+      "path": "strategy_config.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "4b3912b0ef615222fa133304342b3b1076390778c96f73eeb576e267b78f94dd"
+    },
+    "summary": {
+      "path": "summary.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "64d18621687ad001bf9fc9393c2ddf6185ec506d77283ec09266e2ed334c6d0a"
+    },
+    "prompt_snapshot_index": {
+      "path": "prompt_snapshot/index.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "2746bba150f259f614dd193a4d90ab1c9e3bb6d89517917082bf3650305161cd"
+    }
+  },
+  "paper_outputs": {
+    "paper_results_csv": {
+      "path": "paper_results.csv",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "c414d0c09c733aca582e5a9b4d5af440f6e42b46c7efdac97b2d4f3db060c196"
+    },
+    "paper_rows_json": {
+      "path": "paper_rows.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "8b03cf15ad9ad632205a7d0947eb980d276339786ab0b1c75c5ee8eca41213bd"
+    },
+    "paper_summary_json": {
+      "path": "paper_summary.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "6e832b2ba81b7b6eacf735a26a12cf752c072990ee467351d75993e4e921aeee"
+    },
+    "paper_comparison_json": {
+      "path": "paper_comparison.json",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "51726d09b97363f3b90ecad575b507036ce421b4d324fa508b7c8d1cf0e4f9e3"
+    },
+    "paper_report_md": {
+      "path": "paper_report.md",
+      "exists": true,
+      "is_dir": false,
+      "sha256": "4dd5cfe91dc9ad0ff1d551bce025e598bf20ead2dac4c4e18b7c3ed0f8782c57"
+    }
+  },
+  "directories": {
+    "shared": {
+      "path": "shared",
+      "exists": true,
+      "is_dir": true,
+      "sha256": null
+    },
+    "strategies": {
+      "path": "strategies",
+      "exists": true,
+      "is_dir": true,
+      "sha256": null
+    },
+    "prompt_snapshot": {
+      "path": "prompt_snapshot",
+      "exists": true,
+      "is_dir": true,
+      "sha256": null
+    },
+    "raw_logs": {
+      "path": "raw_logs",
+      "exists": true,
+      "is_dir": true,
+      "sha256": null
+    }
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "publication_name": "origin",
+      "prompt_version": "origin_no_prompt_v1_20260601",
+      "strategy_dir": {
+        "path": "strategies/origin",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "summary_file": {
+        "path": "strategies/origin/summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "46e4357d4cede358efd759fa3ef40d9ea503c098860e24fbb0a991b54a8409dd"
+      },
+      "state_file": {
+        "path": "strategies/origin/optimization_state.json",
+        "exists": false,
+        "is_dir": false,
+        "sha256": null
+      },
+      "prompt_snapshot_dir": {
+        "path": "strategies/origin/prompt_snapshot",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "reports_dir": {
+        "path": "strategies/origin/reports",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "verification_file": {
+        "path": "strategies/origin/verification.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "c119f3696fe5a071adc40cf3a1d32388560fd40f1fb03c90edbabe49b20691e9"
+      },
+      "benchmark_file": {
+        "path": "strategies/origin/benchmark.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "ee0dbde6af0e8f5189c510b3f18fa3c67029daf5041631199ecfbf739035d10a"
+      },
+      "paper_rows_file": {
+        "path": "strategies/origin/paper_rows.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "3ce8cff4b2bfb4819e20b5f1c63ba24687fa63b6a692127dc5c312b247cd49fa"
+      },
+      "paper_summary_file": {
+        "path": "strategies/origin/paper_summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "5e09be05422807f2c0b3897cbb0e7a3724126564867d13ccdc36d0278130f0a6"
+      }
+    },
+    {
+      "strategy": "strong_plain",
+      "publication_name": "strong_plain",
+      "prompt_version": "strong_plain_v1_20260601",
+      "strategy_dir": {
+        "path": "strategies/strong_plain",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "summary_file": {
+        "path": "strategies/strong_plain/summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "be71f290062e9e5974c5c7b51f57daf8cc8a70fd517c2b29759326c39d1d8e1d"
+      },
+      "state_file": {
+        "path": "strategies/strong_plain/optimization_state.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "b8334b8beeb42a4f6fc8d6a56096f0bafd45fd5fbae2f5d9b34c5def12ae6b0c"
+      },
+      "prompt_snapshot_dir": {
+        "path": "strategies/strong_plain/prompt_snapshot",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "reports_dir": {
+        "path": "strategies/strong_plain/reports",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "verification_file": {
+        "path": "strategies/strong_plain/verification.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "df27e4ffff4b70a8e5f37a4b13f34c9036f3dbe5677f996e0d0b54a9f2848ee3"
+      },
+      "benchmark_file": {
+        "path": "strategies/strong_plain/benchmark.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "bbd5e489bd9bf4f4eefd9ba17dc1ebc050347f6654fc9ce7777ea943998c7beb"
+      },
+      "paper_rows_file": {
+        "path": "strategies/strong_plain/paper_rows.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "4a1a27ea2c9ac875cb7655eb7b0f172d083ea9593844769424b06d01c8da49d7"
+      },
+      "paper_summary_file": {
+        "path": "strategies/strong_plain/paper_summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "38953e40a85d4ed141ca98fbe21fbd6d4847c62b946004fc6073a2506ac1e0f2"
+      }
+    },
+    {
+      "strategy": "diagnostic_only",
+      "publication_name": "diagnostic_only",
+      "prompt_version": "diagnostic_only_v1_20260601",
+      "strategy_dir": {
+        "path": "strategies/diagnostic_only",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "summary_file": {
+        "path": "strategies/diagnostic_only/summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "daa34ee937dfdc5387c0ac1d3b366853a7193499b4ed8f3ed7a9e0e77075dc87"
+      },
+      "state_file": {
+        "path": "strategies/diagnostic_only/optimization_state.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "f2775e57040d71a3742bdeae45fc7cdff456571923936177b9d95a7544e0f7a9"
+      },
+      "prompt_snapshot_dir": {
+        "path": "strategies/diagnostic_only/prompt_snapshot",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "reports_dir": {
+        "path": "strategies/diagnostic_only/reports",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "verification_file": {
+        "path": "strategies/diagnostic_only/verification.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "df722190a4dec9c45be27d41e8adb42860e3ab28274768265c6ac79e3d5410fc"
+      },
+      "benchmark_file": {
+        "path": "strategies/diagnostic_only/benchmark.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "155213b104bb86fc70e4100f295338e2ede2a2533258766ddd7d197363f5f0e4"
+      },
+      "paper_rows_file": {
+        "path": "strategies/diagnostic_only/paper_rows.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "68f78151bceba2cd22859fca36693abe62951e691cb9952ac0082cde0ff5cd1c"
+      },
+      "paper_summary_file": {
+        "path": "strategies/diagnostic_only/paper_summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "3eec0f71e974665dff1351c19b8da70f686109460f53aee2671c671d2313c44a"
+      }
+    },
+    {
+      "strategy": "case_card_only",
+      "publication_name": "case_card_only",
+      "prompt_version": "case_card_only_v1_20260601",
+      "strategy_dir": {
+        "path": "strategies/case_card_only",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "summary_file": {
+        "path": "strategies/case_card_only/summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "2f5205b6696ac4c642ba07c5e5cb377f0a1203c89b04542a77518f3bb9a269b0"
+      },
+      "state_file": {
+        "path": "strategies/case_card_only/optimization_state.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "26fff4b04482ce813e75c98379192e9c1f385f9aa2fbf5e2134c95501bd70c4f"
+      },
+      "prompt_snapshot_dir": {
+        "path": "strategies/case_card_only/prompt_snapshot",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "reports_dir": {
+        "path": "strategies/case_card_only/reports",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "verification_file": {
+        "path": "strategies/case_card_only/verification.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "66dc18ad07215694b1981ff08e8d18a8feb9901908e1610e84573ca8c3a679ad"
+      },
+      "benchmark_file": {
+        "path": "strategies/case_card_only/benchmark.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "2c5405a4373bf8787cbab2706cc96c7a69aa29aebe553c185efd0d268985cda8"
+      },
+      "paper_rows_file": {
+        "path": "strategies/case_card_only/paper_rows.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "e930f6e1ff24bbec529ea8988fedf35aa4973a9d1532259bec2e9604dc10fc3c"
+      },
+      "paper_summary_file": {
+        "path": "strategies/case_card_only/paper_summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "30d82ca1e34b9ebfa5a0ec4ef56e0796b9f1a332bd0ab336cc9ee72d4792c047"
+      }
+    },
+    {
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "strategy_dir": {
+        "path": "strategies/full_method",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "summary_file": {
+        "path": "strategies/full_method/summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "ef55afd777239c6d2a1c96979d973435a61dee852bc48d1f3dc9224505d49fbd"
+      },
+      "state_file": {
+        "path": "strategies/full_method/optimization_state.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "52ccddf5f22697be06e32cbf06fd2f73e507c696fedddef2e7de940f5f1af0d0"
+      },
+      "prompt_snapshot_dir": {
+        "path": "strategies/full_method/prompt_snapshot",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "reports_dir": {
+        "path": "strategies/full_method/reports",
+        "exists": true,
+        "is_dir": true,
+        "sha256": null
+      },
+      "verification_file": {
+        "path": "strategies/full_method/verification.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "b5ec76f2c42461189f982b894d398209fb0d0565f3ecf6c20b3e775700867dec"
+      },
+      "benchmark_file": {
+        "path": "strategies/full_method/benchmark.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "65aacf076a594e66de927cf4375002048a6fa2423729c8c6110e234a82566af4"
+      },
+      "paper_rows_file": {
+        "path": "strategies/full_method/paper_rows.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "f54fce433563f4d0ac29a01e32e5e773e77ff8f11c46e1a5338fc4c6d8c35f45"
+      },
+      "paper_summary_file": {
+        "path": "strategies/full_method/paper_summary.json",
+        "exists": true,
+        "is_dir": false,
+        "sha256": "9b023f809ab959240832f89020561395a62b255fc5c7ef42c29d7c161d588d35"
+      }
+    }
+  ]
+}

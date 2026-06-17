@@ -1,0 +1,127 @@
+{
+  "snapshot_schema_version": 1,
+  "timestamp": "2026-06-17T22:55:43.709954",
+  "function": "s275",
+  "strategy": "full_method",
+  "publication_name": "full_method",
+  "paper_role": "论文主方法。",
+  "prompt_version": "full_method_v1_20260601",
+  "round": 3,
+  "max_rounds": 3,
+  "prompt_kind": "optimization",
+  "prompt_options": {
+    "system_prompt_profile": "method",
+    "include_strong_baseline_guidance": false,
+    "include_diagnostics": true,
+    "include_structured_feedback": true,
+    "include_semantic_hints": true,
+    "include_knowledge": true,
+    "include_examples": true,
+    "include_history": true,
+    "include_progress_analysis": true,
+    "use_multi_round_system_prompt": true
+  },
+  "template_versions": {
+    "method_system": "method_system_v1_20260601",
+    "strong_plain_system": "strong_plain_system_v1_20260601",
+    "multi_round_system": "multi_round_system_v1_20260601",
+    "optimization_user": "optimization_user_v1_20260601",
+    "retry_prompt": "retry_prompt_v1_20260601",
+    "structured_feedback_format": "structured_feedback_v1_20260601"
+  },
+  "system_prompt_template": {
+    "name": "multi_round_system",
+    "version": "multi_round_system_v1_20260601"
+  },
+  "user_prompt_template": {
+    "name": "optimization_user",
+    "version": "optimization_user_v1_20260601"
+  },
+  "diagnostics": {
+    "vectorized": [],
+    "missed": [],
+    "analysis": [
+      "/tmp/acpo_s275_cl7249uj/minimal_s275.c:56:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+      "/tmp/acpo_s275_cl7249uj/minimal_s275.c:56:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]"
+    ],
+    "errors": [],
+    "vectorized_entries": [],
+    "missed_entries": [],
+    "analysis_entries": [
+      {
+        "raw": "/tmp/acpo_s275_cl7249uj/minimal_s275.c:56:13: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+        "line": 56,
+        "column": 13,
+        "message": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+        "reason": "the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      },
+      {
+        "raw": "/tmp/acpo_s275_cl7249uj/minimal_s275.c:56:13: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+        "line": 56,
+        "column": 13,
+        "message": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+        "reason": "the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]",
+        "categories": [
+          "other"
+        ]
+      }
+    ],
+    "missed_categories": [],
+    "analysis_categories": [
+      "other"
+    ],
+    "all_categories": [
+      "other"
+    ],
+    "structured_feedback": {
+      "func_name": "s275",
+      "severity": "medium",
+      "pattern_family": "reduction_or_recurrence",
+      "primary_categories": [
+        "recurrence_reduction"
+      ],
+      "compile_level": {
+        "compilable": true,
+        "error_preview": null
+      },
+      "vectorization_level": {
+        "vectorized_count": 0,
+        "missed_count": 0,
+        "missed_categories": [
+          "recurrence_reduction"
+        ],
+        "dynamic_missed_reasons": [],
+        "static_problem_reasons": [
+          "value that could not be identified as reduction is used outside the loop"
+        ]
+      },
+      "performance_level": {
+        "available": false,
+        "anti_patterns": []
+      },
+      "code_facts": {
+        "has_runtime_stride": false,
+        "has_indexed_recurrence": false,
+        "has_control_flow": false,
+        "has_indirect_indexing": false,
+        "has_fixed_index_self_read_hazard": false,
+        "has_outer_iterations_loop": true
+      }
+    }
+  },
+  "case_cards": {
+    "included": false,
+    "case_card_set_version": "experiment_case_cards_v1_20260601",
+    "case_card_format_version": "case_card_format_v1_20260601",
+    "structured_feedback_available": true,
+    "selected_count": 0,
+    "selected_cards": [],
+    "formatted_text": "",
+    "reason": "case_cards_only_added_without_round_history"
+  },
+  "system_prompt": "你是 VecGuide（AI-Enabled Compiler Program Optimization - Large Language Model），一个专门为 C/C++ 自动向量化优化设计的大模型。\n\n## 你的核心使命\n通过多轮迭代优化，逐步消除代码中的向量化障碍，最终生成能够被 Clang 自动向量化的代码。\n\n## 当前优化轮次：第 3 轮 / 共 3 轮\n\n## 多轮优化规则（非常重要）\n1. **每轮必须改进**：如果当前代码仍未完全向量化，你必须做出实质性改变，禁止提交与上一轮相同的代码\n2. **渐进优化**：优先解决主要障碍，次要障碍留到后续轮次\n3. **策略记录**：每轮必须明确说明你尝试的新策略\n4. **反馈利用**：仔细分析编译器反馈的失败原因，针对性地改进\n5. **接受部分向量化**：并非所有循环都能完全向量化（如带有真依赖的循环）。如果多轮优化后仍有循环无法向量化且检测到本质限制，接受部分向量化的结果也是成功\n\n## 向量化优化技术清单（按优先级和改动成本）\n\n### 低成本方案（优先尝试）\n1. **restrict 关键字**：`real_t * __restrict__ a_ = a;` - 消除别名分析障碍\n2. **vectorize pragma**：`#pragma clang loop vectorize(enable)` - 强制编译器向量化\n3. **interleave pragma**：`#pragma clang loop interleave(enable)` - 增加ILP\n4. **局部变量**：将参数复制到局部变量帮助编译器分析\n\n### 高成本方案（当低成本方案无效时使用）\n5. **循环拆分**：将复杂循环拆分为多个简单循环\n6. **索引预计算**：将复杂索引计算提前到预计算阶段\n7. **标量提升**：将循环内修改的标量转为数组\n8. **循环归一化**：统一循环边界和步长\n9. **条件转换**：将 if-else 转为条件选择表达式\n10. **算法重构**：针对真依赖问题改变算法（如前缀和）\n\n## 多轮优化策略建议\n- **第1轮**：尝试 restrict + vectorize pragma（最低成本）\n- **第2轮**：分析剩余问题，如果是归纳变量/真依赖则重构代码\n- **第2-3轮针对运行时步长循环**：优先尝试“多个小步长特化 + 通用 fallback”的多版本化，而不是只堆 pragma\n- **第3轮**：综合使用多种技术，或接受部分向量化\n\n## 禁止事项\n- 禁止提交与上一轮完全相同的代码\n- 禁止忽略编译器的具体失败原因\n- 禁止在同一轮中尝试过多修改（保持可控）\n- 禁止硬编码 LEN_1D 等宏的值\n- **禁止移动 dummy() 的调用位置**：dummy() 在原始代码中处于哪个循环层级（如 nl 循环内），优化后必须保持在完全相同的层级，移出循环会改变程序语义\n- **禁止把递推变量拍脑袋改成闭式公式**：若原始代码存在 `k += ...` 这类递推，除非能严格证明值序列与首项完全一致，否则不要改成 `k = f(i)`；优先使用预计算数组。\n- **禁止折叠 `iterations/nl` 外层循环语义**：不要把多次迭代合并成一次批量更新，也不要改变 `dummy()` 的调用次数。\n- **禁止引入与 TSVC 全局数组同名的局部变量**：不要使用 `a/b/c/d/e/aa/bb/cc/tt/x/xx/yy/indx` 作为新的局部变量或循环变量名\n- **禁止把“同数组固定位置读”直接整轮外提**：若循环同时写 `a[i]` 并读 `a[k]`，且 `i` 可能命中 `k`，则 `a[k]` 不是整轮不变量。除非你按命中点拆分并证明等价，否则不要把该读取缓存成整轮复用的标量。\n\n## 输出格式\n策略：[清晰描述本轮采用的优化策略]\n\n```c\n// 优化后的完整函数代码\n```\n\n额外要求：\n- 代码块内只能包含纯 C 代码，禁止混入自然语言分析\n- 禁止输出 `...`、占位符、伪代码或不完整函数\n- 如果本轮无法安全激进优化，也要返回一个完整、可编译、语义保守的函数\n",
+  "user_prompt": "【函数名】: s275\n【当前轮次】: 第 3 轮 / 共 3 轮\n\n【待优化代码】:\n```c\nreal_t s275(struct args_t * func_args)\n{\n\n//    control flow\n//    if around inner loop, interchanging needed\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < 10*(iterations/LEN_2D); nl++) {\n        for (int j = 1; j < LEN_2D; j++) {\n            for (int i = 0; i < LEN_2D; i++) {\n                aa[j][i] = (aa[0][i] > (real_t)0.) ? (aa[j-1][i] + bb[j][i] * cc[j][i]) : aa[j][i];\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}\n```\n\n【结构化反馈摘要】:\n- 静态严重度: medium\n- 当前更像的模式族: reduction_or_recurrence\n- compile-level: 可编译\n- vectorization-level: vectorized=0, missed=0, primary blockers=reduction / recurrence boundary\n  - 静态问题图谱: value that could not be identified as reduction is used outside the loop\n\n【语义安全提示】:\n- 检测到 `dummy()` 位于外层 `nl/iterations` 循环内。禁止改变 dummy() 的调用次数、顺序或循环层级，也不要折叠外层迭代。\n- 若需要重构跨多次 `iterations` 的逻辑，只能做等价的逐轮改写；不要用乘法放大、批量累加或一次性聚合替代多轮副作用。\n\n【前几轮优化历史】:\n\n--- 第 2 轮 ---\n策略: 识别到内层循环存在跨迭代递推依赖 `aa[j][i]` 依赖于 `aa[j-1][i]`，且外层存在条件分支。根据案例卡 1，在 TSVC 初始化条件下 `aa[0][i]` 恒为正且不变，采用循环交换技术将 `j` 循环外提、`i` 循环内层，从而暴露可向量化的内层循环，并添加 restrict 消除别名顾虑。\n结果: 0 成功 / 0 失败\n正确性: 通过\n\n--- 第 3 轮 ---\n策略: 上一轮循环交换后，内层循环仍包含条件分支，阻碍了 SIMD 指令的生成。本轮采用条件转换技术，将 `if-else` 逻辑替换为三元条件运算符 `? :`，帮助编译器生成掩码向量指令，从而消除控制流障碍。\n结果: 0 成功 / 0 失败\n正确性: 通过\n\n【本轮要求】:\n上一轮优化后仍未完全向量化。你必须：\n1. 分析剩余失败原因\n2. 采用与之前不同的策略\n3. 做出实质性代码改变\n4. 禁止提交与之前完全相同的代码\n\n【上一候选的正确性反馈】:\n- 总体结果: 通过\n\n【你的任务】:\n基于前几轮的反馈，采用新策略继续优化。必须做出实质性改变！\n如果存在递推变量、参数化步长或 dummy() 语义风险，优先使用可验证的保守重构，不要做未经证明的闭式化简或批量折叠。\n\n请输出优化策略和完整代码：\n- 先给 2-4 行策略说明，再给一个 ```c 代码块\n- 代码块内只能包含纯 C 代码，禁止夹带解释文字\n- 不要输出 `...`、`TODO`、伪代码或半截函数\n- 如果不确定优化是否成立，返回完整保守版本函数，不要只给分析"
+}

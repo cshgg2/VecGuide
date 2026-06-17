@@ -1,0 +1,194 @@
+{
+  "run_id": "cgo_repeat_s275_formal_clean_20260617",
+  "timestamp": "2026-06-17T22:48:13.117744",
+  "dry_run": false,
+  "repo_root": "<repo>",
+  "git": {
+    "commit": "78727954d5c3c62e6e3b5f71173318d0ef754fbd",
+    "is_dirty": true,
+    "status_short": [],
+    "status_sanitized": true,
+    "status_sanitized_reason": "Local working-tree paths are omitted from public artifacts."
+  },
+  "source": {
+    "path": "TSVC_2/src/tsvc.c",
+    "sha256": "456dd573b84b30e6f32c943bb559d80374eec67177de48223e95124a8c3fc627"
+  },
+  "toolchain": {
+    "clang_path": "${CLANG_PATH}",
+    "clang_version": [
+      "clang version 17.0.6 (https://gitee.com/openeuler/llvm-project.git e3899ef38ba23c080a82e36a44cb6acf47d5f4e8)",
+      "Target: x86_64-unknown-linux-gnu",
+      "Thread model: posix",
+      "InstalledDir: <clang-install-dir>"
+    ]
+  },
+  "runtime": {
+    "python_executable": "/usr/bin/python3",
+    "python_version": "3.10.12",
+    "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "hostname": "LAPTOP-VV69BL1B"
+  },
+  "model_name": "glm-4.7",
+  "requested_rounds": 3,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "functions": [
+    "s275"
+  ],
+  "shared_problem_map": {
+    "path": null,
+    "sha256": null
+  },
+  "strategies": [
+    {
+      "name": "origin",
+      "publication_name": "origin",
+      "implementation_status": "ready",
+      "paper_role": "原始代码基线。",
+      "prompt_version": "origin_no_prompt_v1_20260601",
+      "legacy_name": null,
+      "description": "原始代码基线，不执行 LLM 优化。",
+      "single_round": true,
+      "max_rounds": 0,
+      "prompt_options": {
+        "system_prompt_profile": "method",
+        "include_strong_baseline_guidance": false,
+        "include_diagnostics": true,
+        "include_structured_feedback": true,
+        "include_semantic_hints": true,
+        "include_knowledge": true,
+        "include_examples": true,
+        "include_history": true,
+        "include_progress_analysis": true,
+        "use_multi_round_system_prompt": true
+      },
+      "performance_guard": {
+        "enabled": false,
+        "min_median_speedup": 0.8,
+        "min_mean_speedup": 0.8
+      }
+    },
+    {
+      "name": "strong_plain",
+      "publication_name": "strong_plain",
+      "implementation_status": "ready",
+      "paper_role": "公平强基础大模型基线。",
+      "prompt_version": "strong_plain_v1_20260601",
+      "legacy_name": null,
+      "description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+      "single_round": true,
+      "max_rounds": 1,
+      "prompt_options": {
+        "system_prompt_profile": "strong_plain",
+        "include_strong_baseline_guidance": true,
+        "include_diagnostics": false,
+        "include_structured_feedback": false,
+        "include_semantic_hints": false,
+        "include_knowledge": false,
+        "include_examples": false,
+        "include_history": false,
+        "include_progress_analysis": false,
+        "use_multi_round_system_prompt": false
+      },
+      "performance_guard": {
+        "enabled": false,
+        "min_median_speedup": 0.8,
+        "min_mean_speedup": 0.8
+      }
+    },
+    {
+      "name": "diagnostic_only",
+      "publication_name": "diagnostic_only",
+      "implementation_status": "ready",
+      "paper_role": "诊断反馈消融基线。",
+      "prompt_version": "diagnostic_only_v1_20260601",
+      "legacy_name": "llm_plain",
+      "description": "投稿版诊断基线：保留编译诊断和结构化反馈，去掉案例卡、Few-shot 和多轮反馈。",
+      "single_round": true,
+      "max_rounds": 1,
+      "prompt_options": {
+        "system_prompt_profile": "method",
+        "include_strong_baseline_guidance": false,
+        "include_diagnostics": true,
+        "include_structured_feedback": true,
+        "include_semantic_hints": true,
+        "include_knowledge": false,
+        "include_examples": false,
+        "include_history": false,
+        "include_progress_analysis": false,
+        "use_multi_round_system_prompt": false
+      },
+      "performance_guard": {
+        "enabled": false,
+        "min_median_speedup": 0.8,
+        "min_mean_speedup": 0.8
+      }
+    },
+    {
+      "name": "case_card_only",
+      "publication_name": "case_card_only",
+      "implementation_status": "ready",
+      "paper_role": "案例卡约束消融基线。",
+      "prompt_version": "case_card_only_v1_20260601",
+      "legacy_name": null,
+      "description": "投稿版案例卡基线：保留诊断驱动的案例卡/知识库约束，但只做单轮，不使用历史反馈。",
+      "single_round": true,
+      "max_rounds": 1,
+      "prompt_options": {
+        "system_prompt_profile": "method",
+        "include_strong_baseline_guidance": false,
+        "include_diagnostics": true,
+        "include_structured_feedback": true,
+        "include_semantic_hints": true,
+        "include_knowledge": true,
+        "include_examples": false,
+        "include_history": false,
+        "include_progress_analysis": false,
+        "use_multi_round_system_prompt": false
+      },
+      "performance_guard": {
+        "enabled": false,
+        "min_median_speedup": 0.8,
+        "min_mean_speedup": 0.8
+      }
+    },
+    {
+      "name": "full_method",
+      "publication_name": "full_method",
+      "implementation_status": "ready",
+      "paper_role": "论文主方法。",
+      "prompt_version": "full_method_v1_20260601",
+      "legacy_name": "ours_full",
+      "description": "投稿版完整方法：诊断路由 + 案例卡约束 + 多轮反馈 + 性能筛选。",
+      "single_round": false,
+      "max_rounds": null,
+      "prompt_options": {
+        "system_prompt_profile": "method",
+        "include_strong_baseline_guidance": false,
+        "include_diagnostics": true,
+        "include_structured_feedback": true,
+        "include_semantic_hints": true,
+        "include_knowledge": true,
+        "include_examples": true,
+        "include_history": true,
+        "include_progress_analysis": true,
+        "use_multi_round_system_prompt": true
+      },
+      "performance_guard": {
+        "enabled": true,
+        "min_median_speedup": 0.8,
+        "min_mean_speedup": 0.8
+      }
+    }
+  ]
+}

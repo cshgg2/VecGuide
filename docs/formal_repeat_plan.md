@@ -49,3 +49,8 @@ python3 main.py results-table   --run-dir experiments/runs/<repeat_run_id>   --p
 - If `s275` does not repeat, keep the original result but downgrade the claim strength.
 - If `s258` repeats, use it as scalar-carry support rather than an exclusive `full_method` win.
 - If `s258` does not repeat, keep it as a candidate family and avoid making it a headline result.
+
+
+## Completed Repeats
+
+- `cgo_repeat_s275_formal_clean_20260617`: clean repeat completed. It preserves a speedup advantage for `full_method` over `strong_plain`, but it does not repeat the full-vectorization result. Use it to moderate the `s275` claim.

@@ -8,7 +8,7 @@ This document records the public evidence scope currently used for the VecGuide 
 
 | Evidence | Runs | Tables | Current interpretation |
 | --- | --- | --- | --- |
-| `s275` | `cgo_method_matrix_key_cases_20260604`, `cgo_strong_plain_key_cases_20260603` | `cgo_key_case_matrix_20260604` | Clearest current formal case where compiler diagnostics and case guidance help beyond the strong plain baseline. |
+| `s275` | `cgo_method_matrix_key_cases_20260604`, `cgo_strong_plain_key_cases_20260603`, `cgo_repeat_s275_formal_clean_20260617` | `cgo_key_case_matrix_20260604`, `cgo_repeat_s275_formal_clean_20260617` | Primary method-advantage case; the clean repeat preserves speedup over strong_plain but does not repeat full vectorization. |
 | `s258` | `cgo_candidate_s258_s256_scalar_array_20260608`, `cgo_candidate_s258_scalar_carry_repeat1_20260609` | `cgo_s258_scalar_carry_20260609` | Main scalar-carry / scalar-expansion candidate; supported by a repeat run. |
 | `s253` | `cgo_candidate_scalar_carry_s253_s254_s255_20260609` | `cgo_scalar_carry_s253_s254_s255_20260609` | Weaker same-family supplement for the scalar-carry story. |
 
