@@ -42,8 +42,8 @@ The public strategy names also define the prompt switch contract:
 | `origin` | original source only | none | off |
 | `strong_plain` | generic vectorization guidance | single round | off |
 | `diagnostic_only` | compiler diagnostics and structured feedback | single round | off |
-| `case_card_only` | diagnostics, structured feedback, and retrieved case cards | single round | off |
-| `full_method` | diagnostics, case cards, few-shot examples, history, and progress analysis | multi-round | on |
+| `case_card_only` | compiler diagnostics, structured feedback, and retrieved case cards | single round | off |
+| `full_method` | compiler diagnostics, structured feedback, retrieved case cards, few-shot examples, history, and progress analysis | multi-round | on |
 
 New experiments should use these paper-facing names. Legacy aliases remain only to read older artifacts and scripts.
 

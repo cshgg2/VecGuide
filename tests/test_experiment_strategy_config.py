@@ -1,8 +1,13 @@
 import unittest
+from pathlib import Path
 
 from experiment_config import (
+    DEFAULT_EXPERIMENT_STRATEGY_CSV,
+    DEFAULT_EXPERIMENT_STRATEGY_NAMES,
     LEGACY_STRATEGY_NAME_MAP,
+    PAPER_STRATEGY_CSV,
     PAPER_STRATEGY_NAMES,
+    describe_publication_prompt_contract,
     get_experiment_strategy,
     get_publication_strategy_definition,
     list_publication_strategy_definitions,
@@ -58,6 +63,12 @@ class ExperimentStrategyConfigTests(unittest.TestCase):
         self.assertFalse(strategy["prompt_options"]["include_history"])
         self.assertTrue(strategy["single_round"])
 
+    def test_strategy_csv_constants_are_locked(self):
+        self.assertEqual(PAPER_STRATEGY_CSV, ",".join(PAPER_STRATEGY_NAMES))
+        self.assertEqual(DEFAULT_EXPERIMENT_STRATEGY_NAMES, ["diagnostic_only", "full_method"])
+        self.assertEqual(DEFAULT_EXPERIMENT_STRATEGY_CSV, "diagnostic_only,full_method")
+        self.assertTrue(set(DEFAULT_EXPERIMENT_STRATEGY_NAMES).issubset(PAPER_STRATEGY_NAMES))
+
     def test_optimizer_default_strategy_uses_publication_name(self):
         from optimizer_pipeline import DEFAULT_OPTIMIZATION_STRATEGY
 
@@ -87,6 +98,22 @@ class ExperimentStrategyConfigTests(unittest.TestCase):
         self.assertEqual(
             get_publication_strategy_definition("strong_plain")["status"],
             "ready",
+        )
+
+    def test_public_prompt_contract_doc_matches_strategy_config(self):
+        docs_path = Path(__file__).resolve().parents[1] / "docs" / "engineering_boundaries.md"
+        doc_text = docs_path.read_text(encoding="utf-8")
+
+        for row in describe_publication_prompt_contract():
+            expected_line = (
+                f"| `{row['strategy']}` | {row['main_prompt_inputs']} | "
+                f"{row['iteration']} | {row['performance_guard']} |"
+            )
+            self.assertIn(expected_line, doc_text)
+
+        self.assertEqual(
+            [row["strategy"] for row in describe_publication_prompt_contract()],
+            PAPER_STRATEGY_NAMES,
         )
 
     def test_publication_strategy_switch_matrix_is_locked(self):

@@ -12,6 +12,7 @@ from typing import List, Optional
 
 from benchmark_protocols import list_benchmark_protocol_names
 from config import config, get_clang_path, get_source_file, check_clang_available, check_source_file_exists
+from experiment_config import DEFAULT_EXPERIMENT_STRATEGY_CSV, PAPER_STRATEGY_CSV
 
 
 class Colors:
@@ -315,8 +316,8 @@ def main():
     experiment_parser.add_argument('-m', '--model', default=None, help='模型名称')
     experiment_parser.add_argument('-r', '--rounds', type=int, default=config.DEFAULT_MAX_ROUNDS,
                                    help=f'最大优化轮数 (默认: {config.DEFAULT_MAX_ROUNDS})')
-    experiment_parser.add_argument('--strategies', default='diagnostic_only,full_method',
-                                   help='逗号分隔的实验策略列表')
+    experiment_parser.add_argument('--strategies', default=DEFAULT_EXPERIMENT_STRATEGY_CSV,
+                                   help=f'逗号分隔的实验策略列表；默认 {DEFAULT_EXPERIMENT_STRATEGY_CSV}。完整投稿矩阵请显式使用 {PAPER_STRATEGY_CSV}')
     experiment_parser.add_argument('--from-analysis', metavar='FILE',
                                    help='从问题映射文件读取要优化的函数')
     experiment_parser.add_argument('--severity', default=None,
@@ -352,8 +353,8 @@ def main():
     table_parser.add_argument('--supplemental-rows', action='append', default=[],
                               help='可选 paper_results-like CSV/JSON 补充行，可重复指定')
     table_parser.add_argument('--strategies',
-                              default='origin,strong_plain,diagnostic_only,case_card_only,full_method',
-                              help='wide 表中的投稿版策略列，逗号分隔')
+                              default=PAPER_STRATEGY_CSV,
+                              help=f'wide 表中的投稿版策略列，逗号分隔；默认 {PAPER_STRATEGY_CSV}')
 
     args = parser.parse_args()
 

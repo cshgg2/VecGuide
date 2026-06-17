@@ -291,6 +291,15 @@ PAPER_STRATEGY_NAMES = [
     "full_method",
 ]
 
+PAPER_STRATEGY_CSV = ",".join(PAPER_STRATEGY_NAMES)
+
+DEFAULT_EXPERIMENT_STRATEGY_NAMES = [
+    "diagnostic_only",
+    "full_method",
+]
+
+DEFAULT_EXPERIMENT_STRATEGY_CSV = ",".join(DEFAULT_EXPERIMENT_STRATEGY_NAMES)
+
 
 LEGACY_STRATEGY_NAME_MAP = {
     "ours_full": "full_method",
@@ -348,6 +357,55 @@ def get_publication_strategy_definition(name: str) -> Dict:
     definition = deepcopy(PUBLICATION_STRATEGY_DEFINITIONS[name])
     definition["name"] = name
     return definition
+
+
+def _join_contract_parts(parts: List[str]) -> str:
+    if not parts:
+        return "none"
+    if len(parts) == 1:
+        return parts[0]
+    if len(parts) == 2:
+        return f"{parts[0]} and {parts[1]}"
+    return ", ".join(parts[:-1]) + f", and {parts[-1]}"
+
+
+def describe_publication_prompt_contract() -> List[Dict]:
+    """Return paper-facing prompt switch rows for public docs and tests."""
+    rows = []
+    for name in PAPER_STRATEGY_NAMES:
+        strategy = get_experiment_strategy(name)
+        options = strategy["prompt_options"]
+
+        if not strategy["optimizer_enabled"]:
+            main_inputs = "original source only"
+            iteration = "none"
+        elif options["include_strong_baseline_guidance"]:
+            main_inputs = "generic vectorization guidance"
+            iteration = "single round"
+        else:
+            parts = []
+            if options["include_diagnostics"]:
+                parts.append("compiler diagnostics")
+            if options["include_structured_feedback"]:
+                parts.append("structured feedback")
+            if options["include_knowledge"]:
+                parts.append("retrieved case cards")
+            if options["include_examples"]:
+                parts.append("few-shot examples")
+            if options["include_history"]:
+                parts.append("history")
+            if options["include_progress_analysis"]:
+                parts.append("progress analysis")
+            main_inputs = _join_contract_parts(parts)
+            iteration = "multi-round" if options["use_multi_round_system_prompt"] else "single round"
+
+        rows.append({
+            "strategy": name,
+            "main_prompt_inputs": main_inputs,
+            "iteration": iteration,
+            "performance_guard": "on" if strategy["performance_guard"]["enabled"] else "off",
+        })
+    return rows
 
 
 def list_publication_strategy_definitions() -> List[Dict]:

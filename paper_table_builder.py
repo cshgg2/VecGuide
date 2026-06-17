@@ -15,17 +15,11 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
 from benchmark_protocols import infer_benchmark_protocol
-from experiment_config import get_experiment_strategy
+from experiment_config import PAPER_STRATEGY_NAMES, get_experiment_strategy
 from feedback_structuring import category_label, categorize_reason
 
 
-STANDARD_STRATEGIES = [
-    "origin",
-    "strong_plain",
-    "diagnostic_only",
-    "case_card_only",
-    "full_method",
-]
+STANDARD_STRATEGIES = list(PAPER_STRATEGY_NAMES)
 
 
 def read_json(path: Path) -> Dict:

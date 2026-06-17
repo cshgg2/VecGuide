@@ -105,7 +105,7 @@ These tests verify strategy naming, prompt/case-card formatting, diagnostic rout
 
 ## 6. Formal Experiment Template
 
-New formal experiments should use the paper-facing strategy names:
+New formal experiments should use the paper-facing strategy names. The CLI default is a lightweight method comparison; pass the full strategy list explicitly for a formal matrix:
 
 ```bash
 python3 main.py experiment <functions...> \

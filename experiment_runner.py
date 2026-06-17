@@ -29,7 +29,7 @@ from config import config, get_clang_path, get_model_name
 from correctness_verifier import full_correctness_verification, run_performance_benchmark
 from data_collector import get_functions_to_optimize
 from evaluate_optimization import analyze_single_function, extract_function_code
-from experiment_config import get_experiment_strategy, list_experiment_strategies
+from experiment_config import DEFAULT_EXPERIMENT_STRATEGY_CSV, get_experiment_strategy, list_experiment_strategies
 from state_manager import get_best_code, load_state
 
 
@@ -1610,8 +1610,8 @@ def main():
     parser.add_argument("-m", "--model", default=get_model_name(), help="模型名称")
     parser.add_argument("-r", "--rounds", type=int, default=config.DEFAULT_MAX_ROUNDS,
                         help=f"最大优化轮数 (默认: {config.DEFAULT_MAX_ROUNDS})")
-    parser.add_argument("--strategies", default="diagnostic_only,full_method",
-                        help="逗号分隔的实验策略列表")
+    parser.add_argument("--strategies", default=DEFAULT_EXPERIMENT_STRATEGY_CSV,
+                        help=f"逗号分隔的实验策略列表；默认 {DEFAULT_EXPERIMENT_STRATEGY_CSV}")
     parser.add_argument("--from-analysis", metavar="FILE",
                         help="使用现有问题映射文件")
     parser.add_argument("--severity", default=None,
