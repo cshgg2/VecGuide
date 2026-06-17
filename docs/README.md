@@ -10,5 +10,6 @@ Public documentation lives in this directory. Local progress notes and day-by-da
 - `evidence_map.md`: current public evidence classification.
 - `experiment_protocol.md`: strategy names, benchmark protocol, and table eligibility rules.
 - `submission_readiness.md`: current paper-use classification and remaining evidence gap.
+- `formal_repeat_plan.md`: minimal manual repeat plan for the current main evidence.
 - `engineering_boundaries.md`: module responsibilities and strategy naming boundaries.
 - `artifact_index.md`: migrated public run/table/frozen-package inventory.

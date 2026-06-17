@@ -27,6 +27,7 @@ Start here if you are reviewing the artifact:
 - `docs/evidence_map.md`: current public evidence classification.
 - `docs/experiment_protocol.md`: strategy names, benchmark protocol, and main-table eligibility.
 - `docs/submission_readiness.md`: current paper-use classification and remaining evidence gap.
+- `docs/formal_repeat_plan.md`: minimal manual repeat plan for the current main evidence.
 - `docs/engineering_boundaries.md`: module responsibilities and strategy naming boundaries.
 - `docs/artifact_index.md`: migrated run/table/frozen-package inventory.
 - `experiments/runs/README.md`: run-level evidence index.

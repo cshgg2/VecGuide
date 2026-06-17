@@ -43,4 +43,4 @@ A row can support the main result table only when it follows `docs/experiment_pr
 
 The public evidence is enough to describe a credible focused story, but it is still narrow. The `s2710` and `s1232` run-only cases have now been promoted into public tables as supplemental or boundary evidence. Before submission, the safest next evidence step is to run a small formal matrix for a clearly targeted gap, rather than broad exploratory batches.
 
-Any new LLM experiment should follow `docs/api_boundary.md`: run manually, use a deliberate `--run-id`, and promote results only after correctness, benchmark protocol, and table eligibility checks.
+Any new LLM experiment should follow `docs/api_boundary.md`: run manually, use a deliberate `--run-id`, and promote results only after correctness, benchmark protocol, and table eligibility checks. The current minimal repeat plan is `docs/formal_repeat_plan.md`.

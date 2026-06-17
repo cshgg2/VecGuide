@@ -17,6 +17,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
             "docs/evidence_map.md",
             "docs/experiment_protocol.md",
             "docs/submission_readiness.md",
+            "docs/formal_repeat_plan.md",
             "docs/engineering_boundaries.md",
             "docs/artifact_index.md",
         ]:
@@ -33,6 +34,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
             "docs/evidence_map.md",
             "docs/experiment_protocol.md",
             "docs/submission_readiness.md",
+            "docs/formal_repeat_plan.md",
             "docs/engineering_boundaries.md",
             "docs/artifact_index.md",
         ]:
@@ -58,6 +60,16 @@ class PublicDocsEntrypointTests(unittest.TestCase):
         self.assertIn("Timeout-limited", doc)
         self.assertIn("cgo_s2710_control_flow_repeat1_20260611", doc)
         self.assertIn("cgo_s1232_triangular_loop_20260611", doc)
+
+    def test_formal_repeat_plan_is_minimal_and_manual(self):
+        doc = (REPO_ROOT / "docs" / "formal_repeat_plan.md").read_text(encoding="utf-8")
+
+        self.assertIn("docs/api_boundary.md", doc)
+        self.assertIn("python3 main.py experiment s275", doc)
+        self.assertIn("python3 main.py experiment s258", doc)
+        self.assertIn("cgo_repeat_s275_formal_<date>", doc)
+        self.assertIn("cgo_repeat_s258_formal_<date>", doc)
+        self.assertIn("python3 main.py results-table", doc)
 
 
 if __name__ == "__main__":
