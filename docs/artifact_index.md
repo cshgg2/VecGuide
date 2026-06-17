@@ -32,6 +32,7 @@ Primary and supplemental `cgo_*` runs currently included:
 - `experiments/runs/cgo_probe_light_candidates_origin_20260611`
 - `experiments/runs/cgo_probe_remaining_light_origin_20260611`
 - `experiments/runs/cgo_repeat_s275_formal_clean_20260617`
+- `experiments/runs/cgo_repeat_s258_formal_clean_20260617`
 
 ## Table Artifacts
 
@@ -49,6 +50,7 @@ Primary and supplemental `cgo_*` runs currently included:
 - `experiments/tables/cgo_s2710_control_flow_repeat1_20260611`
 - `experiments/tables/cgo_s1232_triangular_loop_20260611`
 - `experiments/tables/cgo_repeat_s275_formal_clean_20260617`
+- `experiments/tables/cgo_repeat_s258_formal_clean_20260617`
 
 ## Frozen Package
 

@@ -1,0 +1,133 @@
+{
+  "run_id": "cgo_repeat_s258_formal_clean_20260617",
+  "timestamp": "2026-06-17T23:25:25.875160",
+  "total_rows": 5,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "origin_baseline": 1
+        },
+        "observed_outcome_counts": {
+          "origin_not_vectorized_baseline": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "experiments/runs/cgo_repeat_s258_formal_clean_20260617/strategies/origin/paper_summary.json"
+    },
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 1,
+        "avg_speedup": 5.85478,
+        "median_speedup": 5.85478,
+        "avg_improvement_pct": 485.47799999999995,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "experiments/runs/cgo_repeat_s258_formal_clean_20260617/strategies/strong_plain/paper_summary.json"
+    },
+    {
+      "strategy": "diagnostic_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "diagnostic_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "failed": 1
+        },
+        "observed_outcome_counts": {
+          "non_vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": 1.45868,
+        "median_speedup": 1.45868,
+        "avg_improvement_pct": 45.868,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "experiments/runs/cgo_repeat_s258_formal_clean_20260617/strategies/diagnostic_only/paper_summary.json"
+    },
+    {
+      "strategy": "case_card_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "case_card_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 1,
+        "avg_speedup": 5.54478,
+        "median_speedup": 5.54478,
+        "avg_improvement_pct": 454.478,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "experiments/runs/cgo_repeat_s258_formal_clean_20260617/strategies/case_card_only/paper_summary.json"
+    },
+    {
+      "strategy": "full_method",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "full_method",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 1,
+        "avg_speedup": 5.6775400000000005,
+        "median_speedup": 5.6775400000000005,
+        "avg_improvement_pct": 467.754,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "experiments/runs/cgo_repeat_s258_formal_clean_20260617/strategies/full_method/paper_summary.json"
+    }
+  ]
+}

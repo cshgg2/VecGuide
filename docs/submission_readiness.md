@@ -19,7 +19,7 @@ A row can support the main result table only when it follows `docs/experiment_pr
 | Candidate | Public tables | Current status | Paper-use note |
 | --- | --- | --- | --- |
 | `s275` | `cgo_key_case_matrix_20260604`, `cgo_repeat_s275_formal_clean_20260617` | primary method-advantage case with mixed repeat | The repeat keeps the speedup advantage over strong_plain, but the full-vectorization claim should be weakened. |
-| `s258` | `cgo_s258_scalar_carry_20260609` | primary scalar-carry case with repeat evidence | Use as main scalar-carry evidence; mention repeat context. |
+| `s258` | `cgo_s258_scalar_carry_20260609`, `cgo_repeat_s258_formal_clean_20260617` | scalar-carry case with clean repeat | Use as scalar-carry evidence, but not as an exclusive VecGuide advantage because strong_plain is competitive in the repeat. |
 | `s253` | `cgo_scalar_carry_s253_s254_s255_20260609` | weaker same-family supplement | Useful as supporting evidence, not as the headline claim. |
 
 ## Supplemental Evidence
@@ -41,6 +41,6 @@ A row can support the main result table only when it follows `docs/experiment_pr
 
 ## Current Gap
 
-The public evidence is enough to describe a credible focused story, but it is still narrow. The `s2710` and `s1232` run-only cases have now been promoted into public tables as supplemental or boundary evidence. The clean `s275` repeat supports the performance-benefit story, but it weakens any claim that full vectorization reliably repeats. Before submission, the safest next evidence step is to repeat `s258` or add one targeted scalar-carry case, rather than broad exploratory batches.
+The public evidence is enough to describe a credible focused story, but it is still narrow. The `s2710` and `s1232` run-only cases have now been promoted into public tables as supplemental or boundary evidence. The clean `s275` repeat supports the performance-benefit story, but it weakens any claim that full vectorization reliably repeats. The clean `s258` repeat confirms scalar-carry speedups, but it also shows that strong_plain is competitive. Before submission, the safest next evidence step is to keep claims focused on compiler-diagnostic guidance and case-card usefulness rather than claiming broad dominance over strong prompting.
 
 Any new LLM experiment should follow `docs/api_boundary.md`: run manually, use a deliberate `--run-id`, and promote results only after correctness, benchmark protocol, and table eligibility checks. The current minimal repeat plan is `docs/formal_repeat_plan.md`.

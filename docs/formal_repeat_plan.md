@@ -54,3 +54,4 @@ python3 main.py results-table   --run-dir experiments/runs/<repeat_run_id>   --p
 ## Completed Repeats
 
 - `cgo_repeat_s275_formal_clean_20260617`: clean repeat completed. It preserves a speedup advantage for `full_method` over `strong_plain`, but it does not repeat the full-vectorization result. Use it to moderate the `s275` claim.
+- `cgo_repeat_s258_formal_clean_20260617`: clean repeat completed. It confirms scalar-carry speedups and full vectorization for strong_plain, case_card_only, and full_method; strong_plain is slightly faster than full_method in this repeat, so use it as scalar-carry evidence rather than as a full-method dominance case.

@@ -1,0 +1,21 @@
+{
+  "total_long_rows": 5,
+  "total_functions": 1,
+  "total_wide_rows": 1,
+  "total_main_table_wide_rows": 1,
+  "counts_by_blocker": {
+    "recurrence_reduction": 5
+  },
+  "counts_by_strategy": {
+    "origin": 1,
+    "strong_plain": 1,
+    "diagnostic_only": 1,
+    "case_card_only": 1,
+    "full_method": 1
+  },
+  "counts_by_conclusion": {
+    "origin_not_vectorized_baseline": 1,
+    "vectorized_speedup": 3,
+    "non_vectorized_speedup": 1
+  }
+}

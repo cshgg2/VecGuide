@@ -1,0 +1,10 @@
+{
+  "strategy": "origin",
+  "results": {
+    "s258": {
+      "func_name": "s258",
+      "overall": true,
+      "mode": "origin_baseline"
+    }
+  }
+}
