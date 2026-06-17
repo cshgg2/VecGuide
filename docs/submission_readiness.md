@@ -44,3 +44,5 @@ A row can support the main result table only when it follows `docs/experiment_pr
 The public evidence is enough to describe a credible focused story, but it is still narrow. The `s2710` and `s1232` run-only cases have now been promoted into public tables as supplemental or boundary evidence. The clean `s275` repeat supports the performance-benefit story, but it weakens any claim that full vectorization reliably repeats. The clean `s258` repeat confirms scalar-carry speedups, but it also shows that strong_plain is competitive. Before submission, the safest next evidence step is to keep claims focused on compiler-diagnostic guidance and case-card usefulness rather than claiming broad dominance over strong prompting.
 
 Any new LLM experiment should follow `docs/api_boundary.md`: run manually, use a deliberate `--run-id`, and promote results only after correctness, benchmark protocol, and table eligibility checks. The current minimal repeat plan is `docs/formal_repeat_plan.md`.
+
+For paper wording and claim guardrails, see `docs/submission_narrative.md`.

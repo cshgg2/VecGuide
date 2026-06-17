@@ -17,6 +17,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
             "docs/evidence_map.md",
             "docs/experiment_protocol.md",
             "docs/submission_readiness.md",
+            "docs/submission_narrative.md",
             "docs/formal_repeat_plan.md",
             "docs/engineering_boundaries.md",
             "docs/artifact_index.md",
@@ -34,6 +35,7 @@ class PublicDocsEntrypointTests(unittest.TestCase):
             "docs/evidence_map.md",
             "docs/experiment_protocol.md",
             "docs/submission_readiness.md",
+            "docs/submission_narrative.md",
             "docs/formal_repeat_plan.md",
             "docs/engineering_boundaries.md",
             "docs/artifact_index.md",
@@ -72,6 +74,15 @@ class PublicDocsEntrypointTests(unittest.TestCase):
         self.assertIn("python3 main.py results-table", doc)
         self.assertIn("cgo_repeat_s275_formal_clean_20260617", doc)
         self.assertIn("cgo_repeat_s258_formal_clean_20260617", doc)
+
+    def test_submission_narrative_has_claim_guardrails(self):
+        doc = (REPO_ROOT / "docs" / "submission_narrative.md").read_text(encoding="utf-8")
+
+        self.assertIn("s275", doc)
+        self.assertIn("s258", doc)
+        self.assertIn("Claims To Avoid", doc)
+        self.assertIn("strong generic prompting", doc)
+        self.assertIn("Do not claim full vectorization reliably repeats", doc)
 
 
 if __name__ == "__main__":
