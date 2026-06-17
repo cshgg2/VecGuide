@@ -1,6 +1,6 @@
 # Experiment Protocol
 
-Updated: 2026-06-12
+Updated: 2026-06-17
 
 This document is the public protocol summary for VecGuide experiments.
 
@@ -41,6 +41,7 @@ The following checks do not call an LLM API:
 
 ```bash
 python3 -m unittest \
+  tests.test_public_api_boundary \
   tests.test_experiment_strategy_config \
   tests.test_prompt_case_card_format \
   tests.test_diagnostic_rag_routing \
@@ -60,7 +61,7 @@ python3 main.py results-table \
 
 ## LLM Experiment Commands
 
-Commands using `python3 main.py experiment` with LLM strategies should be run manually by the repository owner, because they may consume API quota and create new experimental evidence.
+Commands using `python3 main.py experiment` with LLM strategies should be run manually by the repository owner, because they may consume API quota and create new experimental evidence. See `docs/api_boundary.md` for command-level API boundaries.
 
 Example template:
 

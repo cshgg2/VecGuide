@@ -22,6 +22,7 @@ Start here if you are reviewing the artifact:
 
 - `PROJECT_INDEX.md`: repository map.
 - `docs/reproduction.md`: how to inspect existing results and run non-API checks.
+- `docs/api_boundary.md`: which commands may call an LLM API and which do not.
 - `docs/current_status.md`: current public project state and near-term work.
 - `docs/evidence_map.md`: current public evidence classification.
 - `docs/experiment_protocol.md`: strategy names, benchmark protocol, and main-table eligibility.
@@ -68,12 +69,15 @@ These checks do not call an LLM API:
 
 ```bash
 python3 -m unittest \
+  tests.test_public_api_boundary \
   tests.test_experiment_strategy_config \
   tests.test_prompt_case_card_format \
   tests.test_diagnostic_rag_routing \
   tests.test_paper_table_builder \
   tests.test_experiment_run_structure
 ```
+
+For the command-level API boundary, see `docs/api_boundary.md`.
 
 Regenerate a table from existing run artifacts without calling an API:
 

@@ -1,6 +1,6 @@
 # Current Status
 
-Updated: 2026-06-16
+Updated: 2026-06-17
 
 VecGuide has completed its first public artifact migration. The repository now contains the core implementation, selected paper-facing run artifacts, generated tables, a frozen evidence package, and public documentation for reproducing non-API checks.
 
@@ -30,6 +30,7 @@ The public non-API regression checks are:
 
 ```bash
 python3 -m unittest \
+  tests.test_public_api_boundary \
   tests.test_experiment_strategy_config \
   tests.test_prompt_case_card_format \
   tests.test_diagnostic_rag_routing \

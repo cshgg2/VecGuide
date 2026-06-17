@@ -1,6 +1,6 @@
 # VecGuide Project Index
 
-Updated: 2026-06-15
+Updated: 2026-06-17
 
 VecGuide is a compiler-diagnostic-guided LLM source rewriting system for automatic vectorization. This index is the public navigation entry for the repository.
 
@@ -8,8 +8,11 @@ VecGuide is a compiler-diagnostic-guided LLM source rewriting system for automat
 
 - `README.md`: project overview and basic usage.
 - `docs/reproduction.md`: result inspection and reproduction notes.
+- `docs/api_boundary.md`: command-level API boundary for tests, tables, and LLM experiments.
+- `docs/current_status.md`: current public project state and near-term work.
 - `docs/evidence_map.md`: current evidence classification for the paper draft.
 - `docs/experiment_protocol.md`: strategy names, benchmark protocol, and result eligibility rules.
+- `docs/engineering_boundaries.md`: module responsibilities and strategy naming boundaries.
 - `docs/artifact_index.md`: public run/table/frozen-package inventory.
 - `experiments/runs/README.md`: run-level evidence index.
 - `experiments/final_packages/cgo2027_current_evidence_20260612/`: frozen evidence package.
@@ -36,6 +39,4 @@ VecGuide is a compiler-diagnostic-guided LLM source rewriting system for automat
 
 ## Public/Private Boundary
 
-The public repository keeps code, reproducibility notes, and selected evidence artifacts. Local planning notes, weekly reports, terminal transcripts, thesis drafts, and historical scratch material are intentionally excluded through `.gitignore`.
-
-Local-only planning notes, weekly reports, terminal transcripts, thesis drafts, and scratch archives are excluded through `.gitignore`. If a private note contains information that should be shared, summarize it into a public document under `docs/` instead of committing the private file directly.
+The public repository keeps code, reproducibility notes, and selected evidence artifacts. Local planning notes, weekly reports, terminal transcripts, thesis drafts, and scratch archives are excluded through `.gitignore`. If a private note contains information that should be shared, summarize it into a public document under `docs/` instead of committing the private file directly.

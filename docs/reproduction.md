@@ -9,6 +9,7 @@ Read these files first:
 - `PROJECT_INDEX.md`: repository-level navigation.
 - `docs/evidence_map.md`: current public evidence classification.
 - `docs/experiment_protocol.md`: strategy names, benchmark protocol, and main-table eligibility.
+- `docs/api_boundary.md`: command-level API boundary for inspection, tests, tables, and experiments.
 - `docs/artifact_index.md`: migrated run/table/frozen-package inventory.
 - `experiments/runs/README.md`: run-level evidence index.
 - `experiments/final_packages/cgo2027_current_evidence_20260612/`: frozen evidence package.
@@ -94,6 +95,7 @@ Main-table eligibility follows `docs/experiment_protocol.md`.
 
 ```bash
 python3 -m unittest \
+  tests.test_public_api_boundary \
   tests.test_experiment_strategy_config \
   tests.test_prompt_case_card_format \
   tests.test_diagnostic_rag_routing \
