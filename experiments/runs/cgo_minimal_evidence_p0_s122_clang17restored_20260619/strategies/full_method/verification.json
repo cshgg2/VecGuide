@@ -1,0 +1,127 @@
+{
+  "strategy": "full_method",
+  "results": {
+    "s122": {
+      "func_name": "s122",
+      "layer1_compilation": {
+        "passed": true,
+        "error": ""
+      },
+      "layer2_semantic": {
+        "passed": true,
+        "error": null,
+        "original_checksum": 51205623513088.0,
+        "optimized_checksum": 51205623513088.0,
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 2,
+            "b": 2
+          },
+          {
+            "a": 4,
+            "b": 3
+          }
+        ],
+        "arg_case_results": [
+          {
+            "arg_info": {
+              "a": 1,
+              "b": 1
+            },
+            "original_checksum": 51205623513088.0,
+            "optimized_checksum": 51205623513088.0,
+            "original_state_metrics": {
+              "STATE_SUM": 51207686847235.06,
+              "STATE_ABS_SUM": 51207692439555.06,
+              "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 51207686847235.06,
+              "STATE_ABS_SUM": 51207692439555.06,
+              "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 2,
+              "b": 2
+            },
+            "original_checksum": 38403244556288.0,
+            "optimized_checksum": 38403244556288.0,
+            "original_state_metrics": {
+              "STATE_SUM": 38405272388898.06,
+              "STATE_ABS_SUM": 38405277981218.06,
+              "STATE_WEIGHTED_SUM": 5.462750743697464e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 38405272388898.06,
+              "STATE_ABS_SUM": 38405277981218.06,
+              "STATE_WEIGHTED_SUM": 5.462750743697464e+17
+            },
+            "equivalent": true,
+            "error": null
+          },
+          {
+            "arg_info": {
+              "a": 4,
+              "b": 3
+            },
+            "original_checksum": 28445065084928.0,
+            "optimized_checksum": 28445065084928.0,
+            "original_state_metrics": {
+              "STATE_SUM": 28447539472675.055,
+              "STATE_ABS_SUM": 28447545064995.055,
+              "STATE_WEIGHTED_SUM": 4.248876954476813e+17
+            },
+            "optimized_state_metrics": {
+              "STATE_SUM": 28447539472675.055,
+              "STATE_ABS_SUM": 28447545064995.055,
+              "STATE_WEIGHTED_SUM": 4.248876954476813e+17
+            },
+            "equivalent": true,
+            "error": null
+          }
+        ]
+      },
+      "layer3_runtime": {
+        "passed": true,
+        "error": null,
+        "details": [
+          "[n1=1, n3=1] TEST0: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST1: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] TEST2: ret_orig=512559808512.000000 ret_opt=512559808512.000000 max_rel=0.00e+00 PASS",
+          "[n1=1, n3=1] PASSED 3/3",
+          "[n1=2, n3=2] TEST0: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] TEST1: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] TEST2: ret_orig=384587137024.000000 ret_opt=384587137024.000000 max_rel=0.00e+00 PASS",
+          "[n1=2, n3=2] PASSED 3/3",
+          "[n1=4, n3=3] TEST0: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] TEST1: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] TEST2: ret_orig=284957999104.000000 ret_opt=284957999104.000000 max_rel=0.00e+00 PASS",
+          "[n1=4, n3=3] PASSED 3/3"
+        ],
+        "arg_cases": [
+          {
+            "a": 1,
+            "b": 1
+          },
+          {
+            "a": 2,
+            "b": 2
+          },
+          {
+            "a": 4,
+            "b": 3
+          }
+        ]
+      },
+      "overall": true
+    }
+  }
+}

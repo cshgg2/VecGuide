@@ -1,0 +1,52 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-19T12:35:36.001381",
+      "function": "s122",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round01_optimization_case_cards.json",
+      "case_cards_included": true,
+      "selected_case_card_ids": [
+        "runtime_stride_complex_two_phase",
+        "call_side_effect_boundary",
+        "runtime_stride_simple_multiversion",
+        "branch_hoisting_predication"
+      ]
+    },
+    {
+      "timestamp": "2026-06-19T12:36:01.196640",
+      "function": "s122",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 2,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round02_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round02_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round02_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    },
+    {
+      "timestamp": "2026-06-19T12:36:25.053929",
+      "function": "s122",
+      "strategy": "full_method",
+      "publication_name": "full_method",
+      "prompt_version": "full_method_v1_20260601",
+      "round": 3,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round03_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round03_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/full_method/prompt_snapshot/s122/round03_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

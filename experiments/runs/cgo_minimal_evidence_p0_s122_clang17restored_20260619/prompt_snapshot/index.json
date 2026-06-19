@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "run_id": "cgo_minimal_evidence_p0_s122_clang17restored_20260619",
+  "timestamp": "2026-06-19T12:50:36.069618",
+  "strategies": [
+    {
+      "strategy": "origin",
+      "prompt_snapshot_dir": "strategies/origin/prompt_snapshot",
+      "strategy_index_file": "strategies/origin/prompt_snapshot/index.json",
+      "strategy_index_exists": false,
+      "snapshot_count": 0,
+      "selected_case_card_ids": []
+    },
+    {
+      "strategy": "strong_plain",
+      "prompt_snapshot_dir": "strategies/strong_plain/prompt_snapshot",
+      "strategy_index_file": "strategies/strong_plain/prompt_snapshot/index.json",
+      "strategy_index_exists": true,
+      "snapshot_count": 1,
+      "selected_case_card_ids": []
+    },
+    {
+      "strategy": "diagnostic_only",
+      "prompt_snapshot_dir": "strategies/diagnostic_only/prompt_snapshot",
+      "strategy_index_file": "strategies/diagnostic_only/prompt_snapshot/index.json",
+      "strategy_index_exists": true,
+      "snapshot_count": 1,
+      "selected_case_card_ids": []
+    },
+    {
+      "strategy": "case_card_only",
+      "prompt_snapshot_dir": "strategies/case_card_only/prompt_snapshot",
+      "strategy_index_file": "strategies/case_card_only/prompt_snapshot/index.json",
+      "strategy_index_exists": true,
+      "snapshot_count": 1,
+      "selected_case_card_ids": [
+        "runtime_stride_complex_two_phase",
+        "call_side_effect_boundary",
+        "runtime_stride_simple_multiversion",
+        "branch_hoisting_predication"
+      ]
+    },
+    {
+      "strategy": "full_method",
+      "prompt_snapshot_dir": "strategies/full_method/prompt_snapshot",
+      "strategy_index_file": "strategies/full_method/prompt_snapshot/index.json",
+      "strategy_index_exists": true,
+      "snapshot_count": 3,
+      "selected_case_card_ids": [
+        "runtime_stride_complex_two_phase",
+        "call_side_effect_boundary",
+        "runtime_stride_simple_multiversion",
+        "branch_hoisting_predication"
+      ]
+    }
+  ]
+}

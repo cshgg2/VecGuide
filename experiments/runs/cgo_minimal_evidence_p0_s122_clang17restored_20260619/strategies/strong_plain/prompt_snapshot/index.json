@@ -1,0 +1,19 @@
+{
+  "snapshot_schema_version": 1,
+  "snapshots": [
+    {
+      "timestamp": "2026-06-19T12:10:09.511428",
+      "function": "s122",
+      "strategy": "strong_plain",
+      "publication_name": "strong_plain",
+      "prompt_version": "strong_plain_v1_20260601",
+      "round": 1,
+      "prompt_kind": "optimization",
+      "json_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/strong_plain/prompt_snapshot/s122/round01_optimization.json",
+      "markdown_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/strong_plain/prompt_snapshot/s122/round01_optimization.md",
+      "case_card_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s122_clang17restored_20260619/strategies/strong_plain/prompt_snapshot/s122/round01_optimization_case_cards.json",
+      "case_cards_included": false,
+      "selected_case_card_ids": []
+    }
+  ]
+}

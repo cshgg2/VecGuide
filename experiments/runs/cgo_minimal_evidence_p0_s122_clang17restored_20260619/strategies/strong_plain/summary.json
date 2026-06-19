@@ -1,0 +1,230 @@
+{
+  "timestamp": "2026-06-19T12:10:30.770345",
+  "strategy": "strong_plain",
+  "strategy_description": "投稿版强基础提示词 baseline：给出充分的通用自动向量化改写建议，但关闭诊断路由、结构化反馈、案例卡和多轮。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s122"
+  ],
+  "results": [
+    {
+      "function": "s122",
+      "strategy": "strong_plain",
+      "status": "failed",
+      "success": false,
+      "partial": false,
+      "vectorized_count": 0,
+      "missed_count": 5,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s122(struct args_t * func_args)\n{\n\n//    induction variable recognition\n//    variable lower and upper bound, and stride\n//    reverse data access and jump in data access\n\n    struct{int a;int b;} * x = func_args->arg_info;\n    int n1 = x->a;\n    int n3 = x->b;\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    int j, k;\n    for (int nl = 0; nl < iterations; nl++) {\n        j = 1;\n        // k = 0 initially, k += j per iteration => k = iteration_count\n        // i starts at n1-1, step n3\n        // iteration_count = (i - (n1 - 1)) / n3\n        // k = (i - n1 + 1) / n3\n        // b index = LEN_1D - k = LEN_1D - (i - n1 + 1) / n3\n        \n        // Calculate start and end for the loop to maintain exact iteration space\n        int start = n1 - 1;\n        int end = LEN_1D;\n        int step = n3;\n\n        for (int i = start; i < end; i += step) {\n            k = (i - start) / step;\n            a[i] += b[LEN_1D - k];\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 0.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": false,
+        "vectorized_count": 0,
+        "missed_count": 5,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [],
+          "missed": [
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:77:9: remark: loop not vectorized: call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized: instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "analysis": [
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:77:9: remark: loop not vectorized: call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized: instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+            "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [],
+          "missed_entries": [
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:77:9: remark: loop not vectorized: call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "line": 77,
+              "column": 9,
+              "message": "loop not vectorized: call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "reason": "call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "call_side_effect",
+                "instruction_shape"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized: instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "line": 60,
+              "column": 5,
+              "message": "loop not vectorized: instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "reason": "instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "instruction_shape"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 60,
+              "column": 5,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "line": 73,
+              "column": 9,
+              "message": "loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "reason": "could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "trip_count_bounds"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 73,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:77:9: remark: loop not vectorized: call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "line": 77,
+              "column": 9,
+              "message": "loop not vectorized: call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "reason": "call instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "call_side_effect",
+                "instruction_shape"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized: instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "line": 60,
+              "column": 5,
+              "message": "loop not vectorized: instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "reason": "instruction cannot be vectorized [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "instruction_shape"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:60:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 60,
+              "column": 5,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "line": 73,
+              "column": 9,
+              "message": "loop not vectorized: could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "reason": "could not determine number of loop iterations [-Rpass-analysis=loop-vectorize]",
+              "categories": [
+                "trip_count_bounds"
+              ]
+            },
+            {
+              "raw": "/tmp/acpo_s122_m5o3494n/minimal_s122.c:73:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "line": 73,
+              "column": 9,
+              "message": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "reason": "loop not vectorized [-Rpass-missed=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [
+            "call_side_effect",
+            "instruction_shape",
+            "other",
+            "trip_count_bounds"
+          ],
+          "analysis_categories": [
+            "call_side_effect",
+            "instruction_shape",
+            "other",
+            "trip_count_bounds"
+          ],
+          "all_categories": [
+            "call_side_effect",
+            "instruction_shape",
+            "other",
+            "trip_count_bounds"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s122",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": false,
+          "error": "[n1=1, n3=1] STATE_WEIGHTED_SUM 不匹配: 原始=546301585177537216.000000, 优化=546352783690096640.000000, diff=51198512559424.000000, tol=5463527836900.966797",
+          "original_checksum": null,
+          "optimized_checksum": null,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            },
+            {
+              "a": 2,
+              "b": 2
+            },
+            {
+              "a": 4,
+              "b": 3
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 51205623513088.0,
+              "optimized_checksum": 51205623513088.0,
+              "original_state_metrics": {
+                "STATE_SUM": 51207686847235.06,
+                "STATE_ABS_SUM": 51207692439555.06,
+                "STATE_WEIGHTED_SUM": 5.463015851775372e+17
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 51207686948795.06,
+                "STATE_ABS_SUM": 51207692541115.06,
+                "STATE_WEIGHTED_SUM": 5.4635278369009664e+17
+              },
+              "equivalent": false,
+              "error": "STATE_WEIGHTED_SUM 不匹配: 原始=546301585177537216.000000, 优化=546352783690096640.000000, diff=51198512559424.000000, tol=5463527836900.966797"
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": false,
+          "error": null,
+          "details": []
+        },
+        "overall": false
+      }
+    }
+  ]
+}

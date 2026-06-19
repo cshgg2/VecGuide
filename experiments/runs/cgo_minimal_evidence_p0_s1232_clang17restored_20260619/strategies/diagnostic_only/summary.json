@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-06-19T13:17:34.062349",
+  "strategy": "diagnostic_only",
+  "strategy_description": "投稿版诊断基线：保留编译诊断和结构化反馈，去掉案例卡、Few-shot 和多轮反馈。",
+  "requested_rounds": 3,
+  "effective_rounds": 1,
+  "single_round": true,
+  "functions": [
+    "s1232"
+  ],
+  "results": [
+    {
+      "function": "s1232",
+      "strategy": "diagnostic_only",
+      "status": "success",
+      "success": true,
+      "partial": false,
+      "vectorized_count": 1,
+      "missed_count": 0,
+      "rounds": 1,
+      "best_round": 1,
+      "final_code": "real_t s1232(struct args_t * func_args)\n{\n\n//    loop interchange\n//    interchanging of triangular loops\n\n    initialise_arrays(__func__);\n    gettimeofday(&func_args->t1, NULL);\n\n    for (int nl = 0; nl < 100*(iterations/LEN_2D); nl++) {\n        for (int j = 0; j < LEN_2D; j++) {\n            int len = LEN_2D - j;\n            real_t * __restrict__ aa_ptr = &aa[j][j];\n            real_t * __restrict__ bb_ptr = &bb[j][j];\n            real_t * __restrict__ cc_ptr = &cc[j][j];\n            #pragma clang loop vectorize(enable)\n            for (int i = 0; i < len; i++) {\n                aa_ptr[i] = bb_ptr[i] + cc_ptr[i];\n            }\n        }\n        dummy(a, b, c, d, e, aa, bb, cc, 1.);\n    }\n\n    gettimeofday(&func_args->t2, NULL);\n    return calc_checksum(__func__);\n}",
+      "final_result": {
+        "compilable": true,
+        "vectorized": true,
+        "vectorized_count": 1,
+        "missed_count": 0,
+        "error": null,
+        "diagnostics": {
+          "vectorized": [
+            "/tmp/acpo_s1232_xbz1akw4/minimal_s1232.c:61:13: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "missed": [],
+          "analysis": [
+            "/tmp/acpo_s1232_xbz1akw4/minimal_s1232.c:61:13: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]"
+          ],
+          "errors": [],
+          "vectorized_entries": [
+            {
+              "raw": "/tmp/acpo_s1232_xbz1akw4/minimal_s1232.c:61:13: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 61,
+              "column": 13,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_entries": [],
+          "analysis_entries": [
+            {
+              "raw": "/tmp/acpo_s1232_xbz1akw4/minimal_s1232.c:61:13: remark: vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "line": 61,
+              "column": 13,
+              "message": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "reason": "vectorized loop (vectorization width: 4, interleaved count: 2) [-Rpass=loop-vectorize]",
+              "categories": [
+                "other"
+              ]
+            }
+          ],
+          "missed_categories": [],
+          "analysis_categories": [
+            "other"
+          ],
+          "all_categories": [
+            "other"
+          ]
+        }
+      },
+      "correctness_report": {
+        "func_name": "s1232",
+        "layer1_compilation": {
+          "passed": true,
+          "error": ""
+        },
+        "layer2_semantic": {
+          "passed": true,
+          "error": null,
+          "original_checksum": 512002944.0,
+          "optimized_checksum": 512002944.0,
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ],
+          "arg_case_results": [
+            {
+              "arg_info": {
+                "a": 1,
+                "b": 1
+              },
+              "original_checksum": 512002944.0,
+              "optimized_checksum": 512002944.0,
+              "original_state_metrics": {
+                "STATE_SUM": 2828956283.086262,
+                "STATE_ABS_SUM": 2834548603.086262,
+                "STATE_WEIGHTED_SUM": 66442585428598.33
+              },
+              "optimized_state_metrics": {
+                "STATE_SUM": 2828954159.1729245,
+                "STATE_ABS_SUM": 2834546479.1729245,
+                "STATE_WEIGHTED_SUM": 66442539422122.984
+              },
+              "equivalent": true,
+              "error": null
+            }
+          ]
+        },
+        "layer3_runtime": {
+          "passed": true,
+          "error": null,
+          "details": [
+            "[n1=1, n3=1] TEST0: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=7.51e-07 PASS",
+            "[n1=1, n3=1] TEST1: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=7.51e-07 PASS",
+            "[n1=1, n3=1] TEST2: ret_orig=512002944.000000 ret_opt=512002944.000000 max_rel=7.51e-07 PASS",
+            "[n1=1, n3=1] PASSED 3/3"
+          ],
+          "arg_cases": [
+            {
+              "a": 1,
+              "b": 1
+            }
+          ]
+        },
+        "overall": true
+      }
+    }
+  ]
+}

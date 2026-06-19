@@ -1,0 +1,133 @@
+{
+  "run_id": "cgo_minimal_evidence_p0_s1232_clang17restored_20260619",
+  "timestamp": "2026-06-19T13:38:26.495081",
+  "total_rows": 5,
+  "benchmark_config": {
+    "protocol_name": "formal",
+    "protocol_role": "formal_main_table",
+    "display_name": "formal(warmup=3,timing=10,batches=5)",
+    "warmup_runs": 3,
+    "timing_runs": 10,
+    "batches": 5,
+    "paper_main_table_eligible": true,
+    "description": "Formal CGO-oriented benchmark protocol for main paper tables.",
+    "inferred_from_parameters": false
+  },
+  "strategies": [
+    {
+      "strategy": "origin",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "origin",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "origin_baseline": 1
+        },
+        "observed_outcome_counts": {
+          "origin_not_vectorized_baseline": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 0,
+        "benchmark_success_count": 1,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s1232_clang17restored_20260619/strategies/origin/paper_summary.json"
+    },
+    {
+      "strategy": "strong_plain",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "strong_plain",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "benchmark_failed": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 0,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s1232_clang17restored_20260619/strategies/strong_plain/paper_summary.json"
+    },
+    {
+      "strategy": "diagnostic_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "diagnostic_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "benchmark_failed": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 0,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s1232_clang17restored_20260619/strategies/diagnostic_only/paper_summary.json"
+    },
+    {
+      "strategy": "case_card_only",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "case_card_only",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "benchmark_failed": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 0,
+        "avg_speedup": null,
+        "median_speedup": null,
+        "avg_improvement_pct": null,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s1232_clang17restored_20260619/strategies/case_card_only/paper_summary.json"
+    },
+    {
+      "strategy": "full_method",
+      "exit_code": 0,
+      "metrics": {
+        "strategy": "full_method",
+        "exit_code": 0,
+        "total_functions": 1,
+        "status_counts": {
+          "success": 1
+        },
+        "observed_outcome_counts": {
+          "vectorized_speedup": 1
+        },
+        "correctness_passed": 1,
+        "fully_vectorized": 1,
+        "benchmark_success_count": 1,
+        "avg_speedup": 24.86596,
+        "median_speedup": 24.86596,
+        "avg_improvement_pct": 2386.596,
+        "negative_optimization_count": 0
+      },
+      "summary_file": "/home/cshgg2/.lcpr/.01/VecGuide/experiments/runs/cgo_minimal_evidence_p0_s1232_clang17restored_20260619/strategies/full_method/paper_summary.json"
+    }
+  ]
+}
