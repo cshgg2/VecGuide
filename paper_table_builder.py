@@ -158,12 +158,20 @@ def blocker_categories_for_function(problem_map: Dict, function_name: str) -> Tu
 def enrich_row(row: Dict, csv_file: Path, problem_map: Dict) -> Dict:
     protocol = infer_protocol_from_row(row)
     function_name = row.get("function", "")
+    problem_info = problem_map.get(function_name, {}) if problem_map else {}
     categories, primary = blocker_categories_for_function(problem_map, function_name)
     correctness = parse_bool(row.get("correctness_overall"))
     benchmark_success = parse_bool(row.get("benchmark_success"))
     protocol_eligible = bool(protocol.get("paper_main_table_eligible"))
     speedup = parse_float(row.get("speedup"))
     observed_outcome = row.get("observed_outcome") or ""
+    severity = row.get("severity") or problem_info.get("severity") or ""
+    problem_count = row.get("problem_count")
+    if problem_count in (None, ""):
+        problem_count = problem_info.get("not_vectorized_count")
+        if problem_count is None:
+            problem_count = len(problem_info.get("problems", []) or []) if problem_info else ""
+        problem_count = str(problem_count) if problem_count != "" else ""
 
     if not correctness:
         conclusion = "correctness_failed"
@@ -178,6 +186,8 @@ def enrich_row(row: Dict, csv_file: Path, problem_map: Dict) -> Dict:
 
     return {
         **row,
+        "severity": severity,
+        "problem_count": problem_count,
         "source_csv": str(csv_file),
         "source_run_dir": str(csv_file.parent),
         "canonical_strategy": normalize_strategy_name(row.get("strategy", "")),

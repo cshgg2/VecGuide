@@ -70,6 +70,44 @@ class PaperTableBuilderTests(unittest.TestCase):
             self.assertEqual(rows[0]["benchmark_protocol"], "formal")
             self.assertTrue(rows[0]["main_table_result_usable"])
 
+    def test_fills_problem_metadata_when_result_row_omits_it(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            problem_map = {
+                "s1232": {
+                    "severity": "low",
+                    "not_vectorized_count": 0,
+                    "problems": [],
+                }
+            }
+            run_dir = root / "run"
+            write_rows(
+                run_dir / "paper_results.csv",
+                [
+                    {
+                        "run_id": "metadata_gap",
+                        "strategy": "full_method",
+                        "function": "s1232",
+                        "status": "success",
+                        "correctness_overall": "True",
+                        "analysis_vectorized": "True",
+                        "analysis_vectorized_count": "1",
+                        "analysis_missed_count": "0",
+                        "benchmark_success": "True",
+                        "benchmark_warmup_runs": "3",
+                        "benchmark_timing_runs": "10",
+                        "benchmark_batches": "5",
+                        "speedup": "24.866",
+                    }
+                ],
+            )
+
+            rows = collect_result_rows([run_dir], problem_map)
+
+            self.assertEqual(rows[0]["severity"], "low")
+            self.assertEqual(rows[0]["problem_count"], "0")
+            self.assertEqual(rows[0]["primary_blocker"], "unknown_or_already_vectorized")
+
     def test_builds_all_and_main_tables_with_nonformal_rows_filtered(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
